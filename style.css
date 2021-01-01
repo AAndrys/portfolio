@@ -1,0 +1,617 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-size: 16px;
+  box-sizing: border-box;
+  background-color: white;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
+/* HEAD */
+.content {
+  width: 100%;
+  height: 80vh;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url('1.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.content header {
+  width: 80%;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  z-index: 1000;
+}
+.content .responsiveheader {
+  display: none;
+}
+.content .rmenu {
+  display: none;
+}
+.content header::before {
+  content: '';
+  width: 1000%;
+  height: 1px;
+  position: absolute;
+  left: -100%;
+  background-color: grey;
+  bottom: -1px;
+}
+.content header .logo {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  display: block;
+  user-select: none;
+  cursor: pointer;
+}
+.content header .logo h1:hover {
+  color: #ff8000;
+}
+.content header .logo h1 {
+  color: black;
+  font-size: 30px;
+  text-transform: uppercase;
+  display: flex;
+}
+.content header .logo span {
+  transform-origin: center;
+  transform: rotate(25deg);
+}
+.content header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content header nav ul {
+  list-style: none;
+}
+.content header nav ul li {
+  display: inline-block;
+  margin-left: 20px;
+  cursor: pointer;
+}
+.content header nav ul li a {
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  display: block;
+  transition: all 1s linear;
+  position: relative;
+}
+.content header nav ul li a::before {
+  content: '';
+  height: 3px;
+  width: 0px;
+  background-color: #ff8000;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  transition: all .3s linear;
+  margin: auto;
+}
+.content header nav ul li a:hover::before {
+  width: 100%;
+}
+.content .text {
+  width: 700px;
+  position: absolute;
+  text-align: left;
+  left: 100px;
+  user-select: none;
+}
+.content .text h1 {
+  font-size: 30px;
+  color: black;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 1s linear;
+  opacity: 0;
+  transform: scale(.5);
+}
+.content .text p:nth-child(3) {
+  color: black;
+  font-size: 15px;
+  letter-spacing: 1px;
+  transition: all 1s linear;
+  opacity: 0;
+  transform: translateY(60%);
+}
+.content .text p:nth-child(1) {
+  color: black;
+  font-size: 15px;
+  letter-spacing: 1px;
+  transition: all 1s linear;
+  opacity: 0;
+  transform: translateY(-60%);
+}
+.content .text button {
+  background-color: transparent;
+  margin-top: 20px;
+  padding: 10px 60px;
+  cursor: pointer;
+  border: 0;
+  border: 1px solid black;
+  transition: opacity 2s linear, background-color .3s linear, color .3s linear, border-color .3s linear, border-radius .3s linear;
+  font-size: 15px;
+  opacity: 0;
+}
+.content .text button:hover {
+  background-color: #ff8000;
+  color: white;
+  border-color: #ff8000;
+  border-radius: 50px;
+}
+.content .text button:hover:active {
+  background-color: #bb5e00;
+  color: white;
+  border-color: #bb5e00;
+}
+/* END HEAD */
+
+/* ABOUT ME */
+.aboutme {
+  width: 100%;
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.aboutme .headerab {
+  width: 100%;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 25px;
+  left: 0;
+}
+.aboutme .headerab h1 {
+  font-size: 30px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.aboutme .headerab h1::before {
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 50%;
+  background-color: #ff8000;
+  bottom: -5px;
+}
+.aboutme div {
+  width: 60%;
+  padding: 0 30px;
+  text-align: justify;
+}
+.aboutme div h1 {
+  color: black;
+  font-size: 30px;
+}
+.aboutme div p {
+  color: black;
+  font-size: 15px;
+  margin-top: 10px;
+  letter-spacing: 1px;
+  transition: all .5s linear;
+  transform: translateX(-50%);
+  opacity: 0;
+  position: relative;
+}
+.aboutme div #arrow {
+  display: block;
+  transform: rotate(90deg);
+  font-size: 30px;
+  width: 50px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  animation: blink 1s linear infinite;
+  user-select: none;
+}
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.aboutme .box {
+  width: 40%;
+  min-height: 90%;
+  padding: 0 30px;
+  color: #303030;
+  font-size: 200px;
+  display: flex;
+  justify-content: center;
+}
+/* END ABOUT ME */
+
+/* TECHNOLOGY */
+.technology {
+  width: 100%;
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.technology .headertech {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+}
+.technology .headertech h1 {
+  font-size: 30px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.technology .headertech h1::before {
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 50%;
+  background-color: #ff8000;
+  bottom: -5px;
+}
+.technology .technologyboxes {
+  width: 80%;
+  display: grid;
+  grid-template-columns: 300px 300px 300px;
+  grid-template-rows: 400px 400px 400px;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  grid-row: wrap;
+  position: relative;
+}
+.technology .technologyboxes .technologybox {
+  width: 200px;
+  height: 300px;
+  position: relative;
+  background-color: #303030;
+  margin-left: 15px;
+  margin-top: 15px;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 100px;
+  -webkit-box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.66);
+  -moz-box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.66);
+  box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.66);
+  transition: transform .2s linear;
+  user-select: none;
+}
+.technology .technologyboxes .technologybox::before {
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 30%;
+  bottom: 0;
+  background-color: #ff8000;
+  transition: width .2s linear;
+}
+.technology .technologyboxes .technologybox:hover::before {
+  width: 100%;
+}
+.technology .technologyboxes .technologybox:hover {
+  transform: scale(1.1);
+}
+.technology .technologyboxes .technologybox div {
+  color: white;
+}
+.technology .technologyboxes .technologybox div h1 {
+  font-size: 30px;
+}
+.technology .technologyboxes .technologybox div p {
+  font-size: 20px;
+}
+/* END TECHNOLOGY */
+
+/* CONTACT */
+.contact {
+  width: 100%;
+  padding: 100px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.contact .headercont {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+}
+.contact .headercont h1 {
+  font-size: 30px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact .headercont h1::before {
+  content: '';
+  position: absolute;
+  height: 3px;
+  width: 50%;
+  background-color: #ff8000;
+  bottom: -5px;
+}
+.contact .social {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact .socialbox {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10px;
+  font-size: 150px;
+  position: relative;
+}
+.contact .social .socialbox div {
+  display: block;
+}
+.contact #socialp {
+  opacity: 0;
+  transition: all 1s ease-in-out;
+  visibility: hidden;
+}
+.contact .social p {
+  text-align: center;
+}
+.contact #icon {
+  cursor: pointer;
+  transition: all .2s linear;
+}
+.contact #icon:hover {
+  color: #303030;
+}
+.contact div p {
+  font-size: 30px;
+  letter-spacing: 1px;
+}
+.contact div a {
+  font-size: 21px;
+  letter-spacing: 2px;
+}
+/* END CONTACT */
+
+/* FOOTER */
+footer {
+  width: 100%;
+  min-height: 8vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #303030;
+  color: white;
+  position: relative;
+  bottom: 0;
+}
+/* END FOOTER */
+
+/* Fixed */
+.fixed {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  right: 10px;
+  bottom: 20px;
+  border: 1px solid #303030;
+  border-radius: 50px;
+  background-color: white;
+  z-index: 1001;
+}
+.fixed p {
+  font-size: 20px;
+}
+/* END Fixed */
+
+
+
+
+
+
+
+
+
+
+
+
+/* RESPONSIVE */
+@media (max-width: 950px) {
+body {
+    flex-direction: column;
+}
+.container {
+    position: relative;
+}
+.content {
+    background-image: url('2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: static;
+}
+/* HEADER */
+.content header  nav {
+  display: none;
+}
+.content header .logo {
+  display: block;
+}
+.content header::before {
+  display: none;
+}
+.content .rmenu {
+  display: flex;
+  color: white;
+  font-size: 35px;
+  cursor: pointer;
+}
+.container .responsiveheader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: white;
+  overflow: hidden;
+  position: absolute;
+  z-index: 1001;
+  transition: all .6s ease-in-out;
+  transform: translateX(100%);
+}
+.container .responsiveheader nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+/*   position: absolute;
+  top: 5%; */
+}
+.container .responsiveheader nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.container .responsiveheader nav ul li a {
+  font-size: 50px;
+  font-weight: bold;
+  color: black;
+}
+.container .responsiveheader .exit {
+  position: absolute;
+  top: 10px;
+  right: 50px;
+  font-size: 30px;
+  color: black;
+  cursor: pointer;
+}
+.content header .logo h1 {
+  color: white;
+}
+.content header nav ul li a {
+  color: white;
+}
+.content .text {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  user-select: none;
+}
+.content .text h1 {
+  color: white;
+}
+.content .text p:nth-child(3) {
+  color: white;
+}
+.content .text p:nth-child(1) {
+  color: white;
+}
+.content .text button {
+  color: white;
+  border: 1px solid white;
+}
+/* END HEADER */
+
+/* ABOUT ME */
+.aboutme {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.aboutme div {
+  width: 80%;
+}
+.aboutme div #arrow {
+  margin-top: 10px;
+}
+.aboutme .box {
+  width: 100%;
+  margin-top: 60px;
+}
+/* END ABOUT ME */
+
+.technology .technologyboxes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.technology .technologyboxes .technologybox {
+  margin-top: 20px;
+}
+
+/* CONTACT */
+.contact {
+  width: 100%;
+}
+.contact .social {
+  display: block;
+}
+.contact .social .socialbox {
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  font-size: 80px;
+}
+.contact .social .socialbox div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+footer {
+  bottom: -40px;  
+}
+}
