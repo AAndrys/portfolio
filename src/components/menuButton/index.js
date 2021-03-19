@@ -11,16 +11,16 @@ const MenuButton = ({ onClickButton }) => {
     2: 30,
   });
 
-//   const stylesObject = {
-//     newBackground: {
-//       background: "white",
-//       bottom: 91 + "%",
-//     },
-//     transform: {
-//       transform: newStyles && "rotate(180deg)",
-//       color: isMouseEnter || newStyles ? "black" : "white",
-//     },
-//   };
+  //   const stylesObject = {
+  //     newBackground: {
+  //       background: "white",
+  //       bottom: 91 + "%",
+  //     },
+  //     transform: {
+  //       transform: newStyles && "rotate(180deg)",
+  //       color: isMouseEnter || newStyles ? "black" : "white",
+  //     },
+  //   };
 
   const handleMouse = () => {
     setIsMouseEnter(!isMouseEnter);
@@ -29,13 +29,13 @@ const MenuButton = ({ onClickButton }) => {
       1: isMouseEnter ? 60 : 100,
       2: isMouseEnter ? 30 : 100,
     });
-    if(newStyles) {
-        setLineValues({
-            0: 100,
-            1: 100,
-            2: 100,
-        });
-    };
+    if (newStyles) {
+      setLineValues({
+        0: 100,
+        1: 100,
+        2: 100,
+      });
+    }
   };
 
   const handleButton = () => {

@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
-import './styles/styles.css';
+import React, { useState } from "react";
+import "./styles/styles.css";
 
 //Component imports
-import Header from './components/header';
-import MenuButton from './components/menuButton';
-import DownScreen from './components/downScreen';
-import StartScreen from './components/startScreen';
-import ThreeScene from './components/threeScene';
+import Header from "./components/header";
+import MenuButton from "./components/menuButton";
+import DownScreen from "./components/downScreen";
+import StartScreen from "./components/startScreen";
+import ThreeScene from "./components/threeScene";
 
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

@@ -32,9 +32,8 @@ class ThreeScene extends Component {
     let x = -3.8;
     let z = 0;
 
-    for(let i = 0; i < 10; i++) {
-
-      for(let j = 0; j < 10; j++) {
+    for (let i = 0; i < 10; i++) {
+      for (let j = 0; j < 10; j++) {
         this.group.add(this.generateCube(x, -1, -z));
         x += 1.1;
       }
@@ -47,7 +46,7 @@ class ThreeScene extends Component {
 
     scene.add(this.group);
     // this.generatePlane();
-    console.log(this.group)
+    console.log(this.group);
     camera.position.z = 5;
 
     const animate = () => {
@@ -89,9 +88,9 @@ class ThreeScene extends Component {
     });
     const cube = new THREE.Mesh(geometry, material);
 
-    cube.position.set(x, y, z)
+    cube.position.set(x, y, z);
     return cube;
-  }
+  };
 
   render() {
     return (
@@ -101,6 +100,6 @@ class ThreeScene extends Component {
       />
     );
   }
-};
+}
 
 export default ThreeScene;
