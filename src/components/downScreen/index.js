@@ -117,50 +117,64 @@ class DownScreen extends React.Component {
         const { isMenuOpen } = this.props;
 
         return (
-            <div
-                className={isLoaded ? isMenuOpen ? 'down-screen-container startAnimation' : 'down-screen-container closeAnimation' : 'down-screen-container'}
-            >
-                <div className='left-side-content'>
-                    <div className='left-side-top-container'>
-                        {mouseLeave
-                            ? DEFAULT_DESCRIPTION
-                            : this.renderTextDescriptions(topDescriptions)
-                        }
-                    </div>
-                    <div className='left-side-bottom-container'>
-                        {mouseLeave
-                            ? DEFAULT_TEXT_NUMBER
-                            : this.renderTextNumber(activeListItemIndex)
-                        }
-                    </div>
-                </div>
-                <ContainerWithLeftBorder />
-                <ContainerWithLeftBorder componentWidth={'50%'}>
-                    <div className='middle-side-content'>
-                        <div className='middle-side-container'>
-                            <nav className='middle-navigation-list'>
-                                {NAVIGATION_LIST_ARRAY.map((item, index) => (
-                                    <NavItem
-                                        text={item}
-                                        key={index}
-                                        isActive={!mouseLeave ? (activeListItemIndex === index ? false : true) : false}
-                                        onMouseEnter={() => this.handleMouseOver(index)}
-                                        onMouseLeave={() => this.setState({ activeListItemIndex: null, mouseLeave: true })}
-                                        onMouseMove={(e) => this.handleMouseMove(e)}
-                                    />
-                                ))}
-                            </nav>
-                            <FilterImage
-                                imgSrc={BURGER_IMAGES[activeListItemIndex]}
-                                mouseLeave={mouseLeave}
-                                moveX={mouseXPosition}
-                                moveY={mouseYPosition}
-                            />
-                        </div>
-                    </div>
-                </ContainerWithLeftBorder>
-                <ContainerWithLeftBorder />
+          <div
+            className={
+              isLoaded
+                ? isMenuOpen
+                  ? "down-screen-container startAnimation"
+                  : "down-screen-container closeAnimation"
+                : "down-screen-container"
+            }
+          >
+            <div className="left-side-content">
+              <div className="left-side-top-container">
+                {mouseLeave
+                  ? DEFAULT_DESCRIPTION
+                  : this.renderTextDescriptions(topDescriptions)}
+              </div>
+              <div className="left-side-bottom-container">
+                {mouseLeave
+                  ? DEFAULT_TEXT_NUMBER
+                  : this.renderTextNumber(activeListItemIndex)}
+              </div>
             </div>
+            <ContainerWithLeftBorder componentWidth={"50%"}>
+              <div className="middle-side-content">
+                <div className="middle-side-container">
+                  <nav className="middle-navigation-list">
+                    {NAVIGATION_LIST_ARRAY.map((item, index) => (
+                      <NavItem
+                        text={item}
+                        key={index}
+                        isActive={
+                          !mouseLeave
+                            ? activeListItemIndex === index
+                              ? false
+                              : true
+                            : false
+                        }
+                        onMouseEnter={() => this.handleMouseOver(index)}
+                        onMouseLeave={() =>
+                          this.setState({
+                            activeListItemIndex: null,
+                            mouseLeave: true,
+                          })
+                        }
+                        onMouseMove={(e) => this.handleMouseMove(e)}
+                      />
+                    ))}
+                  </nav>
+                  <FilterImage
+                    imgSrc={BURGER_IMAGES[activeListItemIndex]}
+                    mouseLeave={mouseLeave}
+                    moveX={mouseXPosition}
+                    moveY={mouseYPosition}
+                  />
+                </div>
+              </div>
+            </ContainerWithLeftBorder>
+            <ContainerWithLeftBorder />
+          </div>
         );
     }
 };

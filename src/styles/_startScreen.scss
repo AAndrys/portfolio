@@ -1,0 +1,59 @@
+.start-screen-container {
+  background: url('../assets/images/background/gradient.jpg') center no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow-y: hidden;
+  transition: all 0.5s linear;
+  z-index: 99999;
+
+  .start-component-container {
+    @include flexCenter(center, center);
+
+    height: 100vh;
+    padding: 0 20px;
+
+    h1 {
+      font-size: 2rem;
+      color: white;
+    }
+    p {
+        background-color: none;
+        border: none;
+        color: white;
+        margin-top: 100px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s linear;
+        &:hover {
+            opacity: 0.5;
+        }
+    }
+  }
+}
+
+.animated-dot {
+  font-size: 1rem;
+  animation: animatedDot 1s ease-in-out infinite;
+}
+
+.animated-opacity {
+    opacity: 0;
+    animation: startScreenOpacity 1s ease-in-out;
+}
+
+@media only screen and (max-width: 950px) {
+    .start-screen-container {
+        .start-component-container {
+            h1 {
+                font-size: 1.5rem;
+            }
+        }
+    }
+}

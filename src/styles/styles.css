@@ -120,15 +120,41 @@
   }
 }
 
+@-webkit-keyframes startScreenOpacity {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-60%);
+            transform: translateY(-60%);
+  }
+}
+
+@keyframes startScreenOpacity {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(-60%);
+            transform: translateY(-60%);
+  }
+}
+
 .App {
-  background-color: #000000;
   min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: relative;
   overflow-y: hidden;
+  z-index: 9999;
 }
 
 .App .main-component-container {
@@ -142,26 +168,26 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  height: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
   padding: 0 20px;
 }
 
 .App .main-component-container h1 {
-  font-size: 1.5vw;
+  font-size: 1rem;
   color: white;
 }
 
 .animated-dot {
-  font-size: 1.5vw;
+  font-size: 1rem;
   -webkit-animation: animatedDot 1s ease-in-out infinite;
           animation: animatedDot 1s ease-in-out infinite;
 }
 
 .App-header {
-  width: 20%;
+  width: 100%;
 }
 
 .App-header .header-container {
@@ -172,20 +198,47 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 20px 0;
-  padding-left: 4vw;
+  padding: 20px 2vw;
+  text-align: center;
+}
+
+.App-header .header-container .header-title-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   text-align: center;
 }
 
 .text-header {
   color: white;
-  font-size: 1.5vw;
+  font-size: 1.2rem;
+}
+
+.normal-text-header {
+  color: white;
+  font-size: 1.2rem;
+}
+
+@media only screen and (max-width: 950px) {
+  .App-header .header-container {
+    padding: 20px 4vw;
+  }
 }
 
 .menu-button-container {
@@ -196,32 +249,29 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 60px;
-  height: 60px;
-  position: absolute;
-  right: 40px;
-  bottom: 5%;
-  border-radius: 50%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  width: 40px;
+  height: 40px;
   z-index: 2000;
   -webkit-transition: all .5s linear;
   transition: all .5s linear;
+  cursor: pointer;
 }
 
-.menu-button-container:hover {
-  background-color: white;
+.menu-button-container:active {
+  opacity: 0.3;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
 }
 
 .menu-button-container button {
   width: 100%;
   height: 100%;
-  border-radius: 50%;
-  border: 1px solid white;
   background-color: transparent;
   cursor: pointer;
   outline: none;
@@ -234,6 +284,13 @@
   color: white;
   -webkit-transition: all .5s linear;
   transition: all .5s linear;
+}
+
+@media only screen and (max-width: 950px) {
+  .menu-button-container {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .down-screen-container {
@@ -452,5 +509,89 @@
   width: 100%;
   -webkit-filter: url(#noise);
           filter: url(#noise);
+}
+
+#menu-button-line {
+  background-color: white;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+.start-screen-container {
+  background: url("../assets/images/background/gradient.jpg") center no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  top: 0;
+  left: 0;
+  overflow-y: hidden;
+  -webkit-transition: all 0.5s linear;
+  transition: all 0.5s linear;
+  z-index: 99999;
+}
+
+.start-screen-container .start-component-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  padding: 0 20px;
+}
+
+.start-screen-container .start-component-container h1 {
+  font-size: 2rem;
+  color: white;
+}
+
+.start-screen-container .start-component-container p {
+  background-color: none;
+  border: none;
+  color: white;
+  margin-top: 100px;
+  font-weight: bold;
+  cursor: pointer;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+.start-screen-container .start-component-container p:hover {
+  opacity: 0.5;
+}
+
+.animated-dot {
+  font-size: 1rem;
+  -webkit-animation: animatedDot 1s ease-in-out infinite;
+          animation: animatedDot 1s ease-in-out infinite;
+}
+
+.animated-opacity {
+  opacity: 0;
+  -webkit-animation: startScreenOpacity 1s ease-in-out;
+          animation: startScreenOpacity 1s ease-in-out;
+}
+
+@media only screen and (max-width: 950px) {
+  .start-screen-container .start-component-container h1 {
+    font-size: 1.5rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

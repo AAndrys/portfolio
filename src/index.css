@@ -1,6 +1,8 @@
 *, *::after, *::before {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  /* font-family: 'Poppins', sans-serif; */
 }
 
 h1, p {
@@ -10,6 +12,7 @@ h1, p {
 
 html {
   scroll-behavior: smooth;
+  font-size: 24px;
 }
 
 body {
@@ -19,6 +22,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
+  background: url('./assets/images/background/gradient.jpg') center no-repeat;
+  background-size: cover;
 }
 
 code {
