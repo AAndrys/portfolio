@@ -48,3 +48,13 @@
         transform: translateX(0%);
     }
 }
+
+@keyframes startScreenOpacity {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-60%);
+    }
+}

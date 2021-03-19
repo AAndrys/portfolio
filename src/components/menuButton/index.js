@@ -1,52 +1,61 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-//Font Awesome
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCaretUp } from '@fortawesome/free-solid-svg-icons';
+import Line from "../line";
 
 const MenuButton = ({ onClickButton }) => {
-    const [isMouseEnter, setIsMouseEnter] = useState(false);
-    const [newStyles, setNewStyles] = useState(false);
+  const [isMouseEnter, setIsMouseEnter] = useState(false);
+  const [newStyles, setNewStyles] = useState(false);
+  const [lineValues, setLineValues] = useState({
+    0: 90,
+    1: 60,
+    2: 30,
+  });
 
-    const stylesObject = {
-        newBackground:
-        {
-            background: 'white',
-            bottom: 91 + '%'
-        },
-        transform: {
-            transform: newStyles && 'rotate(180deg)',
-            color: isMouseEnter || newStyles ? 'black' : 'white'
-        }
-    };
+  //   const stylesObject = {
+  //     newBackground: {
+  //       background: "white",
+  //       bottom: 91 + "%",
+  //     },
+  //     transform: {
+  //       transform: newStyles && "rotate(180deg)",
+  //       color: isMouseEnter || newStyles ? "black" : "white",
+  //     },
+  //   };
 
-    const handleMouse = () => {
-        setIsMouseEnter(!isMouseEnter);
-    };
+  const handleMouse = () => {
+    setIsMouseEnter(!isMouseEnter);
+    setLineValues({
+      0: isMouseEnter ? 90 : 100,
+      1: isMouseEnter ? 60 : 100,
+      2: isMouseEnter ? 30 : 100,
+    });
+    if (newStyles) {
+      setLineValues({
+        0: 100,
+        1: 100,
+        2: 100,
+      });
+    }
+  };
 
-    const handleButton = () => {
-        onClickButton();
-        setNewStyles(!newStyles);
-    };
+  const handleButton = () => {
+    onClickButton();
+    setNewStyles(!newStyles);
+  };
 
-    return (
-        <div
-            className='menu-button-container'
-            style={newStyles ? stylesObject['newBackground'] : null}
-            onMouseEnter={handleMouse}
-            onMouseLeave={handleMouse}
-            onClick={handleButton}
-        >
-            <button>
-                <FontAwesomeIcon
-                    className="menu-button-svg-icon"
-                    icon={faCaretUp}
-                    size='2x'
-                    style={stylesObject['transform']}
-                />
-            </button>
-        </div>
-    );
+  return (
+    <div
+      className="menu-button-container"
+      // style={newStyles ? stylesObject["newBackground"] : null}
+      onMouseEnter={handleMouse}
+      onMouseLeave={handleMouse}
+      onClick={handleButton}
+    >
+      <Line lineWidth={lineValues["0"]} />
+      <Line lineWidth={lineValues["1"]} />
+      <Line lineWidth={lineValues["2"]} />
+    </div>
+  );
 };
 
 export default MenuButton;
