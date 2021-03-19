@@ -1,0 +1,25 @@
+.App {
+  background-color: #000000;
+  min-height: 100vh;
+  display: flex;
+  text-align: center;
+  position: relative;
+  overflow-y: hidden;
+  
+  .main-component-container {
+    @include flexCenter(center, flex-start);
+
+    height: 100%;
+    padding: 0 20px;
+
+    h1 {
+      font-size: 1.5vw;
+      color: white;
+    }
+  }
+}
+
+.animated-dot {
+  font-size: 1.5vw;
+  animation: animatedDot 1s ease-in-out infinite;
+}

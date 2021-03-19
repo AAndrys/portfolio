@@ -1,0 +1,50 @@
+@keyframes closeMenu {
+    0% {
+        transform: translateY(0%);
+    }
+    25% {
+        transform: translateY(20%);
+    }
+    50% {
+        transform: translateY(40%);
+    }
+    100% {
+        transform: translateY(100%);
+    }
+}
+
+@keyframes openMenu {
+    0% {
+        transform: translateY(100%);
+    }
+    25% {
+        transform: translateY(40%);
+    }
+    50% {
+        transform: translateY(20%);
+    }
+    100% {
+        transform: translateY(0%);
+    }
+}
+
+@keyframes animatedDot {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes translatePosition {
+    0% {
+        transform: translateX(130%);
+    }
+    100% {
+        transform: translateX(0%);
+    }
+}

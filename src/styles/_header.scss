@@ -1,0 +1,15 @@
+.App-header {
+    width: 20%;
+
+    .header-container {
+        @include flexCenter(flex-start, center, row);
+
+        padding: 20px 0;
+        padding-left: 4vw;
+        text-align: center;
+    }
+}
+.text-header {
+    color: white;
+    font-size: 1.5vw;
+}

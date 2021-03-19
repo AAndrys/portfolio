@@ -1,0 +1,10 @@
+.normal-text {
+  margin: 10px;
+  color: white;
+  transition: all .3s linear;
+}
+
+.animated-normal-text {
+  transform: translateX(0%);
+  animation: translatePosition 1s ease-in-out;
+}

@@ -1,0 +1,20 @@
+//Variables
+@import './variables';
+
+//Animations
+@import './animations';
+
+//Mixin
+@import './mixinStyles';
+
+//Main component styles
+@import './mainApp';
+
+//Components imports
+@import './header';
+@import './menuButton';
+@import './downScreen';
+@import './containersWithBorder';
+@import './normalText';
+@import './navItem';
+@import './filterImage';
