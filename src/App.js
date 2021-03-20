@@ -9,6 +9,7 @@ import StartScreen from "./components/startScreen";
 // import ThreeScene from "./components/threeScene";
 import HomePage from "./components/homePage";
 import Vanta from "./components/vanta";
+import DownArrow from "./components/downArrow";
 
 const App = () => {
   const [startAnimationEnd, setStartAnimationEnd] = useState(false);
@@ -26,6 +27,7 @@ const App = () => {
       <HomePage startAnimationEnd={startAnimationEnd} />
       {/* <MenuButton onClickButton={() => setIsMenuOpen(!isMenuOpen)} /> */}
       <DownScreen />
+      <DownArrow />
       {/* <ThreeScene /> */}
       <Vanta vantaLoaded={() => setVantaLoaded(true)} />
     </div>

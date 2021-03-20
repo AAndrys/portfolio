@@ -41,7 +41,6 @@ const MenuButton = ({ onClickButton = () => null }) => {
   return (
     <div
       className="menu-button-container"
-      // style={newStyles ? stylesObject["newBackground"] : null}
       onMouseEnter={handleMouse}
       onMouseLeave={handleMouse}
       onClick={handleButton}

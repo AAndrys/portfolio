@@ -12,7 +12,7 @@ const StartScreen = ({ animationEnd, vantaLoaded }) => {
       { opacity: 0, scale: 0.8 },
       { opacity: 1, scale: 1, duration: 3 }
     );
-  }, [])
+  }, []);
 
   const stylesObject = {
     display: onEndAnimation ? "none" : "flex",

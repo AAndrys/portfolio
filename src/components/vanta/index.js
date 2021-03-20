@@ -29,10 +29,22 @@ class Vanta extends React.Component {
       });
       this.props.vantaLoaded();
     }
+    window.addEventListener("resize", this.vantaResize);
   }
+
+  vantaResize = () => {
+    if (this.vantaEffect) {
+      this.vantaEffect.setOptions({
+        minHeight: window.innerHeight,
+        minWidth: window.innerWidth,
+      });
+      this.vantaEffect.resize();
+    }
+  };
 
   componentWillUnmount() {
     if (this.vantaEffect) this.vantaEffect.destroy();
+    window.removeEventListener("resize", this.vantaResize);
   }
 
   render() {

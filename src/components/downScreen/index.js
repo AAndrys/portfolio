@@ -124,9 +124,7 @@ class DownScreen extends React.Component {
       //       : "down-screen-container"
       //   }
       // >
-      <div
-        className="down-screen-container"
-      >
+      <div className="down-screen-container">
         <div className="left-side-content">
           <div className="left-side-top-container">
             {mouseLeave
@@ -183,5 +181,5 @@ class DownScreen extends React.Component {
 export default DownScreen;
 
 DownScreen.propTypes = {
-  isMenuOpen: PropTypes.bool.isRequired,
+  isMenuOpen: PropTypes.bool,
 };
