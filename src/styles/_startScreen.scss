@@ -23,8 +23,8 @@
       font-size: 1.5rem;
       color: white;
       font-weight: 200;
-      // animation: opacityIncrease 2s linear;
     }
+    
     p {
         background-color: none;
         border: none;
@@ -33,7 +33,6 @@
         font-weight: lighter;
         cursor: pointer;
         transition: all 0.3s linear;
-        // animation: opacityIncrease 2s linear;
         &:hover {
             opacity: 0.5;
             word-spacing: 80%;

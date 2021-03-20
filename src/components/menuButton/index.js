@@ -1,26 +1,17 @@
 import React, { useState } from "react";
+import { gsap } from "gsap";
 
 import Line from "../line";
 
-const MenuButton = ({ onClickButton }) => {
+const MenuButton = ({ onClickButton = () => null }) => {
   const [isMouseEnter, setIsMouseEnter] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [newStyles, setNewStyles] = useState(false);
   const [lineValues, setLineValues] = useState({
     0: 90,
     1: 60,
     2: 30,
   });
-
-  //   const stylesObject = {
-  //     newBackground: {
-  //       background: "white",
-  //       bottom: 91 + "%",
-  //     },
-  //     transform: {
-  //       transform: newStyles && "rotate(180deg)",
-  //       color: isMouseEnter || newStyles ? "black" : "white",
-  //     },
-  //   };
 
   const handleMouse = () => {
     setIsMouseEnter(!isMouseEnter);
@@ -39,6 +30,10 @@ const MenuButton = ({ onClickButton }) => {
   };
 
   const handleButton = () => {
+    gsap.to(".down-screen-container", {
+      yPercent: isMenuOpen ? 0 : -100,
+    });
+    setIsMenuOpen(!isMenuOpen);
     onClickButton();
     setNewStyles(!newStyles);
   };

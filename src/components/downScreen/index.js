@@ -115,14 +115,17 @@ class DownScreen extends React.Component {
     const { isMenuOpen } = this.props;
 
     return (
+      // <div
+      //   className={
+      //     isLoaded
+      //       ? isMenuOpen
+      //         ? "down-screen-container startAnimation"
+      //         : "down-screen-container closeAnimation"
+      //       : "down-screen-container"
+      //   }
+      // >
       <div
-        className={
-          isLoaded
-            ? isMenuOpen
-              ? "down-screen-container startAnimation"
-              : "down-screen-container closeAnimation"
-            : "down-screen-container"
-        }
+        className="down-screen-container"
       >
         <div className="left-side-content">
           <div className="left-side-top-container">

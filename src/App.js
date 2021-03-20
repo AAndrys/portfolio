@@ -6,12 +6,11 @@ import Header from "./components/header";
 import MenuButton from "./components/menuButton";
 import DownScreen from "./components/downScreen";
 import StartScreen from "./components/startScreen";
-import ThreeScene from "./components/threeScene";
+// import ThreeScene from "./components/threeScene";
 import HomePage from "./components/homePage";
 import Vanta from "./components/vanta";
 
 const App = () => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [startAnimationEnd, setStartAnimationEnd] = useState(false);
   const [vantaLoaded, setVantaLoaded] = useState(false);
 
@@ -22,11 +21,11 @@ const App = () => {
         vantaLoaded={vantaLoaded}
       />
       <Header>
-        <MenuButton onClickButton={() => setIsMenuOpen(!isMenuOpen)} />
+        <MenuButton />
       </Header>
       <HomePage startAnimationEnd={startAnimationEnd} />
       {/* <MenuButton onClickButton={() => setIsMenuOpen(!isMenuOpen)} /> */}
-      <DownScreen isMenuOpen={isMenuOpen} />
+      <DownScreen />
       {/* <ThreeScene /> */}
       <Vanta vantaLoaded={() => setVantaLoaded(true)} />
     </div>
