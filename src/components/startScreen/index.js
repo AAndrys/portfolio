@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 
-const StartScreen = () => {
+const StartScreen = ({ animationEnd, vantaLoaded }) => {
   const [startAnimation, setStartAnimation] = useState(true);
   const [onEndAnimation, setOnEndAnimation] = useState(false);
 
@@ -12,6 +13,24 @@ const StartScreen = () => {
     setStartAnimation(false);
   };
 
+  const handleEndAnimation = () => {
+    setOnEndAnimation(true);
+    animationEnd();
+  };
+
+  if (!vantaLoaded) {
+    return (
+      <div className="start-screen-container">
+        <div className="start-component-container">
+          <h1>
+            Loading
+            <i className="animated-dot"> ...</i>
+          </h1>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div
       className={
@@ -20,7 +39,7 @@ const StartScreen = () => {
           : "start-screen-container animated-opacity"
       }
       style={stylesObject}
-      onAnimationEnd={() => setOnEndAnimation(true)}
+      onAnimationEnd={handleEndAnimation}
     >
       <div className="start-component-container">
         <h1>
@@ -34,3 +53,8 @@ const StartScreen = () => {
 };
 
 export default StartScreen;
+
+StartScreen.propTypes = {
+  animationEnd: PropTypes.func,
+  vantaLoaded: PropTypes.bool,
+};

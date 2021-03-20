@@ -5,7 +5,6 @@
         @include flexCenter(space-between, center, row);
 
         padding: 20px 2vw;
-        text-align: center;
 
         .header-title-container {
             @include flexCenter(center, center, row);
@@ -16,11 +15,12 @@
 }
 .text-header {
     color: white;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 .normal-text-header {
     color: white;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
+    font-weight: 300;
 }
 
 @media only screen and (max-width: 950px) {

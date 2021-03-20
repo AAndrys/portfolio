@@ -18,7 +18,7 @@ class ThreeScene extends Component {
     this.mount.appendChild(renderer.domElement);
 
     const light = new THREE.DirectionalLight();
-    light.position.set(0, 2, 1);
+    light.position.set(0, 1, 1);
     scene.add(light);
 
     // const geometry = new THREE.BoxGeometry(1, 1, 1);
@@ -28,32 +28,35 @@ class ThreeScene extends Component {
     // const cube = new THREE.Mesh(geometry, material);
     // scene.add(cube);
 
-    this.group = new THREE.Group();
-    let x = -3.8;
-    let z = 0;
+    // this.group = new THREE.Group();
+    // let x = -3.8;
+    // let z = 0;
 
-    for (let i = 0; i < 10; i++) {
-      for (let j = 0; j < 10; j++) {
-        this.group.add(this.generateCube(x, -1, -z));
-        x += 1.1;
-      }
-      x = -3.8;
-      z += 1.2;
-    }
+    // for (let i = 0; i < 10; i++) {
+    //   for (let j = 0; j < 10; j++) {
+    //     this.group.add(this.generateCube(x, -1, -z));
+    //     x += 1.1;
+    //   }
+    //   x = -3.8;
+    //   z += 1.2;
+    // }
 
-    this.group.rotation.x = 0.1;
-    this.group.position.set(-1, -3, -3);
+    // this.group.rotation.x = 0.1;
+    // this.group.position.set(-1, -3, -3);
 
-    scene.add(this.group);
+    // scene.add(this.group);
     // this.generatePlane();
-    console.log(this.group);
+    const newCube = this.generateCube(0, 0, -2);
+    newCube.rotation.x = 1.5;
+    scene.add(newCube);
+
     camera.position.z = 5;
 
     const animate = () => {
       requestAnimationFrame(animate);
 
-      // cube.rotation.x += 0.01;
-      // cube.rotation.y += 0.01;
+      newCube.rotation.x += 0.01;
+      newCube.rotation.y += 0.01;
 
       renderer.render(scene, camera);
     };
@@ -82,7 +85,7 @@ class ThreeScene extends Component {
   };
 
   generateCube = (x = 0, y = 0, z = 0) => {
-    const geometry = new THREE.BoxGeometry(1, 0.1, 1);
+    const geometry = new THREE.BoxGeometry(3, 0.1, 3);
     const material = new THREE.MeshPhongMaterial({
       color: new THREE.Color("#023b66"),
     });

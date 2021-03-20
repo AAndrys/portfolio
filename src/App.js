@@ -7,25 +7,28 @@ import MenuButton from "./components/menuButton";
 import DownScreen from "./components/downScreen";
 import StartScreen from "./components/startScreen";
 import ThreeScene from "./components/threeScene";
+import HomePage from "./components/homePage";
+import Vanta from "./components/vanta";
 
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [startAnimationEnd, setStartAnimationEnd] = useState(false);
+  const [vantaLoaded, setVantaLoaded] = useState(false);
 
   return (
     <div className="App">
-      <StartScreen />
+      <StartScreen
+        animationEnd={() => setStartAnimationEnd(true)}
+        vantaLoaded={vantaLoaded}
+      />
       <Header>
         <MenuButton onClickButton={() => setIsMenuOpen(!isMenuOpen)} />
       </Header>
-      {/* <div className="main-component-container">
-        <h1>
-          WELCOME TO MY WEBSITE
-          <i className="animated-dot"> .</i>
-        </h1>
-      </div> */}
+      <HomePage startAnimationEnd={startAnimationEnd} />
       {/* <MenuButton onClickButton={() => setIsMenuOpen(!isMenuOpen)} /> */}
       <DownScreen isMenuOpen={isMenuOpen} />
-      <ThreeScene />
+      {/* <ThreeScene /> */}
+      <Vanta vantaLoaded={() => setVantaLoaded(true)} />
     </div>
   );
 };

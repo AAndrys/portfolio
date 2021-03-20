@@ -1,12 +1,13 @@
 .down-screen-container {
     width: 100%;
     height: 100vh;
-    background-color: black;
+    // background-color: black;
+    background: url("../assets/images/background/gradient.png") center no-repeat;
+    background-size: cover;
     display: flex;
-    position: absolute;
-    top: 0;
+    position: fixed;
+    top: 100%;
     left: 0;
-    right: 0;
     z-index: 100;
     transform: translateY(100%);
 

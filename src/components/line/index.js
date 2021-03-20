@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const Line = ({ lineHeight = 5, lineWidth = 90 }) => {
+const Line = ({ lineHeight = 2, lineWidth = 90 }) => {
   const spanStyle = {
     width: `${lineWidth}%`,
     height: `${lineHeight}px`,

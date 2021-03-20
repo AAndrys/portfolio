@@ -53,12 +53,18 @@ class DownScreen extends React.Component {
     };
   }
 
-  componentDidUpdate(prevProps) {
-    if (!prevProps.isMenuOpen && !this.state.isLoaded) {
-      this.setState({
-        isLoaded: true,
-      });
-    }
+  // componentDidUpdate(prevProps) {
+  //   if (prevProps.isMenuOpen) {
+  //     this.setState({
+  //       isProp: true,
+  //     });
+  //   }
+  // }
+
+  componentDidMount() {
+    this.setState({
+      isLoaded: true,
+    });
   }
 
   handleMouseOver = (index) => {
