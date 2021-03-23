@@ -56,11 +56,7 @@ const HomePage = ({ startAnimationEnd }) => {
         </div>
       </div>
       <div className="home-page-image-container">
-        <img
-          className="face-image"
-          src={IMAGE}
-          alt="face"
-        />
+        <img className="face-image" src={IMAGE} alt="face" />
       </div>
     </div>
   );

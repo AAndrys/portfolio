@@ -5,12 +5,7 @@ import NormalText from "../normalText";
 import NavItem from "../navItem";
 import FilterImage from "../filterImage";
 
-const NAVIGATION_LIST_ARRAY = [
-  "START",
-  "ABOUT ME",
-  "TECHNOLOGIES",
-  "CONTACT",
-];
+const NAVIGATION_LIST_ARRAY = ["START", "ABOUT ME", "TECHNOLOGIES", "CONTACT"];
 
 const BURGER_IMAGES = [
   require("../../assets/images/burger1.jpg").default,
