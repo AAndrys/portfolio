@@ -6,11 +6,10 @@ import NavItem from "../navItem";
 import FilterImage from "../filterImage";
 
 const NAVIGATION_LIST_ARRAY = [
-  "CHEESEBURGER",
-  "BURGER",
-  "BURGER1",
-  "BURGER2",
-  "NUTBURGER",
+  "START",
+  "ABOUT ME",
+  "TECHNOLOGIES",
+  "CONTACT",
 ];
 
 const BURGER_IMAGES = [
@@ -21,7 +20,7 @@ const BURGER_IMAGES = [
   require("../../assets/images/burger5.jpg").default,
 ];
 
-const DEFAULT_DESCRIPTION = <NormalText text={"Service"} isAnimated />;
+const DEFAULT_DESCRIPTION = <NormalText text={"Menu"} isAnimated />;
 const DEFAULT_TEXT_NUMBER = (
   <NormalText
     text={"05"}
@@ -45,11 +44,11 @@ class DownScreen extends React.Component {
     };
 
     this.descriptionList = {
-      0: ["BurgerMenu1", "BurgerrMenu1", "BurgerrrrMenu1"],
-      1: ["BurgerMenu2", "BurgerrMenu2", "BurgerrrrMenu2"],
-      2: ["BurgerMenu3", "BurgerrMenu3", "BurgerrrrMenu3"],
-      3: ["BurgerMenu4", "BurgerrMenu4", "BurgerrrrMenu4"],
-      4: ["BurgerMenu5", "BurgerrMenu5", "BurgerrrrMenu5"],
+      0: ["First page", "", ""],
+      1: ["Little about me", "", ""],
+      2: ["Technologies, which I used before", "", ""],
+      3: ["Contact to me", "", ""],
+      4: ["BurgerMenu5", "", ""],
     };
   }
 
@@ -137,7 +136,7 @@ class DownScreen extends React.Component {
               : this.renderTextNumber(activeListItemIndex)}
           </div>
         </div>
-        <ContainerWithLeftBorder componentWidth={"50%"}>
+        <ContainerWithLeftBorder componentWidth={"60%"}>
           <div className="middle-side-content">
             <div className="middle-side-container">
               <nav className="middle-navigation-list">
@@ -163,12 +162,12 @@ class DownScreen extends React.Component {
                   />
                 ))}
               </nav>
-              <FilterImage
+              {/* <FilterImage
                 imgSrc={BURGER_IMAGES[activeListItemIndex]}
                 mouseLeave={mouseLeave}
                 moveX={mouseXPosition}
                 moveY={mouseYPosition}
-              />
+              /> */}
             </div>
           </div>
         </ContainerWithLeftBorder>

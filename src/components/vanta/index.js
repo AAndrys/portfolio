@@ -25,7 +25,7 @@ class Vanta extends React.Component {
         midtoneColor: 0x434343,
         lowlightColor: 0x0,
         baseColor: 0x111111,
-        speed: 0.4,
+        speed: 0.8,
       });
       this.props.vantaLoaded();
     }

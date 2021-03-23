@@ -13,7 +13,8 @@ import DownArrow from "./components/downArrow";
 
 const App = () => {
   const [startAnimationEnd, setStartAnimationEnd] = useState(false);
-  const [vantaLoaded, setVantaLoaded] = useState(false);
+  const [vantaLoaded, setVantaLoaded] = useState(true);
+  const [slideNumber, setslideNumber] = useState(1);
 
   return (
     <div className="App">
@@ -29,7 +30,7 @@ const App = () => {
       <DownScreen />
       <DownArrow />
       {/* <ThreeScene /> */}
-      <Vanta vantaLoaded={() => setVantaLoaded(true)} />
+      {/* <Vanta vantaLoaded={() => setVantaLoaded(true)} /> */}
     </div>
   );
 };
