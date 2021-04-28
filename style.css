@@ -287,7 +287,7 @@ body {
 .technology .technologyboxes {
   width: 80%;
   display: grid;
-  grid-template-columns: 300px 300px 300px 300px;
+  grid-template-columns: 300px 300px 300px;
   grid-template-rows: 400px 400px 400px 400px;
   justify-content: space-around;
   align-items: center;
