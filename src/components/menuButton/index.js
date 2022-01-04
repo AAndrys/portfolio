@@ -31,7 +31,8 @@ const MenuButton = ({ onClickButton = () => null }) => {
 
   const handleButton = () => {
     gsap.to(".down-screen-container", {
-      yPercent: isMenuOpen ? 0 : -100,
+      top: isMenuOpen ? "100%" : 0,
+      // display: isMenuOpen ? "none" : "flex",
     });
     setIsMenuOpen(!isMenuOpen);
     onClickButton();

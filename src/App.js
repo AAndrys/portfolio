@@ -18,18 +18,12 @@ const App = () => {
 
   return (
     <div className="App">
-      <StartScreen
-        animationEnd={() => setStartAnimationEnd(true)}
-        vantaLoaded={vantaLoaded}
-      />
+      <StartScreen animationEnd={() => setStartAnimationEnd(true)} vantaLoaded={vantaLoaded} />
       <Header>
         <MenuButton />
       </Header>
       <HomePage startAnimationEnd={startAnimationEnd} />
-      <div
-        id="second"
-        style={{ width: "100%", height: "100vh", backgroundColor: "black" }}
-      >
+      <div id="second" style={{ width: "100%", height: "100vh", backgroundColor: "black" }}>
         <h1>FDSFESF</h1>
       </div>
       {/* <MenuButton onClickButton={() => setIsMenuOpen(!isMenuOpen)} /> */}

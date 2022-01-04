@@ -1,15 +1,16 @@
 .down-screen-container {
   width: 100%;
+  height: calc(100vh - calc(100vh - 100%));
   background: url("../assets/images/background/gradient.png") center no-repeat;
   background-size: cover;
   display: flex;
   position: fixed;
-  top: 0;
-  bottom: 0;
+  top: 100%;
+  //   bottom: 0;
   right: 0;
   left: 0;
   z-index: 100;
-  transform: translateY(100%);
+  //   transform: translateY(100%);
 
   .left-side-content {
     @include flexCenter(center, center);
