@@ -176,24 +176,19 @@
 
 .App {
   min-height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  text-align: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
   position: relative;
   overflow-y: hidden;
-  z-index: 9999;
 }
 
-.App-header {
+.app-header {
   width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
-.App-header .header-container {
+.app-header .header-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -210,7 +205,7 @@
   padding: 20px 2vw;
 }
 
-.App-header .header-container .header-title-container {
+.app-header .header-container .header-title-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -224,7 +219,9 @@
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+  position: relative;
   text-align: center;
+  z-index: 10;
 }
 
 .text-header {
@@ -239,7 +236,7 @@
 }
 
 @media only screen and (max-width: 950px) {
-  .App-header .header-container {
+  .app-header .header-container {
     padding: 20px 4vw;
   }
 }
@@ -260,9 +257,14 @@
   align-items: flex-end;
   width: 40px;
   height: 40px;
-  z-index: 2000;
   -webkit-transition: all 0.5s linear;
   transition: all 0.5s linear;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 2000;
   cursor: pointer;
 }
 
@@ -297,7 +299,6 @@
 
 .down-screen-container {
   width: 100%;
-  height: 100vh;
   background: url("../assets/images/background/gradient.png") center no-repeat;
   background-size: cover;
   display: -webkit-box;
@@ -305,6 +306,8 @@
   display: flex;
   position: fixed;
   top: 0;
+  bottom: 0;
+  right: 0;
   left: 0;
   z-index: 100;
   -webkit-transform: translateY(100%);
@@ -344,7 +347,7 @@
   align-items: flex-end;
   width: 100%;
   height: 80%;
-  padding-top: 20px;
+  padding-top: 60px;
   overflow: hidden;
 }
 
@@ -606,7 +609,7 @@
   -ms-flex-align: center;
   align-items: center;
   width: 100%;
-  height: 90vh;
+  min-height: 100vh;
 }
 
 .home-page-container .home-page-text-content {

@@ -3,25 +3,25 @@ import PropTypes from "prop-types";
 import ContainerWithLeftBorder from "../containerWithLeftBorder";
 import NormalText from "../normalText";
 import NavItem from "../navItem";
-import FilterImage from "../filterImage";
+// import FilterImage from "../filterImage";
 
 const NAVIGATION_LIST_ARRAY = ["START", "ABOUT ME", "TECHNOLOGIES", "CONTACT"];
 
-const BURGER_IMAGES = [
-  require("../../assets/images/burger1.jpg").default,
-  require("../../assets/images/burger2.jpg").default,
-  require("../../assets/images/burger3.jpg").default,
-  require("../../assets/images/burger4.jpg").default,
-  require("../../assets/images/burger5.jpg").default,
-];
+// const BURGER_IMAGES = [
+//   require("../../assets/images/burger1.jpg").default,
+//   require("../../assets/images/burger2.jpg").default,
+//   require("../../assets/images/burger3.jpg").default,
+//   require("../../assets/images/burger4.jpg").default,
+//   require("../../assets/images/burger5.jpg").default,
+// ];
 
-const DEFAULT_DESCRIPTION = <NormalText text={"Menu"} isAnimated />;
+const DEFAULT_DESCRIPTION = <NormalText text="Menu" isAnimated />;
 const DEFAULT_TEXT_NUMBER = (
   <NormalText
-    text={"05"}
+    text="05"
     isBold
     fontSize={30}
-    textColor={"rgba(255, 255, 255, 0.5)"}
+    textColor="rgba(255, 255, 255, 0.5)"
     isAnimated
   />
 );
@@ -131,7 +131,7 @@ class DownScreen extends React.Component {
               : this.renderTextNumber(activeListItemIndex)}
           </div>
         </div>
-        <ContainerWithLeftBorder componentWidth={"60%"}>
+        <ContainerWithLeftBorder componentWidth="60%">
           <div className="middle-side-content">
             <div className="middle-side-container">
               <nav className="middle-navigation-list">

@@ -1,32 +1,38 @@
-.App-header {
-    width: 100%;
+.app-header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 
-    .header-container {
-        @include flexCenter(space-between, center, row);
+  .header-container {
+    @include flexCenter(space-between, center, row);
 
-        padding: 20px 2vw;
+    padding: 20px 2vw;
 
-        .header-title-container {
-            @include flexCenter(center, center, row);
+    .header-title-container {
+      @include flexCenter(center, center, row);
 
-            text-align: center;
-        }
+      position: relative;
+      text-align: center;
+      z-index: 10;
     }
+  }
 }
 .text-header {
-    color: white;
-    font-size: 1rem;
+  color: white;
+  font-size: 1rem;
 }
 .normal-text-header {
-    color: white;
-    font-size: 0.8rem;
-    font-weight: 300;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 300;
 }
 
 @media only screen and (max-width: 950px) {
-    .App-header {
-        .header-container {
-            padding: 20px 4vw;
-        }
+  .app-header {
+    .header-container {
+      padding: 20px 4vw;
     }
+  }
 }

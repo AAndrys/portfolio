@@ -2,12 +2,12 @@ import React from "react";
 import PropTypes from "prop-types";
 
 //Font Awesome
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHamburger } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faHamburger } from "@fortawesome/free-solid-svg-icons";
 
 const Header = ({ children }) => {
   return (
-    <header className="App-header">
+    <header className="app-header">
       <div className="header-container">
         <div className="header-title-container">
           <h1 className="text-header">AA</h1>

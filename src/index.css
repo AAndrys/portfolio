@@ -28,8 +28,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   overflow: hidden;
   background-color: black;
-  /* background: url("./assets/images/background/twarz_black.png") center no-repeat; */
-  /* background-size: cover; */
   color: white;
 }
 

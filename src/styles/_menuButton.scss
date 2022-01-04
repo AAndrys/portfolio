@@ -1,37 +1,40 @@
 .menu-button-container {
-    @include flexCenter(space-between, flex-end);
+  @include flexCenter(space-between, flex-end);
 
-    width: 40px;
-    height: 40px;
-    // position: absolute;
-    // right: 40px;
-    // bottom: 5%;
-    z-index: 2000;
-    transition: all .5s linear;
+  width: 40px;
+  height: 40px;
+  transition: all 0.5s linear;
+  position: relative;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: 2000;
+  cursor: pointer;
+
+  &:active {
+    opacity: 0.3;
+    transition: all 0.2s linear;
+  }
+
+  button {
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
     cursor: pointer;
-    &:active {
-        opacity: 0.3;
-        transition: all .2s linear;
-    }
+    transition: all 0.3s linear;
 
-    button {
-        width: 100%;
-        height: 100%;
-        background-color: transparent;
-        cursor: pointer;
-        transition: all .3s linear;
-        
-        .menu-button-svg-icon {
-            background-color: transparent;
-            color: white;
-            transition: all .5s linear;
-        }
+    .menu-button-svg-icon {
+      background-color: transparent;
+      color: white;
+      transition: all 0.5s linear;
     }
+  }
 }
 
 @media only screen and (max-width: 950px) {
-    .menu-button-container {
-        width: 30px;
-        height: 30px;
-    }
+  .menu-button-container {
+    width: 30px;
+    height: 30px;
+  }
 }

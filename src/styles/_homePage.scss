@@ -1,104 +1,101 @@
 .home-page-container {
+  @include flexCenter(center, center);
+
+  width: 100%;
+  min-height: 100vh;
+  //   height: 100vh;
+
+  .home-page-text-content {
     @include flexCenter(center, center);
 
     width: 100%;
-    height: 90vh;
+    height: 100%;
 
-    .home-page-text-content {
-        @include flexCenter(center, center);
-
-        width: 100%;
-        height: 100%;
-
-        .name-animation {
-            opacity: 0;
-            animation: homeTextAnimation 4s ease-in-out;
-        }
+    .name-animation {
+      opacity: 0;
+      animation: homeTextAnimation 4s ease-in-out;
     }
+  }
 
-    .home-page-main-content {
-        @include flexCenter(center, center, row);
+  .home-page-main-content {
+    @include flexCenter(center, center, row);
 
-        width: 100%;
-        height: 100%;
+    width: 100%;
+    height: 100%;
 
-        .home-page-profile {
-            @include flexCenter(center, center);
+    .home-page-profile {
+      @include flexCenter(center, center);
 
-            width: 50%;
-            border-right: 1px solid rgba(255, 255, 255, 0.3);
-            padding: 0 20px;
-            overflow: hidden;
+      width: 50%;
+      border-right: 1px solid rgba(255, 255, 255, 0.3);
+      padding: 0 20px;
+      overflow: hidden;
 
-            h1 {
-                font-family: 'Poppins', sans-serif;
-                // font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-                // font-family: Arial, Helvetica, sans-serif;
-                font-size: 3rem;
-                letter-spacing: 5px;
-            }
-        }
-        .home-page-profile-info {
-            @include flexCenter(center, center);
-
-            width: 50%;
-
-            p {
-                font-weight: 300;
-            }
-        }
-
+      h1 {
+        font-family: "Poppins", sans-serif;
+        font-size: 3rem;
+        letter-spacing: 5px;
+      }
     }
+    .home-page-profile-info {
+      @include flexCenter(center, center);
 
-    .home-page-image-container { 
-        position: fixed;
-        top: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        z-index: -200;
-        transition: all 1s linear;
+      width: 50%;
 
-        img {
-            width: 100%; 
-            height: 100%; 
-            object-fit: contain;
-        }
+      p {
+        font-weight: 300;
+      }
     }
+  }
+
+  .home-page-image-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -200;
+    transition: all 1s linear;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
 }
 
 @media only screen and (max-width: 1300px) {
-    .home-page-container {
+  .home-page-container {
+    .home-page-main-content {
+      flex-direction: column;
 
-        .home-page-main-content {
-            flex-direction: column;
+      .home-page-profile {
+        width: 100%;
+        height: 50%;
+        padding: 20px 0;
+        border: none;
+        opacity: 0;
 
-            .home-page-profile {
-                width: 100%;
-                height: 50%;
-                padding: 20px 0;
-                border: none;
-                opacity: 0;
-
-                h1 {
-                    font-size: larger;
-                }
-
-                p {
-                    font-size: medium;
-                }
-            }
+        h1 {
+          font-size: larger;
         }
 
-        .home-page-image-container {
-            width: 100%;
-            height: 100%;
-
-            img {
-                opacity: 0;
-                object-fit: cover;
-                object-position: right;
-            }
+        p {
+          font-size: medium;
         }
+      }
     }
+
+    .home-page-image-container {
+      width: 100%;
+      height: 100%;
+
+      img {
+        opacity: 0;
+        object-fit: cover;
+        object-position: right;
+      }
+    }
+  }
 }

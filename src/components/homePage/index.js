@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
 import HeaderTitle from "./headerTitle";
+import Face from "../../assets/images/background/twarz_black.png";
 import { gsap } from "gsap";
-
-const IMAGE = require("../../assets/images/background/twarz_black.png").default;
 
 const HomePage = ({ startAnimationEnd }) => {
   const [firstAnimationEnd, setFirstAnimationEnd] = useState(false);
@@ -26,20 +25,20 @@ const HomePage = ({ startAnimationEnd }) => {
     return (
       <div className="home-page-container">
         <div className="home-page-text-content">
-          {startAnimationEnd ? (
+          {startAnimationEnd && (
             <HeaderTitle
-              text={"MY NAME IS"}
+              text="MY NAME IS"
               animationEnd={() => setFirstAnimationEnd(true)}
               displayAnimation={firstAnimationEnd}
             />
-          ) : null}
-          {firstAnimationEnd ? (
+          )}
+          {firstAnimationEnd && (
             <HeaderTitle
-              text={"ADAM ANDRYSIAK"}
+              text="ADAM ANDRYSIAK"
               animationEnd={() => setEndAnimation(true)}
               displayAnimation={endAnimation}
             />
-          ) : null}
+          )}
         </div>
       </div>
     );
@@ -51,12 +50,10 @@ const HomePage = ({ startAnimationEnd }) => {
           <h1>ADAM ANDRYSIAK</h1>
           <p>JavaScript Developer</p>
         </div>
-        <div className="home-page-profile-info">
-          {/* <p>Something text</p> */}
-        </div>
+        <div className="home-page-profile-info"></div>
       </div>
       <div className="home-page-image-container">
-        <img className="face-image" src={IMAGE} alt="face" />
+        <img className="face-image" src={Face} alt="face" />
       </div>
     </div>
   );

@@ -8,7 +8,7 @@ import DownScreen from "./components/downScreen";
 import StartScreen from "./components/startScreen";
 // import ThreeScene from "./components/threeScene";
 import HomePage from "./components/homePage";
-import Vanta from "./components/vanta";
+// import Vanta from "./components/vanta";
 import DownArrow from "./components/downArrow";
 
 const App = () => {
@@ -26,6 +26,12 @@ const App = () => {
         <MenuButton />
       </Header>
       <HomePage startAnimationEnd={startAnimationEnd} />
+      <div
+        id="second"
+        style={{ width: "100%", height: "100vh", backgroundColor: "black" }}
+      >
+        <h1>FDSFESF</h1>
+      </div>
       {/* <MenuButton onClickButton={() => setIsMenuOpen(!isMenuOpen)} /> */}
       <DownScreen />
       <DownArrow />
