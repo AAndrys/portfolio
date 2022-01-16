@@ -50,7 +50,7 @@ const HomePage = ({ startAnimationEnd }) => {
           <h1>ADAM ANDRYSIAK</h1>
           <p>JavaScript Developer</p>
         </div>
-        <div className="home-page-profile-info"></div>
+        <div className="home-page-profile-info" />
       </div>
       <div className="home-page-image-container">
         <img className="face-image" src={Face} alt="face" />

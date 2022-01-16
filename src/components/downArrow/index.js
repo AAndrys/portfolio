@@ -1,14 +1,12 @@
 import React from "react";
-// import PropTypes from "prop-types";
 
-//Font Awesome
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
-const DownArrow = () => {
+const DownArrow = ({ onClick }) => {
   return (
     <div className="down-arrow-container">
-      <FontAwesomeIcon icon={faArrowDown} />
+      <FontAwesomeIcon icon={faArrowDown} onClick={onClick} />
     </div>
   );
 };

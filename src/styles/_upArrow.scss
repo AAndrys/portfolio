@@ -1,8 +1,6 @@
-.down-arrow-container {
-  @include flexCenter(center, center);
-
+.up-arrow-container {
   position: fixed;
-  bottom: 1.4rem;
+  bottom: 2.4rem;
   right: 1.4rem;
   transition: all 0.2s linear;
   cursor: pointer;
