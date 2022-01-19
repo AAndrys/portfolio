@@ -1,0 +1,14 @@
+.layout {
+  width: 100%;
+  min-height: 100vh;
+  background-color: black;
+
+  .layout-container {
+    padding: 60px 25px;
+
+    & h1 {
+      margin: 40px 0;
+      text-transform: uppercase;
+    }
+  }
+}

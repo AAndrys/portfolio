@@ -789,4 +789,19 @@
 .down-arrow-container:hover {
   opacity: 0.5;
 }
+
+.layout {
+  width: 100%;
+  min-height: 100vh;
+  background-color: black;
+}
+
+.layout .layout-container {
+  padding: 60px 25px;
+}
+
+.layout .layout-container h1 {
+  margin: 40px 0;
+  text-transform: uppercase;
+}
 /*# sourceMappingURL=styles.css.map */

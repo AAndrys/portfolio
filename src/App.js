@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./styles/styles.css";
 
 //Component imports
@@ -11,7 +11,9 @@ import HomePage from "./components/homePage";
 // import Vanta from "./components/vanta";
 import UpArrow from "./components/upArrow";
 import DownArrow from "./components/downArrow";
-import { useEffect } from "react/cjs/react.development";
+import AboutMe from "./components/sections/aboutMe";
+import Technologies from "./components/sections/technologies";
+import Contact from "./components/sections/contact";
 
 import { gsap } from "gsap";
 
@@ -41,6 +43,19 @@ const App = () => {
   };
 
   useEffect(() => {
+    const switchOnScroll = (e) => {
+      if (e.deltaY < 0) {
+        handleSlide("up");
+      } else if (e.deltaY > 0) {
+        handleSlide("down");
+      }
+    };
+
+    document.addEventListener("wheel", switchOnScroll);
+    return () => document.removeEventListener("wheel", switchOnScroll);
+  }, []);
+
+  useEffect(() => {
     if (slideNumber > MAX_SLIDES) setslideNumber(MAX_SLIDES);
   }, [slideNumber]);
 
@@ -56,40 +71,14 @@ const App = () => {
 
       <div className="main-wrapper">
         <HomePage startAnimationEnd={startAnimationEnd} />
-        <div
-          id="second"
-          style={{
-            width: "100%",
-            minHeight: "100vh",
-            backgroundColor: "black",
-          }}
-        >
-          <h1>FDSFESF</h1>
-        </div>
-
-        <div
-          style={{
-            width: "100%",
-            minHeight: "100vh",
-            backgroundColor: "green",
-          }}
-        >
-          <h1>FDSFESF</h1>
-        </div>
-
-        <div
-          style={{
-            width: "100%",
-            minHeight: "100vh",
-            backgroundColor: "darkBlue",
-          }}
-        >
-          <h1>FDSFESF</h1>
-        </div>
+        <AboutMe />
+        <Technologies />
+        <Contact />
 
         {/* <ThreeScene /> */}
         {/* <Vanta vantaLoaded={() => setVantaLoaded(true)} /> */}
       </div>
+
       <DownScreen />
       {slideNumber >= 1 && <UpArrow onClick={() => handleSlide("up")} />}
       {slideNumber !== MAX_SLIDES && (
