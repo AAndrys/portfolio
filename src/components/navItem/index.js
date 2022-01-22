@@ -9,6 +9,7 @@ const NavItem = (props) => {
     onMouseEnter,
     onMouseLeave,
     onMouseMove,
+    onClick,
   } = props;
 
   const styles = {
@@ -17,6 +18,7 @@ const NavItem = (props) => {
 
   return (
     <a
+      onClick={onClick}
       className="navigation-item"
       href={hrefLink}
       style={styles}

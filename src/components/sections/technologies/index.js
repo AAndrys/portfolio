@@ -4,7 +4,7 @@ import Layout from "../../layout";
 
 const Technologies = ({}) => {
   return (
-    <Layout title="Technologies">
+    <Layout title="Technologies" id="Technologies">
       <div className="">
         <p>Example text</p>
       </div>

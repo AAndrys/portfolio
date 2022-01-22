@@ -6,6 +6,7 @@
   color: white;
   position: relative;
   transition: all 0.2s linear;
+  text-transform: uppercase;
   &::before {
     content: "";
     width: 0;

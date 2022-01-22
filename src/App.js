@@ -18,8 +18,10 @@ import Contact from "./components/sections/contact";
 import { gsap } from "gsap";
 
 const MAX_SLIDES = 3;
+const SECTIONS = ["#Home", "#AboutMe", "#Technologies", "#Contact"];
 
 const App = () => {
+  const [endHomePageAnimation, setEndHomePageAnimation] = useState(false);
   const [startAnimationEnd, setStartAnimationEnd] = useState(false);
   const [vantaLoaded, setVantaLoaded] = useState(true);
   const [slideNumber, setslideNumber] = useState(0); // 0 === home page
@@ -27,33 +29,12 @@ const App = () => {
   const handleSlide = (arrowType) => {
     if (arrowType === "up") {
       setslideNumber(slideNumber === 0 ? 0 : slideNumber - 1);
-      gsap.fromTo(
-        ".main-wrapper",
-        { y: `-${slideNumber * 100}vh` },
-        { y: `-${(slideNumber - 1) * 100}vh`, duration: 1 }
-      );
+      window.location.href = SECTIONS[slideNumber === 0 ? 0 : slideNumber - 1];
     } else {
-      gsap.fromTo(
-        ".main-wrapper",
-        { y: `-${slideNumber * 100}vh` },
-        { y: `-${(slideNumber + 1) * 100}vh`, duration: 1 }
-      );
       setslideNumber(slideNumber === MAX_SLIDES ? MAX_SLIDES : slideNumber + 1);
+      window.location.href = SECTIONS[slideNumber === MAX_SLIDES ? MAX_SLIDES : slideNumber + 1];
     }
   };
-
-  useEffect(() => {
-    const switchOnScroll = (e) => {
-      if (e.deltaY < 0) {
-        handleSlide("up");
-      } else if (e.deltaY > 0) {
-        handleSlide("down");
-      }
-    };
-
-    document.addEventListener("wheel", switchOnScroll);
-    return () => document.removeEventListener("wheel", switchOnScroll);
-  }, []);
 
   useEffect(() => {
     if (slideNumber > MAX_SLIDES) setslideNumber(MAX_SLIDES);
@@ -61,16 +42,19 @@ const App = () => {
 
   return (
     <div className="App">
-      <StartScreen
-        animationEnd={() => setStartAnimationEnd(true)}
-        vantaLoaded={vantaLoaded}
-      />
-      <Header>
-        <MenuButton />
-      </Header>
+      <StartScreen animationEnd={() => setStartAnimationEnd(true)} vantaLoaded={vantaLoaded} />
+      {endHomePageAnimation && (
+        <Header>
+          <MenuButton />
+        </Header>
+      )}
 
       <div className="main-wrapper">
-        <HomePage startAnimationEnd={startAnimationEnd} />
+        <HomePage
+          startAnimationEnd={startAnimationEnd}
+          endAnimation={endHomePageAnimation}
+          setEndAnimation={() => setEndHomePageAnimation(true)}
+        />
         <AboutMe />
         <Technologies />
         <Contact />
@@ -80,8 +64,9 @@ const App = () => {
       </div>
 
       <DownScreen />
-      {slideNumber >= 1 && <UpArrow onClick={() => handleSlide("up")} />}
-      {slideNumber !== MAX_SLIDES && (
+
+      {endHomePageAnimation && slideNumber >= 1 && <UpArrow onClick={() => handleSlide("up")} />}
+      {endHomePageAnimation && slideNumber !== MAX_SLIDES && (
         <DownArrow onClick={() => handleSlide("down")} />
       )}
     </div>

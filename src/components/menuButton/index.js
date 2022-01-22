@@ -12,6 +12,8 @@ const MenuButton = ({ onClickButton = () => null }) => {
     1: 60,
     2: 30,
   });
+  const downScreenOpenCondition =
+    document.querySelector(".down-screen-container").style.top !== "100%";
 
   const handleMouse = () => {
     setIsMouseEnter(!isMouseEnter);
@@ -31,8 +33,7 @@ const MenuButton = ({ onClickButton = () => null }) => {
 
   const handleButton = () => {
     gsap.to(".down-screen-container", {
-      top: isMenuOpen ? "100%" : 0,
-      // display: isMenuOpen ? "none" : "flex",
+      top: isMenuOpen && downScreenOpenCondition ? "100%" : 0,
     });
     setIsMenuOpen(!isMenuOpen);
     onClickButton();
