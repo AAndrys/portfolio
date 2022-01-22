@@ -32,7 +32,8 @@ const MenuButton = ({ onClickButton = () => null }) => {
   const handleButton = () => {
     gsap.to(".down-screen-container", {
       top:
-        isMenuOpen && document.querySelector(".down-screen-container").style.top !== "100%"
+        isMenuOpen &&
+        document.querySelector(".down-screen-container").style.top !== "100%"
           ? "100%"
           : 0,
     });
