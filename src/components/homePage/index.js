@@ -9,7 +9,11 @@ const HomePage = ({ startAnimationEnd, endAnimation, setEndAnimation }) => {
   // const [endAnimation, setEndAnimation] = useState(false);
 
   useEffect(() => {
-    gsap.fromTo(".face-image", { opacity: 0, x: -100 }, { opacity: 1, x: 0, duration: 2 });
+    gsap.fromTo(
+      ".face-image",
+      { opacity: 0, x: -100 },
+      { opacity: 1, x: 0, duration: 2 }
+    );
     gsap.fromTo(
       ".home-page-profile",
       { opacity: 0, scale: 0.8 },

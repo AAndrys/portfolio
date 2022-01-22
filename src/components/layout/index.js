@@ -8,7 +8,8 @@ const Layout = ({ id, title, children }) => {
   });
 
   useEffect(() => {
-    if (isInView) gsap.to(`#layout_${id}`, { scaleY: 1, opacity: 1, duration: 0.6 });
+    if (isInView)
+      gsap.to(`#layout_${id}`, { scaleY: 1, opacity: 1, duration: 0.6 });
     else gsap.to(`#layout_${id}`, { scaleY: 0, opacity: 0, duration: 0.6 });
   }, [isInView]);
 

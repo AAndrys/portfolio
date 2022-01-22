@@ -32,7 +32,8 @@ const App = () => {
       window.location.href = SECTIONS[slideNumber === 0 ? 0 : slideNumber - 1];
     } else {
       setslideNumber(slideNumber === MAX_SLIDES ? MAX_SLIDES : slideNumber + 1);
-      window.location.href = SECTIONS[slideNumber === MAX_SLIDES ? MAX_SLIDES : slideNumber + 1];
+      window.location.href =
+        SECTIONS[slideNumber === MAX_SLIDES ? MAX_SLIDES : slideNumber + 1];
     }
   };
 
@@ -42,7 +43,10 @@ const App = () => {
 
   return (
     <div className="App">
-      <StartScreen animationEnd={() => setStartAnimationEnd(true)} vantaLoaded={vantaLoaded} />
+      <StartScreen
+        animationEnd={() => setStartAnimationEnd(true)}
+        vantaLoaded={vantaLoaded}
+      />
       {endHomePageAnimation && (
         <Header>
           <MenuButton />
@@ -65,7 +69,9 @@ const App = () => {
 
       <DownScreen />
 
-      {endHomePageAnimation && slideNumber >= 1 && <UpArrow onClick={() => handleSlide("up")} />}
+      {endHomePageAnimation && slideNumber >= 1 && (
+        <UpArrow onClick={() => handleSlide("up")} />
+      )}
       {endHomePageAnimation && slideNumber !== MAX_SLIDES && (
         <DownArrow onClick={() => handleSlide("down")} />
       )}
