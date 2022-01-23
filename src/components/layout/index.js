@@ -8,7 +8,8 @@ const Layout = ({ id, title, isMiddle, children }) => {
   });
 
   useEffect(() => {
-    if (isInView) gsap.to(`#layout_${id}`, { yPercent: 0, opacity: 1, duration: 0.6 });
+    if (isInView)
+      gsap.to(`#layout_${id}`, { yPercent: 0, opacity: 1, duration: 0.6 });
     else gsap.to(`#layout_${id}`, { yPercent: 10, opacity: 0, duration: 0.6 });
   }, [isInView]);
 
@@ -16,7 +17,9 @@ const Layout = ({ id, title, isMiddle, children }) => {
     <section className="layout-wrapper" id={id}>
       <div
         ref={wrapperRef}
-        className={isMiddle ? "layout layout-margin-left" : "layout layout-margin-right"}
+        className={
+          isMiddle ? "layout layout-margin-left" : "layout layout-margin-right"
+        }
         id={`layout_${id}`}
       >
         <div className="layout-container">
