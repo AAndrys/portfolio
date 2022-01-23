@@ -1,6 +1,4 @@
 import React from "react";
-import { useInView } from "react-intersection-observer";
-import { gsap } from "gsap";
 
 import Layout from "../../layout";
 
@@ -19,7 +17,7 @@ const AboutMe = ({}) => {
   // }, [isVisible]);
 
   return (
-    <Layout title="About me" id="AboutMe">
+    <Layout title="About" id="AboutMe" isMiddle>
       <div className="s">
         <p>Example text</p>
       </div>
