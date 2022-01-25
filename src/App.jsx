@@ -15,8 +15,6 @@ import AboutMe from "./components/sections/aboutMe";
 import Technologies from "./components/sections/technologies";
 import Contact from "./components/sections/contact";
 
-import { gsap } from "gsap";
-
 const MAX_SLIDES = 3;
 const SECTIONS = ["#Home", "#AboutMe", "#Technologies", "#Contact"];
 
@@ -32,8 +30,7 @@ const App = () => {
       window.location.href = SECTIONS[slideNumber === 0 ? 0 : slideNumber - 1];
     } else {
       setslideNumber(slideNumber === MAX_SLIDES ? MAX_SLIDES : slideNumber + 1);
-      window.location.href =
-        SECTIONS[slideNumber === MAX_SLIDES ? MAX_SLIDES : slideNumber + 1];
+      window.location.href = SECTIONS[slideNumber === MAX_SLIDES ? MAX_SLIDES : slideNumber + 1];
     }
   };
 
@@ -43,10 +40,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <StartScreen
-        animationEnd={() => setStartAnimationEnd(true)}
-        vantaLoaded={vantaLoaded}
-      />
+      <StartScreen animationEnd={() => setStartAnimationEnd(true)} vantaLoaded={vantaLoaded} />
       {endHomePageAnimation && (
         <Header>
           <MenuButton />
@@ -69,9 +63,7 @@ const App = () => {
 
       <DownScreen />
 
-      {endHomePageAnimation && slideNumber >= 1 && (
-        <UpArrow onClick={() => handleSlide("up")} />
-      )}
+      {endHomePageAnimation && slideNumber >= 1 && <UpArrow onClick={() => handleSlide("up")} />}
       {endHomePageAnimation && slideNumber !== MAX_SLIDES && (
         <DownArrow onClick={() => handleSlide("down")} />
       )}

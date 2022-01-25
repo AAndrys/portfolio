@@ -1,7 +1,10 @@
 .layout-wrapper {
+  // background-color: rgb(10, 10, 10);
+
   .layout {
-    min-height: 100vh;
-    background-color: black;
+    // min-height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
     // border-top: 1px solid rgba(255, 255, 255, 0.1);
     opacity: 0;
 
@@ -9,26 +12,23 @@
       padding: 60px 25px;
 
       & h1 {
-        font-size: 4.5vw;
+        font-size: 45px;
         margin: 40px 0;
         text-transform: uppercase;
-        border-right: 2px solid rgb(255, 255, 255);
       }
     }
   }
-
-  .layout-margin-left {
-    margin-left: 30%;
-  }
-
-  .layout-margin-right {
-    margin-right: 30%;
-  }
 }
 
-.s {
-  & p {
-    font-size: 3vw;
-    font-weight: 300;
+@media (max-width: 1024px) {
+  .layout-wrapper {
+    .layout {
+      // margin-right: 2%;
+      .layout-container {
+        & h1 {
+          font-size: 25px;
+        }
+      }
+    }
   }
 }
