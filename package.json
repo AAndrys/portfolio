@@ -23,7 +23,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "pretty": "prettier --write \"./**/*.{ts,tsx,css,js,jsx,json}\"",
+    "pretty": "git add . && prettier --write \"./**/*.{ts,tsx,css,js,jsx,json}\"",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
