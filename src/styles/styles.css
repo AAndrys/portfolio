@@ -801,17 +801,22 @@
 
 .layout-wrapper .layout .layout-container {
   padding: 60px 25px;
+  position: relative;
 }
 
 .layout-wrapper .layout .layout-container h1 {
-  font-size: 45px;
+  font-family: "Poppins", sans-serif;
+  font-size: 95px;
   margin: 40px 0;
   text-transform: uppercase;
+  color: #ffffff23;
+  letter-spacing: 25px;
 }
 
 @media (max-width: 1024px) {
   .layout-wrapper .layout .layout-container h1 {
-    font-size: 25px;
+    font-size: 30px;
+    letter-spacing: 10px;
   }
 }
 
@@ -867,6 +872,19 @@
   }
 }
 
+.square-wrapper {
+  position: absolute;
+  bottom: 0;
+  right: 120px;
+  z-index: 1;
+}
+
+.square-wrapper > div {
+  background-color: #ffffff11;
+  border-radius: 25%;
+  display: inline-block;
+}
+
 .about-wrapper {
   position: relative;
   display: -ms-grid;
@@ -913,5 +931,60 @@
     -ms-flex-direction: column;
     flex-direction: column;
   }
+}
+
+.technologies-wrapper {
+  position: relative;
+  display: -ms-grid;
+  display: grid;
+  width: 100%;
+}
+
+.technologies-wrapper .slider-item {
+  min-width: 350px;
+  height: 350px;
+}
+
+.technologies-wrapper .slider-item .slider-item-title {
+  height: 20%;
+}
+
+.technologies-wrapper .slider-item .slider-item-title h4 {
+  font-size: 30px;
+  text-transform: uppercase;
+  padding: 20px 0 20px;
+}
+
+.technologies-wrapper .slider-item .slider-item-image {
+  width: 100%;
+  height: 80%;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 120px;
+  -o-object-fit: cover;
+  object-fit: cover;
+  background-color: #0d0d0d;
+}
+
+.technologies-wrapper .slider-item .slider-item-image svg {
+  width: 220px;
+  height: 220px;
+}
+
+.slick-slider .slick-list .slick-track {
+  width: -webkit-max-content !important;
+  width: -moz-max-content !important;
+  width: max-content !important;
+}
+
+.slick-slider .slick-list .slick-track .slick-slide {
+  min-width: 350px;
+  margin: 0 5px;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,45 @@
+.technologies-wrapper {
+  position: relative;
+  display: grid;
+  width: 100%;
+
+  .slider-item {
+    min-width: 350px;
+    height: 350px;
+
+    & .slider-item-title {
+      height: 20%;
+      & h4 {
+        font-size: 30px;
+        text-transform: uppercase;
+        padding: 20px 0 20px;
+      }
+    }
+
+    .slider-item-image {
+      width: 100%;
+      height: 80%;
+      display: grid;
+      justify-content: center;
+      align-items: center;
+      font-size: 120px;
+      object-fit: cover;
+      background-color: #0d0d0d;
+      svg {
+        width: 220px;
+        height: 220px;
+      }
+    }
+  }
+}
+
+.slick-slider {
+  & .slick-list .slick-track {
+    width: max-content !important;
+
+    & .slick-slide {
+      min-width: 350px;
+      margin: 0 5px;
+    }
+  }
+}

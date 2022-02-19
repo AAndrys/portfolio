@@ -3,6 +3,7 @@ import { useInView } from "react-intersection-observer";
 
 import Layout from "../../layout";
 import CountBox from "../../countBox";
+import Square from "../../Square";
 
 const AboutMe = ({}) => {
   const [wrapperRef, isInView] = useInView({
@@ -11,17 +12,7 @@ const AboutMe = ({}) => {
 
   return (
     <Layout title="About" id="AboutMe" gridColumn="1/13">
-      <div style={{ position: "absolute", bottom: 0, right: 120, zIndex: 1 }}>
-        <div
-          style={{
-            width: 380,
-            height: 380,
-            backgroundColor: "#ffffff11",
-            borderRadius: "25%",
-            display: "inline-block",
-          }}
-        />
-      </div>
+      <Square />
       <div ref={wrapperRef} className="about-wrapper">
         <p>
           Hello, my name is Adam. I am 22 years old and I am from Poland. As you

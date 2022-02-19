@@ -1,20 +1,20 @@
 .layout-wrapper {
-  // background-color: rgb(10, 10, 10);
-
   .layout {
-    // min-height: 100vh;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    // border-top: 1px solid rgba(255, 255, 255, 0.1);
     opacity: 0;
 
     .layout-container {
       padding: 60px 25px;
+      position: relative;
 
       & h1 {
-        font-size: 45px;
+        font-family: "Poppins", sans-serif;
+        font-size: 95px;
         margin: 40px 0;
         text-transform: uppercase;
+        color: #ffffff23;
+        letter-spacing: 25px;
       }
     }
   }
@@ -23,10 +23,10 @@
 @media (max-width: 1024px) {
   .layout-wrapper {
     .layout {
-      // margin-right: 2%;
       .layout-container {
         & h1 {
-          font-size: 25px;
+          font-size: 30px;
+          letter-spacing: 10px;
         }
       }
     }

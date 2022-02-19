@@ -40,7 +40,7 @@ const App = () => {
   }, [slideNumber]);
 
   return (
-    <div className="App">
+    <div className="App" style={{ display: "grid" }}>
       <StartScreen
         animationEnd={() => setStartAnimationEnd(true)}
         vantaLoaded={vantaLoaded}
@@ -51,7 +51,10 @@ const App = () => {
         </Header>
       )}
 
-      <div className="main-wrapper">
+      <div
+        className="main-wrapper"
+        style={{ maxWidth: 1680, justifySelf: "center" }}
+      >
         <HomePage
           startAnimationEnd={startAnimationEnd}
           endAnimation={endHomePageAnimation}
