@@ -15,7 +15,7 @@ const AboutMe = ({}) => {
       <Square />
       <div ref={wrapperRef} className="about-wrapper">
         <p>
-          Hello, my name is Adam. I am 22 years old and I am from Poland. As you
+          Hello, my name is Adam. I am 23 years old and I am from Poland. As you
           can see I am a JavaScript developer, and this is what I love so much!
           Too much time spent on learning, a lot of bad code and failures caused
           me resistant on defeat. Working with a large amount of lines code,
