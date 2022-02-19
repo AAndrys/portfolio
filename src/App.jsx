@@ -40,7 +40,7 @@ const App = () => {
   }, [slideNumber]);
 
   return (
-    <div className="App" style={{ display: "grid" }}>
+    <div className="App" style={{ display: "grid", overflow: "hidden" }}>
       <StartScreen
         animationEnd={() => setStartAnimationEnd(true)}
         vantaLoaded={vantaLoaded}
