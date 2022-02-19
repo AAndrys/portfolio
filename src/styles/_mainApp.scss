@@ -1,28 +1,4 @@
 .App {
-  // background: url('../assets/images/background/gradient.jpg') center no-repeat;
-  // background-size: cover;
-  min-height: 100vh;
-  display: flex;
-  text-align: center;
-  flex-direction: column;
   position: relative;
   overflow-y: hidden;
-  z-index: 9999;
-  
-  .main-component-container {
-    @include flexCenter(center, center);
-
-    height: 100vh;
-    padding: 0 20px;
-
-    h1 {
-      font-size: 1rem;
-      color: white;
-    }
-  }
-}
-
-.animated-dot {
-  font-size: 1rem;
-  animation: animatedDot 1s ease-in-out infinite;
 }

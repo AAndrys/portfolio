@@ -5,6 +5,7 @@
   padding: 0;
   box-sizing: border-box;
   /* font-family: 'Poppins', sans-serif; */
+  font-family: "Josefin Sans", sans-serif;
 }
 
 h1,
@@ -25,9 +26,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow: hidden;
-  background: url("./assets/images/background/gradient.jpg") center no-repeat;
-  background-size: cover;
+  background-color: black;
+  /* overflow: hidden; */
+  /* for future enable */
+  color: white;
 }
 
 code {

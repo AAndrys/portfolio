@@ -1,0 +1,33 @@
+.about-wrapper {
+  position: relative;
+  display: grid;
+  justify-content: space-between;
+  z-index: 10;
+
+  & p {
+    margin-right: 17%;
+    font-size: larger;
+    font-weight: 300;
+    line-height: 35px;
+  }
+
+  .about-amounts-container {
+    @include flexCenter(space-around, center, row);
+    width: 100%;
+    margin-top: 420px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .about-wrapper {
+    & p {
+      font-size: 20px;
+      line-height: 25px;
+    }
+
+    .about-amounts-container {
+      margin-top: 120px;
+      flex-direction: column;
+    }
+  }
+}

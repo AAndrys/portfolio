@@ -27,7 +27,7 @@
         transform: translateY(0%);
     }
 }
-
+/////////////
 @keyframes animatedDot {
     0% {
         opacity: 0;
@@ -56,5 +56,19 @@
     100% {
         opacity: 0;
         transform: translateY(-60%);
+    }
+}
+
+@keyframes homeTextAnimation {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.2);
     }
 }

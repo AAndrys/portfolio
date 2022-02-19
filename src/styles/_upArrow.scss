@@ -1,0 +1,11 @@
+.up-arrow-container {
+  position: fixed;
+  bottom: 2.4rem;
+  right: 1.4rem;
+  transition: all 0.2s linear;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}

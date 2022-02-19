@@ -1,5 +1,5 @@
 .start-screen-container {
-  background: url('../assets/images/background/gradient.jpg') center no-repeat;
+  background: url('../assets/images/background/gradient.png') center no-repeat;
   background-size: cover;
   width: 100%;
   min-height: 100vh;
@@ -20,19 +20,22 @@
     padding: 0 20px;
 
     h1 {
-      font-size: 2rem;
+      font-size: 1.5rem;
       color: white;
+      font-weight: 200;
     }
+    
     p {
         background-color: none;
         border: none;
         color: white;
         margin-top: 100px;
-        font-weight: bold;
+        font-weight: lighter;
         cursor: pointer;
         transition: all 0.3s linear;
         &:hover {
             opacity: 0.5;
+            word-spacing: 80%;
         }
     }
   }
@@ -52,7 +55,10 @@
     .start-screen-container {
         .start-component-container {
             h1 {
-                font-size: 1.5rem;
+                font-size: 1rem;
+            }
+            p {
+              font-size: 0.8rem;
             }
         }
     }

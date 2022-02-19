@@ -1,0 +1,34 @@
+.layout-wrapper {
+  .layout {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    opacity: 0;
+
+    .layout-container {
+      padding: 60px 25px;
+      position: relative;
+
+      & h1 {
+        font-family: "Poppins", sans-serif;
+        font-size: 95px;
+        margin: 40px 0;
+        text-transform: uppercase;
+        color: #ffffff23;
+        letter-spacing: 25px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .layout-wrapper {
+    .layout {
+      .layout-container {
+        & h1 {
+          font-size: 30px;
+          letter-spacing: 10px;
+        }
+      }
+    }
+  }
+}

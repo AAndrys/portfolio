@@ -1,0 +1,13 @@
+.down-arrow-container {
+  @include flexCenter(center, center);
+
+  position: fixed;
+  bottom: 1.4rem;
+  right: 1.4rem;
+  transition: all 0.2s linear;
+  cursor: pointer;
+
+  &:hover {
+    opacity: 0.5;
+  }
+}

@@ -1,25 +1,26 @@
 .navigation-item {
-    margin: 10px 0;
-    font-size: 5vw;
-    cursor: pointer;
-    text-decoration: none;
-    color: white;
-    position: relative;
-    transition: all .2s linear;
-    &::before {
-        content: '';
-        width: 0;
-        height: 4px;
-        position: absolute;
-        bottom: 1px;
-        background-color: white;
-        transition: all .3s linear;
-    }
-    &:hover::before {
-        width: 100%;
-    }
+  margin: 10px 0;
+  font-size: 5vw;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+  position: relative;
+  transition: all 0.2s linear;
+  text-transform: uppercase;
+  &::before {
+    content: "";
+    width: 0;
+    height: 2px;
+    position: absolute;
+    bottom: 1px;
+    background-color: white;
+    transition: all 0.3s linear;
+  }
+  &:hover::before {
+    width: 100%;
+  }
 }
 
 .navigation-item-active {
-    color: white;
+  color: white;
 }

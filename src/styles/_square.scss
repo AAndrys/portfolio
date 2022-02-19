@@ -1,0 +1,11 @@
+.square-wrapper {
+  position: absolute;
+  bottom: 0;
+  right: 120px;
+  z-index: 1;
+  & > div {
+    background-color: #ffffff11;
+    border-radius: 25%;
+    display: inline-block;
+  }
+}
