@@ -1,11 +1,25 @@
 .square-wrapper {
   position: absolute;
-  bottom: 0;
-  right: 120px;
+  bottom: 28%;
+  right: 18%;
+  display: flex;
   z-index: 1;
-  & > div {
-    background-color: #ffffff11;
-    border-radius: 25%;
-    display: inline-block;
+
+  & img {
+    width: 438px;
+    height: 438px;
+    aspect-ratio: 1/1;
+  }
+}
+
+@media (max-width: 1024px) {
+  .square-wrapper {
+    bottom: 38%;
+    right: 10%;
+
+    & img {
+      width: 238px;
+      height: 238px;
+    }
   }
 }

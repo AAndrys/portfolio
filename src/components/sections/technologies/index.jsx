@@ -16,13 +16,15 @@ const Technologies = ({}) => {
 
   const settings = {
     dots: false,
-    infinite: false,
     arrows: false,
-    speed: 500,
     slidesToShow: 4,
     slidesToScroll: 4,
     initialSlide: 0,
     infinite: true,
+    autoplay: true,
+    speed: 3000,
+    autoplaySpeed: 0,
+    cssEase: "linear",
     responsive: [
       {
         breakpoint: 1024,
@@ -42,7 +44,7 @@ const Technologies = ({}) => {
         breakpoint: 480,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1,
+          slidesToScroll: 3,
         },
       },
     ],

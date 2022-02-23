@@ -5,6 +5,7 @@
   height: 100vh;
   text-align: center;
   position: relative;
+  background-color: $black;
 
   .home-page-text-content {
     @include flexCenter(center, center);
@@ -23,6 +24,7 @@
 
     width: 100%;
     height: 100%;
+    z-index: 1;
 
     .home-page-profile {
       @include flexCenter(center, center);
@@ -55,7 +57,7 @@
     bottom: 0;
     right: 0;
     margin: auto 0;
-    z-index: -100;
+    z-index: 0;
     transition: all 1s linear;
 
     img {

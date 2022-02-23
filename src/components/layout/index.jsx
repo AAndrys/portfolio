@@ -11,18 +11,11 @@ const Layout = ({ id, title, gridColumn, children }) => {
     if (isInView)
       gsap.to(`#layout_${id}`, { yPercent: 0, opacity: 1, duration: 0.6 });
     else gsap.to(`#layout_${id}`, { yPercent: 10, opacity: 0, duration: 0.6 });
-  }, [isInView]);
+  }, [isInView, id]);
 
   return (
     <section className="layout-wrapper" id={id}>
-      <div
-        ref={wrapperRef}
-        // className={
-        //   isMiddle ? "layout layout-margin-left" : "layout layout-margin-right"
-        // }
-        className="layout"
-        id={`layout_${id}`}
-      >
+      <div ref={wrapperRef} className="layout" id={`layout_${id}`}>
         <div className="layout-container" style={{ gridColumn: gridColumn }}>
           {title && <h1>{title}</h1>}
           {children}

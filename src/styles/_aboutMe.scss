@@ -1,25 +1,43 @@
 .about-wrapper {
-  position: relative;
   display: grid;
-  justify-content: space-between;
-  z-index: 10;
+  position: relative;
+  z-index: 5;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 600px;
+    left: -13%;
+    width: 360px;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
 
   & p {
-    margin-right: 17%;
-    font-size: larger;
-    font-weight: 300;
-    line-height: 35px;
+    max-width: 1088px;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 125.5%;
+  }
+
+  & strong {
+    font-weight: 700;
   }
 
   .about-amounts-container {
     @include flexCenter(space-around, center, row);
     width: 100%;
-    margin-top: 420px;
+    margin-top: 718px;
   }
 }
 
 @media (max-width: 1024px) {
   .about-wrapper {
+    &::after {
+      top: 300px;
+      width: 140px;
+    }
+
     & p {
       font-size: 20px;
       line-height: 25px;

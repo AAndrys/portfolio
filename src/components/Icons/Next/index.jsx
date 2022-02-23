@@ -6,14 +6,14 @@ const NextIcon = () => {
       <g
         id="Page-1"
         stroke="none"
-        stroke-width="1"
+        strokeWidth="1"
         fill="none"
-        fill-rule="evenodd"
+        fillRule="evenodd"
       >
         <g
           id="White-Next.js"
           transform="translate(-247.000000, -138.000000)"
-          fill-rule="nonzero"
+          fillRule="nonzero"
         >
           <g
             id="next-white-vector"

@@ -3,7 +3,7 @@ import { useInView } from "react-intersection-observer";
 
 import Layout from "../../layout";
 import CountBox from "../../countBox";
-import Square from "../../Square";
+import Squares from "../../Squares";
 
 const AboutMe = ({}) => {
   const [wrapperRef, isInView] = useInView({
@@ -12,7 +12,7 @@ const AboutMe = ({}) => {
 
   return (
     <Layout title="About" id="AboutMe" gridColumn="1/13">
-      <Square />
+      <Squares />
       <div ref={wrapperRef} className="about-wrapper">
         <p>
           Hello, my name is Adam. I am 23 years old and I am from Poland. As you

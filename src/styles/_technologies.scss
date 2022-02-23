@@ -1,6 +1,6 @@
 #Technologies {
   position: relative;
-  background-color: #141414;
+
   & .layout {
     display: flex;
   }
@@ -14,8 +14,8 @@
     align-items: center;
 
     .slider-item {
-      min-width: 350px;
-      height: 350px;
+      min-width: 450px;
+      height: 450px;
 
       & .slider-item-title {
         height: 20%;
@@ -51,7 +51,7 @@
       width: max-content !important;
 
       & .slick-slide {
-        min-width: 350px;
+        min-width: 450px;
         margin: 0 5px;
       }
     }

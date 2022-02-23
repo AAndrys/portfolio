@@ -51,11 +51,7 @@ const App = () => {
         </Header>
       )}
 
-      <div
-        className="main-wrapper"
-        style={{ justifySelf: "center" }}
-        // style={{ maxWidth: 1680, justifySelf: "center" }}
-      >
+      <div className="main-wrapper" style={{ justifySelf: "center" }}>
         <HomePage
           startAnimationEnd={startAnimationEnd}
           endAnimation={endHomePageAnimation}
