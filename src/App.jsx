@@ -51,7 +51,10 @@ const App = () => {
         </Header>
       )}
 
-      <div className="main-wrapper" style={{ justifySelf: "center" }}>
+      <main
+        className="main-wrapper"
+        style={{ justifySelf: "center", width: "100%" }}
+      >
         <HomePage
           startAnimationEnd={startAnimationEnd}
           endAnimation={endHomePageAnimation}
@@ -63,7 +66,7 @@ const App = () => {
 
         {/* <ThreeScene /> */}
         {/* <Vanta vantaLoaded={() => setVantaLoaded(true)} /> */}
-      </div>
+      </main>
 
       <DownScreen />
 

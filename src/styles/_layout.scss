@@ -6,7 +6,8 @@
     width: 40%;
     height: 2px;
     position: absolute;
-    bottom: -50px;
+    //bottom: -50px;
+    bottom: -28px;
     right: 0;
     left: 0;
     margin: auto;
@@ -34,6 +35,18 @@
         text-transform: uppercase;
         color: #ffffff23;
         letter-spacing: 25px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .layout-wrapper {
+    .layout {
+      .layout-container {
+        & h1 {
+          font-size: 100px;
+        }
       }
     }
   }

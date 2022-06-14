@@ -5,6 +5,9 @@ import Layout from "../../layout";
 import CountBox from "../../countBox";
 import Squares from "../../Squares";
 
+import { BIRTHDAY_DATE, EXPERIENCE_DATE } from "../../../utils/constants";
+import { calculateYears } from "../../../utils/calculateYears";
+
 const AboutMe = ({}) => {
   const [wrapperRef, isInView] = useInView({
     threshold: 0.1,
@@ -15,17 +18,21 @@ const AboutMe = ({}) => {
       <Squares />
       <div ref={wrapperRef} className="about-wrapper">
         <p>
-          Hello, my name is Adam. I am 23 years old and I am from Poland. As you
-          can see I am a JavaScript developer, and this is what I love so much!
-          Too much time spent on learning, a lot of bad code and failures caused
-          me resistant on defeat. Working with a large amount of lines code,
-          experience caused me increasing more professionalism.
+          Hello, my name is Adam. I am {calculateYears(new Date(BIRTHDAY_DATE))}{" "}
+          years old and I am from Poland. As you can see I am a JavaScript
+          developer, and this is what I love so much! Too much time spent on
+          learning, a lot of bad code and failures caused me resistant on
+          defeat. Working with a large amount of lines code, experience caused
+          me increasing more professionalism.
           <br />
           <strong>Programming is my hooby and I love it!</strong>{" "}
         </p>
 
         <div className="about-amounts-container">
-          <CountBox text="Years of experience" countNumber={1} />
+          <CountBox
+            text="Years of experience"
+            countNumber={calculateYears(new Date(EXPERIENCE_DATE))}
+          />
           <CountBox
             text="Number of written lines of code"
             countNumber={10000}

@@ -1,4 +1,5 @@
 .about-wrapper {
+  width: 100%;
   display: grid;
   position: relative;
   z-index: 5;
@@ -8,6 +9,16 @@
     position: absolute;
     top: 600px;
     left: -13%;
+    width: 360px;
+    height: 4px;
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 1050px;
+    right: -13%;
     width: 360px;
     height: 4px;
     background-color: rgba(255, 255, 255, 0.2);
@@ -31,11 +42,33 @@
   }
 }
 
+@media (max-width: 1280px) {
+  .about-wrapper {
+    &::after {
+      top: 370px;
+    }
+
+    &::before {
+      width: 215px;
+      top: 880px;
+    }
+
+    & p {
+      font-size: 32px;
+    }
+  }
+}
+
 @media (max-width: 1024px) {
   .about-wrapper {
     &::after {
+      width: 180px;
       top: 300px;
-      width: 140px;
+    }
+
+    &::before {
+      width: 42px;
+      top: 715px;
     }
 
     & p {
