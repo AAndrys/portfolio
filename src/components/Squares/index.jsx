@@ -1,5 +1,5 @@
-import React from "react";
-import SquaresIcon from "../../assets/svgs/squares.svg";
+import React from 'react';
+import SquaresIcon from '../../assets/svgs/squares.svg';
 
 const Squares = ({ bottom, right }) => {
   return (

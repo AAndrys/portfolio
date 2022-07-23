@@ -1,15 +1,14 @@
-import React, { useEffect } from "react";
-import { useInView } from "react-intersection-observer";
-import { gsap } from "gsap";
+import { gsap } from 'gsap';
+import React, { useEffect } from 'react';
+import { useInView } from 'react-intersection-observer';
 
 const Layout = ({ id, title, gridColumn, children }) => {
   const [wrapperRef, isInView] = useInView({
-    threshold: 0.1,
+    threshold: 0.1
   });
 
   useEffect(() => {
-    if (isInView)
-      gsap.to(`#layout_${id}`, { yPercent: 0, opacity: 1, duration: 0.6 });
+    if (isInView) gsap.to(`#layout_${id}`, { yPercent: 0, opacity: 1, duration: 0.6 });
     else gsap.to(`#layout_${id}`, { yPercent: 10, opacity: 0, duration: 0.6 });
   }, [isInView, id]);
 

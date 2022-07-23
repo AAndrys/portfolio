@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { gsap } from "gsap";
+import React, { useState } from 'react';
+import { gsap } from 'gsap';
 
-import Line from "../line";
+import Line from '../line';
 
 const MenuButton = ({ onClickButton = () => null }) => {
   const [isMouseEnter, setIsMouseEnter] = useState(false);
@@ -10,7 +10,7 @@ const MenuButton = ({ onClickButton = () => null }) => {
   const [lineValues, setLineValues] = useState({
     0: 90,
     1: 60,
-    2: 30,
+    2: 30
   });
 
   const handleMouse = () => {
@@ -18,24 +18,23 @@ const MenuButton = ({ onClickButton = () => null }) => {
     setLineValues({
       0: isMouseEnter ? 90 : 100,
       1: isMouseEnter ? 60 : 100,
-      2: isMouseEnter ? 30 : 100,
+      2: isMouseEnter ? 30 : 100
     });
     if (newStyles) {
       setLineValues({
         0: 100,
         1: 100,
-        2: 100,
+        2: 100
       });
     }
   };
 
   const handleButton = () => {
-    gsap.to(".down-screen-container", {
+    gsap.to('.down-screen-container', {
       top:
-        isMenuOpen &&
-        document.querySelector(".down-screen-container").style.top !== "100%"
-          ? "100%"
-          : 0,
+        isMenuOpen && document.querySelector('.down-screen-container').style.top !== '100%'
+          ? '100%'
+          : 0
     });
     setIsMenuOpen(!isMenuOpen);
     onClickButton();
@@ -48,10 +47,13 @@ const MenuButton = ({ onClickButton = () => null }) => {
       onMouseEnter={handleMouse}
       onMouseLeave={handleMouse}
       onClick={handleButton}
+      onKeyDown={handleButton}
+      role="button"
+      tabIndex={0}
     >
-      <Line lineWidth={lineValues["0"]} />
-      <Line lineWidth={lineValues["1"]} />
-      <Line lineWidth={lineValues["2"]} />
+      <Line lineWidth={lineValues['0']} />
+      <Line lineWidth={lineValues['1']} />
+      <Line lineWidth={lineValues['2']} />
     </div>
   );
 };

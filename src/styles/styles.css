@@ -299,7 +299,7 @@
 .down-screen-container {
   width: 100%;
   height: calc(100vh - calc(100vh - 100%));
-  background: url("../assets/images/background/gradient.png") center no-repeat;
+  background: url('../assets/images/background/gradient.png') center no-repeat;
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -404,10 +404,7 @@
   height: 100%;
 }
 
-.down-screen-container
-  .middle-side-content
-  .middle-side-container
-  .middle-navigation-list {
+.down-screen-container .middle-side-content .middle-side-container .middle-navigation-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -456,7 +453,7 @@
 }
 
 .navigation-item::before {
-  content: "";
+  content: '';
   width: 0;
   height: 2px;
   position: absolute;
@@ -510,7 +507,7 @@
 }
 
 .start-screen-container {
-  background: url("../assets/images/background/gradient.png") center no-repeat;
+  background: url('../assets/images/background/gradient.png') center no-repeat;
   background-size: cover;
   width: 100%;
   min-height: 100vh;
@@ -677,7 +674,7 @@
 }
 
 .home-page-container .home-page-main-content .home-page-profile h1 {
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 3rem;
   letter-spacing: 5px;
 }
@@ -800,7 +797,7 @@
 }
 
 .layout-wrapper::after {
-  content: "";
+  content: '';
   width: 40%;
   height: 2px;
   position: absolute;
@@ -948,7 +945,7 @@
 }
 
 .about-wrapper::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 600px;
   left: -13%;
@@ -958,7 +955,7 @@
 }
 
 .about-wrapper::before {
-  content: "";
+  content: '';
   position: absolute;
   top: 1050px;
   right: -13%;

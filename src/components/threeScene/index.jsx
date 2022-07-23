@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import * as THREE from "three";
+import React, { Component } from 'react';
+import * as THREE from 'three';
 
 class ThreeScene extends Component {
   componentDidMount() {
@@ -75,7 +75,7 @@ class ThreeScene extends Component {
     const planeGeometry = new THREE.PlaneGeometry(10, 20, 32);
     const planeMaterial = new THREE.MeshBasicMaterial({
       color: 0xccac20,
-      side: THREE.DoubleSide,
+      side: THREE.DoubleSide
     });
     const plane = new THREE.Mesh(planeGeometry, planeMaterial);
     plane.rotation.x = 1.6;
@@ -87,7 +87,7 @@ class ThreeScene extends Component {
   generateCube = (x = 0, y = 0, z = 0) => {
     const geometry = new THREE.BoxGeometry(3, 0.1, 3);
     const material = new THREE.MeshPhongMaterial({
-      color: new THREE.Color("#023b66"),
+      color: new THREE.Color('#023b66')
     });
     const cube = new THREE.Mesh(geometry, material);
 
@@ -97,10 +97,7 @@ class ThreeScene extends Component {
 
   render() {
     return (
-      <div
-        ref={(ref) => (this.mount = ref)}
-        style={{ position: "absolute", zIndex: "-100" }}
-      />
+      <div ref={(ref) => (this.mount = ref)} style={{ position: 'absolute', zIndex: '-100' }} />
     );
   }
 }

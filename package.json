@@ -29,10 +29,13 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "lint": "eslint -c .eslintrc.js --ext .js,.jsx .",
+    "lint:fix": "npm run lint -- --fix"
   },
   "pre-commit": [
-    "pretty"
+    "pretty",
+    "lint:fix"
   ],
   "eslintConfig": {
     "extends": [
@@ -53,8 +56,11 @@
     ]
   },
   "devDependencies": {
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.2.1",
     "pre-commit": "^1.2.2",
-    "prettier": "^2.2.1"
+    "prettier": "^2.7.1"
   },
+  "prettier-format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc",
   "homepage": "https://aandrys.github.io/Portfolio2"
 }
