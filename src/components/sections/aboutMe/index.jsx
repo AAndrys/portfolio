@@ -23,7 +23,7 @@ const AboutMe = () => {
           defeat. Working with a large amount of lines code, experience caused me increasing more
           professionalism.
           <br />
-          <strong>Programming is my hooby and I love it!</strong>{' '}
+          <strong>Programming is my hooby and I love it!</strong>
         </p>
 
         <div className="about-amounts-container">
