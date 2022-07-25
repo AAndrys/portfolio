@@ -40,12 +40,12 @@
   },
   "lint-staged": {
     "*.{js,jsx}": [
-      "prettier --write",
-      "eslint --fix",
+      "prettier --write \"./**/*.{ts,tsx,css,js,jsx,json}\"",
+      "npm run lint -- --fix",
       "git add"
     ],
     "*.{html,css,less,ejs}": [
-      "prettier --write",
+      "prettier --write \"./**/*.{ts,tsx,css,js,jsx,json}\"",
       "git add"
     ]
   },
