@@ -14,7 +14,7 @@
   z-index: 99999;
 
   .start-component-container {
-    @include flexCenter(center, center);
+    @include flexBox(center, center);
 
     height: 100vh;
     padding: 0 20px;
@@ -24,19 +24,19 @@
       color: white;
       font-weight: 200;
     }
-    
+
     p {
-        background-color: none;
-        border: none;
-        color: white;
-        margin-top: 100px;
-        font-weight: lighter;
-        cursor: pointer;
-        transition: all 0.3s linear;
-        &:hover {
-            opacity: 0.5;
-            word-spacing: 80%;
-        }
+      background-color: none;
+      border: none;
+      color: white;
+      margin-top: 100px;
+      font-weight: lighter;
+      cursor: pointer;
+      transition: all 0.3s linear;
+      &:hover {
+        opacity: 0.5;
+        word-spacing: 80%;
+      }
     }
   }
 }
@@ -47,19 +47,19 @@
 }
 
 .animated-opacity {
-    opacity: 0;
-    animation: startScreenOpacity 1s ease-in-out;
+  opacity: 0;
+  animation: startScreenOpacity 1s ease-in-out;
 }
 
 @media only screen and (max-width: 950px) {
-    .start-screen-container {
-        .start-component-container {
-            h1 {
-                font-size: 1rem;
-            }
-            p {
-              font-size: 0.8rem;
-            }
-        }
+  .start-screen-container {
+    .start-component-container {
+      h1 {
+        font-size: 1rem;
+      }
+      p {
+        font-size: 0.8rem;
+      }
     }
+  }
 }

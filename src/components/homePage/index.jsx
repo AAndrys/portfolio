@@ -6,7 +6,6 @@ import Face from '../../assets/images/background/twarz_black.png';
 
 const HomePage = ({ startAnimationEnd, endAnimation, setEndAnimation }) => {
   const [firstAnimationEnd, setFirstAnimationEnd] = useState(false);
-  // const [endAnimation, setEndAnimation] = useState(false);
 
   useEffect(() => {
     gsap.fromTo('.face-image', { opacity: 0, x: -100 }, { opacity: 1, x: 0, duration: 2 });
@@ -45,7 +44,7 @@ const HomePage = ({ startAnimationEnd, endAnimation, setEndAnimation }) => {
       <div className="home-page-main-content">
         <div className="home-page-profile">
           <h1>ADAM ANDRYSIAK</h1>
-          <p>JavaScript Developer</p>
+          <h6>JavaScript Developer</h6>
         </div>
         <div className="home-page-profile-info" />
       </div>

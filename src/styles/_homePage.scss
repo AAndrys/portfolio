@@ -1,5 +1,5 @@
 .home-page-container {
-  @include flexCenter(center, center);
+  @include flexBox(center, center);
 
   width: 100%;
   height: 100vh;
@@ -8,7 +8,7 @@
   background-color: $black;
 
   .home-page-text-content {
-    @include flexCenter(center, center);
+    @include flexBox(center, center);
 
     width: 100%;
     height: 100%;
@@ -20,14 +20,14 @@
   }
 
   .home-page-main-content {
-    @include flexCenter(center, center, row);
+    @include flexBox(center, center, row);
 
     width: 100%;
     height: 100%;
     z-index: 1;
 
     .home-page-profile {
-      @include flexCenter(center, center);
+      @include flexBox(center, center);
 
       width: 50%;
       border-right: 1px solid rgba(255, 255, 255, 0.3);
@@ -35,13 +35,13 @@
       overflow: hidden;
 
       h1 {
-        font-family: "Poppins", sans-serif;
-        font-size: 3rem;
+        // font-size: 3rem;
+        font-weight: 300;
         letter-spacing: 5px;
       }
     }
     .home-page-profile-info {
-      @include flexCenter(center, center);
+      @include flexBox(center, center);
 
       width: 50%;
 
@@ -79,14 +79,6 @@
         padding: 20px 0;
         border: none;
         opacity: 0;
-
-        h1 {
-          font-size: larger;
-        }
-
-        p {
-          font-size: medium;
-        }
       }
     }
 

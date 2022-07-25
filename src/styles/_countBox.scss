@@ -1,11 +1,11 @@
 .count-box {
-  @include flexCenter(flex-start, center);
+  @include flexBox(flex-start, center);
 
   padding: 10px 20px;
   text-align: center;
 
   .count-box-wrapper {
-    @include flexCenter(center, center, row);
+    @include flexBox(center, center, row);
 
     width: 100%;
     height: 80%;

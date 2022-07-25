@@ -1,12 +1,9 @@
 .layout-wrapper {
-  position: relative;
-
   &::after {
-    content: "";
+    content: '';
     width: 40%;
     height: 2px;
     position: absolute;
-    //bottom: -50px;
     bottom: -28px;
     right: 0;
     left: 0;
@@ -20,46 +17,51 @@
     height: 100%;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    opacity: 0;
-    min-height: 1200px;
+    // opacity: 0;
+    // min-height: 1200px;
 
     .layout-container {
       width: 100%;
-      height: auto;
       padding: 60px 10%;
       position: relative;
+      word-break: break-word;
+      grid-column: 1/13;
 
       & h1 {
-        font-size: 144px;
+        //  font-size: 144px;
         margin: 0 0 46px 0;
         text-transform: uppercase;
         color: #ffffff23;
-        letter-spacing: 25px;
+        letter-spacing: 10px;
+        // letter-spacing: 25px;
       }
     }
   }
 }
 
-@media (max-width: 1280px) {
+@media (min-width: 1280px) {
   .layout-wrapper {
     .layout {
+      min-height: 1200px;
       .layout-container {
         & h1 {
-          font-size: 100px;
+          //font-size: 100px;
+          letter-spacing: 25px;
         }
       }
     }
   }
 }
 
-@media (max-width: 1024px) {
+@media (min-width: 1024px) {
   .layout-wrapper {
     .layout {
-      min-height: 800px;
+      // min-height: 800px;
       .layout-container {
         & h1 {
-          font-size: 30px;
-          letter-spacing: 10px;
+          font-size: 100px;
+          // font-size: 30px;
+          //letter-spacing: 10px;
         }
       }
     }

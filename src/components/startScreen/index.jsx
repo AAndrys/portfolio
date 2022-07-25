@@ -40,10 +40,8 @@ const StartScreen = ({ animationEnd }) => {
           WELCOME TO MY WEBSITE
           <i className="animated-dot"> .</i>
         </h1>
-        <p className="start-screen-text">
-          <button onClick={handleStartButton} onKeyDown={handleStartButton}>
-            START
-          </button>
+        <p className="start-screen-text" onClick={handleStartButton} onKeyDown={handleStartButton}>
+          START
         </p>
       </div>
     </div>

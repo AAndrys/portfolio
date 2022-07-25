@@ -6,12 +6,12 @@
   z-index: 1000;
 
   .header-container {
-    @include flexCenter(space-between, center, row);
+    @include flexBox(space-between, center, row);
 
     padding: 20px 2vw;
 
     .header-title-container {
-      @include flexCenter(center, center, row);
+      @include flexBox(center, center, row);
 
       position: relative;
       text-align: center;
