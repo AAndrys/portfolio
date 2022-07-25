@@ -938,6 +938,7 @@ em {
   display: grid;
   -ms-grid-columns: (1fr) [12];
   grid-template-columns: repeat(12, 1fr);
+  min-height: 800px;
 }
 
 .layout-wrapper .layout .layout-container {
