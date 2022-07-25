@@ -11,8 +11,6 @@ module.exports = {
     'eslint:recommended',
     'plugin:react/recommended',
     'plugin:react-hooks/recommended',
-    'plugin:jest/recommended',
-    'plugin:testing-library/react',
     'plugin:prettier/recommended',
     'prettier'
   ],
@@ -24,10 +22,7 @@ module.exports = {
     ecmaVersion: 2018, // Allows for the parsing of modern ECMAScript features
     sourceType: 'module' // Allows for the use of imports
   },
-  plugins: [
-    'prettier',
-    'import' // eslint-plugin-import plugin. https://www.npmjs.com/package/eslint-plugin-import
-  ],
+  plugins: ['prettier'],
   root: true, // For configuration cascading.
   rules: {
     'comma-dangle': ['warn', 'never'],

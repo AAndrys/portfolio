@@ -31,7 +31,9 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "lint": "eslint -c .eslintrc.js --ext .js,.jsx .",
-    "lint:fix": "npm run lint -- --fix"
+    "lint:fix": "npm run lint -- --fix",
+    "husky-install": "husky install",
+    "lint-staged": "lint-staged"
   },
   "husky": {
     "hooks": {
@@ -41,12 +43,10 @@
   "lint-staged": {
     "*.{js,jsx}": [
       "prettier --write \"./**/*.{ts,tsx,css,js,jsx,json}\"",
-      "npm run lint -- --fix",
-      "git add"
+      "eslint --cache --fix"
     ],
     "*.{html,css,less,ejs}": [
-      "prettier --write \"./**/*.{ts,tsx,css,js,jsx,json}\"",
-      "git add"
+      "prettier --write \"./**/*.{ts,tsx,css,js,jsx,json}\""
     ]
   },
   "eslintConfig": {
@@ -69,6 +69,8 @@
   },
   "devDependencies": {
     "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-jest": "^26.6.0",
+    "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.1",
     "lint-staged": "^13.0.3",
