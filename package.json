@@ -33,9 +33,11 @@
     "lint": "eslint -c .eslintrc.js --ext .js,.jsx .",
     "lint:fix": "npm run lint -- --fix"
   },
+  "lint-staged": {
+    "*.{js,jsx}": "eslint --fix"
+  },
   "pre-commit": [
-    "pretty",
-    "lint:fix"
+    "pretty"
   ],
   "eslintConfig": {
     "extends": [
@@ -58,6 +60,7 @@
   "devDependencies": {
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-prettier": "^4.2.1",
+    "lint-staged": "^13.0.3",
     "pre-commit": "^1.2.2",
     "prettier": "^2.7.1"
   },
