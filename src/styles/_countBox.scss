@@ -1,6 +1,7 @@
 .count-box {
   @include flexBox(flex-start, center);
 
+  margin-top: 80px;
   padding: 10px 20px;
   text-align: center;
 
@@ -10,20 +11,46 @@
     width: 100%;
     height: 80%;
 
-    & span {
+    span {
       color: $goldColor;
-      font-size: 80px;
+      font-size: 56px;
     }
   }
 
-  & span {
+  span {
     font-weight: bold;
-    font-size: 25px;
+    font-size: 22px;
   }
 }
 
-@media (max-width: 1024px) {
+@include media('md') {
   .count-box {
-    margin-top: 80px;
+    margin: 0;
+
+    .count-box-wrapper {
+      span {
+        font-size: 62px;
+      }
+    }
+
+    span {
+      font-size: 24px;
+    }
+  }
+}
+
+@include media('md') {
+  .count-box {
+    margin: 0;
+
+    .count-box-wrapper {
+      span {
+        font-size: 72px;
+      }
+    }
+
+    span {
+      font-size: 28px;
+    }
   }
 }

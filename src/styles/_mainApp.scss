@@ -79,72 +79,108 @@ em {
   display: none;
 }
 
-@media (min-width: 1280px) {
+@include media('md') {
   h1 {
-    font-size: 56px;
+    font-size: 50px;
   }
 
   h2 {
-    font-size: 52px;
+    font-size: 46px;
   }
 
   h3 {
-    font-size: 48px;
-  }
-
-  h4 {
     font-size: 42px;
   }
 
+  h4 {
+    font-size: 36px;
+  }
+
   h5 {
-    font-size: 38px;
+    font-size: 32px;
   }
 
   h6 {
-    font-size: 32px;
+    font-size: 26px;
   }
 
   body,
   p,
   li {
-    font-weight: 300;
-    font-size: 30px;
-    letter-spacing: -0.4px;
+    font-size: 24px;
+    letter-spacing: -0.2px;
   }
 
   label {
-    font-weight: 400;
     font-size: 12px;
+    letter-spacing: 0.1px;
+  }
+
+  small {
+    font-size: 10px;
+    line-height: 16px;
+    letter-spacing: 0.1px;
+  }
+
+  span {
+    font-size: 22px;
+  }
+
+  em {
+    font-size: 20px;
     letter-spacing: -0.1px;
+  }
+}
+
+@include media('md') {
+  h1 {
+    font-size: 58px;
+  }
+
+  h2 {
+    font-size: 54px;
+  }
+
+  h3 {
+    font-size: 50px;
+  }
+
+  h4 {
+    font-size: 44px;
+  }
+
+  h5 {
+    font-size: 40px;
+  }
+
+  h6 {
+    font-size: 34px;
+  }
+
+  body,
+  p,
+  li {
+    font-size: 30px;
+    letter-spacing: 0.2px;
+  }
+
+  label {
+    font-size: 14px;
+    letter-spacing: 0.1px;
   }
 
   small {
     font-size: 14px;
     line-height: 18px;
-    letter-spacing: -0.2px;
-  }
-
-  a {
-    color: white;
+    letter-spacing: 0.2px;
   }
 
   span {
     font-size: 26px;
   }
 
-  strong {
-    font-weight: 600;
-  }
-
   em {
-    font-size: 18px;
-    font-weight: 300;
-    letter-spacing: -0.4px;
-    line-height: 22px;
-    font-style: italic;
-  }
-
-  ::-webkit-scrollbar {
-    display: none;
+    font-size: 22px;
+    letter-spacing: -0.2px;
   }
 }

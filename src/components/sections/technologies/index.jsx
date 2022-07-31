@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
 import Slider from 'react-slick';
 
@@ -13,38 +13,38 @@ const Technologies = () => {
   const [wrapperRef, isInView] = useInView({
     threshold: 0.1
   });
+  const sliderRef = useRef();
 
   const settings = {
     dots: false,
     arrows: false,
-    slidesToShow: 4,
-    slidesToScroll: 4,
+    slidesToShow: 2,
+    slidesToScroll: 2,
     initialSlide: 0,
     infinite: true,
     autoplay: true,
-    speed: 3000,
-    autoplaySpeed: 0,
+    speed: 200,
     cssEase: 'linear',
     responsive: [
       {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 4
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 4
-        }
-      },
-      {
-        breakpoint: 480,
+        breakpoint: 1280,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 3
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
+        }
+      },
+      {
+        breakpoint: 100,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2
         }
       }
     ]
@@ -52,16 +52,20 @@ const Technologies = () => {
 
   return (
     <Layout title="Technologies" id="Technologies">
+      <p>
+        Technologies that I have learned to a varying degree or that I have had contact with in any
+        projects.
+      </p>
       <div ref={wrapperRef} className="technologies-wrapper">
-        <div style={{ width: document.documentElement.clientWidth - 52 }}>
-          <Slider {...settings}>
+        <div style={{ width: window.innerWidth }}>
+          <Slider ref={sliderRef} {...settings}>
             {SLIDER_ITEMS.map(({ title, image }, index) => (
               <div key={title + index} className="slider-item">
                 <div className="slider-item-image" role="presentation">
                   {image()}
                 </div>
                 <div className="slider-item-title">
-                  <h4>{title}</h4>
+                  <h6>{title}</h6>
                 </div>
               </div>
             ))}

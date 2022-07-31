@@ -10,3 +10,9 @@ $saffronMango: #f7cc4c;
 $mineShaftLight: #252525;
 $codGrayJs: #151515;
 $mineShaftLighter: #393939;
+
+$breakpoints: (
+  'sm': 420px,
+  'md': 1024px,
+  'lg': 1280px
+) !default;

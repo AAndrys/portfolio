@@ -1,6 +1,7 @@
 import React from 'react';
 import { useInView } from 'react-intersection-observer';
 
+import { countHours } from '../../../utils/countHours';
 import { calculateYears } from '../../../utils/calculateYears';
 import { BIRTHDAY_DATE, EXPERIENCE_DATE } from '../../../utils/constants';
 import CountBox from '../../countBox';
@@ -32,7 +33,7 @@ const AboutMe = () => {
             countNumber={calculateYears(new Date(EXPERIENCE_DATE))}
           />
           <CountBox text="Number of written lines of code" countNumber={10000} />
-          <CountBox text="Hours spent on learning" countNumber={4860} />
+          <CountBox text="Hours spent on learning" countNumber={countHours()} />
         </div>
       </div>
     </Layout>

@@ -10,13 +10,14 @@ import MenuButton from './components/menuButton';
 import AboutMe from './components/sections/aboutMe';
 import Contact from './components/sections/contact';
 import Technologies from './components/sections/technologies';
+import Testimonial from './components/sections/testimonial';
 import StartScreen from './components/startScreen';
 // import ThreeScene from "./components/threeScene";
 // import Vanta from "./components/vanta";
 import UpArrow from './components/upArrow';
 
 const MAX_SLIDES = 3;
-const SECTIONS = ['#Home', '#AboutMe', '#Technologies', '#Contact'];
+const SECTIONS = ['#Home', '#AboutMe', '#Technologies', '#Testimonial', '#Contact'];
 
 const App = () => {
   const [endHomePageAnimation, setEndHomePageAnimation] = useState(false);
@@ -54,6 +55,7 @@ const App = () => {
         />
         <AboutMe />
         <Technologies />
+        <Testimonial />
         <Contact />
 
         {/* <ThreeScene /> */}
