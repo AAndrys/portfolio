@@ -3,6 +3,29 @@
   overflow-y: hidden;
 }
 
+.mineShaft {
+  background-color: $mineShaftLight;
+}
+
+.mineShaftLighter {
+  background-color: $mineShaftLighter;
+}
+
+.bottom-line {
+  &::after {
+    content: '';
+    width: 40%;
+    height: 2px;
+    position: absolute;
+    bottom: -28px;
+    right: 0;
+    left: 0;
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.2);
+    z-index: 1;
+  }
+}
+
 h1 {
   font-size: 42px;
   letter-spacing: -0.2px;
@@ -29,7 +52,7 @@ h5 {
 }
 
 h6 {
-  font-size: 22px;
+  font-size: 24px;
   letter-spacing: -0.2px;
 }
 
@@ -43,13 +66,13 @@ li {
 
 label {
   font-weight: 400;
-  font-size: 10px;
+  font-size: 14px;
   letter-spacing: -0.1px;
 }
 
 small {
-  font-weight: 400;
-  font-size: 8px;
+  font-weight: 300;
+  font-size: 14px;
   line-height: 14px;
   letter-spacing: -0.1px;
 }
@@ -112,12 +135,12 @@ em {
   }
 
   label {
-    font-size: 12px;
+    font-size: 18px;
     letter-spacing: 0.1px;
   }
 
   small {
-    font-size: 10px;
+    font-size: 18px;
     line-height: 16px;
     letter-spacing: 0.1px;
   }
@@ -132,7 +155,7 @@ em {
   }
 }
 
-@include media('md') {
+@include media('lg') {
   h1 {
     font-size: 58px;
   }
@@ -165,12 +188,12 @@ em {
   }
 
   label {
-    font-size: 14px;
+    font-size: 20px;
     letter-spacing: 0.1px;
   }
 
   small {
-    font-size: 14px;
+    font-size: 18px;
     line-height: 18px;
     letter-spacing: 0.2px;
   }

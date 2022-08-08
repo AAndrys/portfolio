@@ -9,7 +9,7 @@ import Layout from '../../layout';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
-const Technologies = () => {
+const Projects = () => {
   const [wrapperRef, isInView] = useInView({
     threshold: 0.1
   });
@@ -22,7 +22,7 @@ const Technologies = () => {
     slidesToScroll: 2,
     initialSlide: 0,
     infinite: true,
-    autoplay: true,
+    autoplay: false,
     speed: 200,
     cssEase: 'linear',
     responsive: [
@@ -51,21 +51,19 @@ const Technologies = () => {
   };
 
   return (
-    <Layout title="Technologies" id="Technologies" bottomLine={false}>
-      <p>
-        Technologies that I have learned to a varying degree or that I have had contact with in any
-        projects.
-      </p>
-      <div ref={wrapperRef} className="technologies-wrapper">
+    <Layout title="Projects" id="Projects" bottomLine={false}>
+      <p>A few examples projects in which I participated or I have made.</p>
+      <div ref={wrapperRef} className="projects-wrapper">
         <div style={{ width: window.innerWidth }}>
           <Slider ref={sliderRef} {...settings}>
             {SLIDER_ITEMS.map(({ title, image }, index) => (
               <div key={title + index} className="slider-item">
                 <div className="slider-item-image" role="presentation">
-                  {image()}
+                  <img src={image} alt={title} />
                 </div>
                 <div className="slider-item-title">
                   <h6>{title}</h6>
+                  <small>My own web application created in React.js</small>
                 </div>
               </div>
             ))}
@@ -76,4 +74,4 @@ const Technologies = () => {
   );
 };
 
-export default Technologies;
+export default Projects;

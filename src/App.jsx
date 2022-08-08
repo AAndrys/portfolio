@@ -15,6 +15,7 @@ import StartScreen from './components/startScreen';
 // import ThreeScene from "./components/threeScene";
 // import Vanta from "./components/vanta";
 import UpArrow from './components/upArrow';
+import Projects from './components/sections/projects';
 
 const MAX_SLIDES = 3;
 const SECTIONS = ['#Home', '#AboutMe', '#Technologies', '#Testimonial', '#Contact'];
@@ -55,7 +56,8 @@ const App = () => {
         />
         <AboutMe />
         <Technologies />
-        <Testimonial />
+        {/* <Testimonial /> */}
+        <Projects />
         <Contact />
 
         {/* <ThreeScene /> */}

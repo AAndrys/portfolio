@@ -1,5 +1,75 @@
 #Testimonial {
+  position: relative;
+
   .testimonial-wrapper {
-    display: block;
+    padding: 150px 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    position: relative;
+
+    h1 {
+      text-transform: uppercase;
+      letter-spacing: 12px;
+      color: $testimonialColor;
+      mix-blend-mode: difference;
+
+      &.testimonial-heading-top {
+        position: absolute;
+        top: 18%;
+        left: 6%;
+      }
+
+      &.testimonial-heading-bottom {
+        position: absolute;
+        bottom: 20%;
+        right: 6%;
+        transform: rotateY(180deg);
+      }
+    }
+
+    .rect {
+      height: 320px;
+    }
+
+    .icon-rect {
+      display: flex;
+      place-self: center;
+
+      svg {
+        max-width: 25vw;
+        max-height: 25vw;
+      }
+    }
+  }
+}
+
+@include media('md') {
+  #Testimonial {
+    .testimonial-wrapper {
+      h1 {
+        letter-spacing: 46px;
+
+        &.testimonial-heading-top {
+          top: 20%;
+          left: 10%;
+        }
+
+        &.testimonial-heading-bottom {
+          bottom: 22%;
+          right: 10%;
+        }
+      }
+
+      .rect {
+        height: 580px;
+      }
+
+      .icon-rect {
+        svg {
+          max-width: 300px;
+          max-height: 300px;
+        }
+      }
+    }
   }
 }

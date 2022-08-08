@@ -1,17 +1,4 @@
 .layout-wrapper {
-  &::after {
-    content: '';
-    width: 40%;
-    height: 2px;
-    position: absolute;
-    bottom: -28px;
-    right: 0;
-    left: 0;
-    margin: auto;
-    background-color: rgba(255, 255, 255, 0.2);
-    z-index: 1;
-  }
-
   .layout {
     width: 100%;
     height: 100%;
@@ -20,15 +7,15 @@
 
     .layout-container {
       width: 100%;
-      padding: 60px 10%;
+      padding: 100px 10%;
       position: relative;
       word-break: break-word;
       grid-column: 1/13;
 
-      & h1 {
+      h1 {
         margin: 0 0 46px 0;
         text-transform: uppercase;
-        color: #ffffff23;
+        color: $sectionTextColor;
         letter-spacing: 10px;
       }
     }
@@ -39,7 +26,7 @@
   .layout-wrapper {
     .layout {
       .layout-container {
-        & h1 {
+        h1 {
           letter-spacing: 22px;
         }
       }
