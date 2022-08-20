@@ -14,10 +14,16 @@ module.exports = {
     'plugin:prettier/recommended',
     'prettier'
   ],
-  parser: 'babel-eslint', // Uses babel-eslint transforms.
+  parser: '@babel/eslint-parser', // Uses babel-eslint transforms.
   parserOptions: {
+    requireConfigFile: false,
     ecmaFeatures: {
       jsx: true
+    },
+    babelOptions: {
+      parserOpts: {
+        plugins: ['jsx']
+      }
     },
     ecmaVersion: 2018, // Allows for the parsing of modern ECMAScript features
     sourceType: 'module' // Allows for the use of imports

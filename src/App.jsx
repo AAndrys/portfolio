@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import './styles/styles.css';
 
 //Component imports
 import DownArrow from './components/downArrow';
@@ -10,15 +9,17 @@ import MenuButton from './components/menuButton';
 import AboutMe from './components/sections/aboutMe';
 import Contact from './components/sections/contact';
 import Technologies from './components/sections/technologies';
-import Testimonial from './components/sections/testimonial';
+// import Testimonial from './components/sections/testimonial';
 import StartScreen from './components/startScreen';
 // import ThreeScene from "./components/threeScene";
 // import Vanta from "./components/vanta";
 import UpArrow from './components/upArrow';
 import Projects from './components/sections/projects';
 
-const MAX_SLIDES = 3;
-const SECTIONS = ['#Home', '#AboutMe', '#Technologies', '#Testimonial', '#Contact'];
+import './styles/styles.css';
+
+const MAX_SLIDES = 4;
+const SECTIONS = ['#Home', '#AboutMe', '#Technologies', '#Projects', '#Contact'];
 
 const App = () => {
   const [endHomePageAnimation, setEndHomePageAnimation] = useState(false);

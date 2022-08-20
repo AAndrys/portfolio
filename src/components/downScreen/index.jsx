@@ -1,6 +1,6 @@
+import React from 'react';
 import { gsap } from 'gsap';
 import PropTypes from 'prop-types';
-import React from 'react';
 
 import ContainerWithLeftBorder from '../containerWithLeftBorder';
 import NavItem from '../navItem';
@@ -10,6 +10,7 @@ const NAVIGATION_LIST_ARRAY = [
   { text: 'Home', href: '#Home' },
   { text: 'About me', href: '#AboutMe' },
   { text: 'Technologies', href: '#Technologies' },
+  { text: 'Projects', href: '#Projects' },
   { text: 'Contact', href: '#Contact' }
 ];
 
@@ -34,8 +35,8 @@ class DownScreen extends React.Component {
       0: ['First page', '', ''],
       1: ['Little about me', '', ''],
       2: ['Technologies, which I used before', '', ''],
-      3: ['Contact to me', '', ''],
-      4: ['BurgerMenu5', '', '']
+      3: ['Project which I participated', '', ''],
+      4: ['Contact to me', '', '']
     };
   }
 
