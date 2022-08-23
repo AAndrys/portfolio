@@ -11,7 +11,7 @@ import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 const Projects = () => {
-  const [wrapperRef, isInView] = useInView({
+  const [wrapperRef] = useInView({
     threshold: 0.1
   });
   const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -29,7 +29,8 @@ const Projects = () => {
     slidesToScroll: 2,
     initialSlide: 0,
     infinite: true,
-    autoplay: false,
+    autoplay: true,
+    pauseOnFocus: true,
     speed: 200,
     cssEase: 'linear',
     responsive: [

@@ -1,0 +1,36 @@
+footer {
+  margin-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+  @include media('lg') {
+    margin-top: 100px;
+  }
+
+  .footer-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 20px 10%;
+
+    .footer-socials {
+      display: grid;
+      row-gap: 10px;
+      .footer-socials-icons {
+        display: flex;
+        column-gap: 10px;
+
+        img {
+          width: 24px;
+          height: 24px;
+          filter: invert(100%);
+          cursor: pointer;
+        }
+      }
+    }
+
+    .footer-copyright {
+      display: flex;
+      align-items: flex-end;
+      text-align: left;
+    }
+  }
+}

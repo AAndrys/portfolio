@@ -202,7 +202,7 @@ li {
 
 label {
   font-weight: 400;
-  font-size: 14px;
+  font-size: 18px;
   letter-spacing: -0.1px;
 }
 
@@ -264,7 +264,7 @@ em {
     letter-spacing: -0.2px;
   }
   label {
-    font-size: 18px;
+    font-size: 22px;
     letter-spacing: 0.1px;
   }
   small {
@@ -306,7 +306,7 @@ em {
     letter-spacing: 0.2px;
   }
   label {
-    font-size: 20px;
+    font-size: 24px;
     letter-spacing: 0.1px;
   }
   small {
@@ -728,6 +728,7 @@ em {
   position: relative;
   word-break: break-word;
   grid-column: 1/13;
+  overflow: hidden;
 }
 .layout-wrapper .layout .layout-container h1 {
   margin: 0 0 46px 0;
@@ -885,6 +886,41 @@ em {
     height: 24px;
   }
 }
+footer {
+  margin-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+@media (min-width: 1280px) {
+  footer {
+    margin-top: 100px;
+  }
+}
+footer .footer-wrapper {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  padding: 20px 10%;
+}
+footer .footer-wrapper .footer-socials {
+  display: grid;
+  row-gap: 10px;
+}
+footer .footer-wrapper .footer-socials .footer-socials-icons {
+  display: flex;
+  -moz-column-gap: 10px;
+  column-gap: 10px;
+}
+footer .footer-wrapper .footer-socials .footer-socials-icons img {
+  width: 24px;
+  height: 24px;
+  filter: invert(100%);
+  cursor: pointer;
+}
+footer .footer-wrapper .footer-copyright {
+  display: flex;
+  align-items: flex-end;
+  text-align: left;
+}
+
 .about-wrapper {
   width: 100%;
   display: grid;
@@ -1130,4 +1166,104 @@ em {
 .slick-slider .slick-list .slick-track {
   display: flex;
   gap: 0 10px;
+}
+
+#Contact .contact-wrapper::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 22%;
+  width: 40%;
+  height: auto;
+  aspect-ratio: 1/1;
+  display: block;
+  background: url('../assets/svgs/rect_lines.svg') no-repeat center center/cover;
+}
+@supports not (aspect-ratio: 1/1) {
+  #Contact .contact-wrapper .contact-wrapper::before {
+    float: left;
+    padding-top: 100%;
+    content: '';
+  }
+  #Contact .contact-wrapper .contact-wrapper::after {
+    display: block;
+    content: '';
+    clear: both;
+  }
+}
+#Contact .contact-wrapper form {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 10;
+}
+#Contact .contact-wrapper form label {
+  margin-bottom: 5px;
+}
+#Contact .contact-wrapper form input {
+  background-color: #151515;
+  border: none;
+  color: white;
+  padding: 5px;
+  height: 32px;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+@media (min-width: 1024px) {
+  #Contact .contact-wrapper form input {
+    padding: 8px;
+  }
+}
+@media (min-width: 1280px) {
+  #Contact .contact-wrapper form input {
+    padding: 10px;
+  }
+}
+#Contact .contact-wrapper form textarea {
+  background-color: #151515;
+  border: none;
+  color: white;
+  padding: 5px;
+  height: 180px;
+  resize: none;
+  font-size: 14px;
+}
+@media (min-width: 1024px) {
+  #Contact .contact-wrapper form textarea {
+    padding: 8px;
+  }
+}
+@media (min-width: 1280px) {
+  #Contact .contact-wrapper form textarea {
+    padding: 10px;
+  }
+}
+#Contact .contact-wrapper form button {
+  background-color: #151515;
+  border: none;
+  color: white;
+  padding: 5px;
+  width: min(30%, 200px);
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 20px;
+  border: 1px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+@media (min-width: 1024px) {
+  #Contact .contact-wrapper form button {
+    padding: 8px;
+  }
+}
+@media (min-width: 1280px) {
+  #Contact .contact-wrapper form button {
+    padding: 10px;
+  }
+}
+#Contact .contact-wrapper form button:hover {
+  opacity: 0.9;
+}
+#Contact .contact-wrapper form button:active {
+  opacity: 0.8;
 } /*# sourceMappingURL=styles.css.map */

@@ -48,7 +48,8 @@ export const SLIDER_ITEMS = [
       },
       {
         title: 'Technologies',
-        description: 'Next.js, Styled-components, GlobalState, Strapi, MySQL, Three.js'
+        description:
+          'Next.js, Styled-components, Framer Motion, GlobalState, Strapi, MySQL, Three.js'
       },
       {
         title: 'Link',
@@ -73,7 +74,7 @@ export const SLIDER_ITEMS = [
       },
       {
         title: 'Technologies',
-        description: 'Next.js, Styled-components, Strapi, MySQL, Three.js'
+        description: 'Next.js, Styled-components, Framer Motion, Strapi, MySQL, Three.js'
       },
       {
         title: 'Link',

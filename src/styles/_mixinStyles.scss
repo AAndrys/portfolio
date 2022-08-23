@@ -12,3 +12,18 @@
   justify-content: $justify;
   align-items: $align;
 }
+
+@mixin inputStyles() {
+  background-color: $codGrayJs;
+  border: none;
+  color: white;
+  padding: 5px;
+
+  @include media('md') {
+    padding: 8px;
+  }
+
+  @include media('lg') {
+    padding: 10px;
+  }
+}

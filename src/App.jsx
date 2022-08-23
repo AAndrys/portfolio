@@ -15,6 +15,7 @@ import StartScreen from './components/startScreen';
 // import Vanta from "./components/vanta";
 import UpArrow from './components/upArrow';
 import Projects from './components/sections/projects';
+import Footer from './components/footer';
 
 import './styles/styles.css';
 
@@ -64,6 +65,7 @@ const App = () => {
         {/* <ThreeScene /> */}
         {/* <Vanta vantaLoaded={() => setVantaLoaded(true)} /> */}
       </main>
+      <Footer />
 
       <DownScreen />
 
