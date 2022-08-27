@@ -1,16 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import Layout from '../../layout';
 
 import { textPattern } from '../../../utils/constants';
 
 const Contact = () => {
-  const [formData, setFormData] = useState({ fullName: '', email: '', message: '' });
-
   const handleSubmit = (e) => {
     const [fullName, email, message] = e.target;
     e.preventDefault();
-    setFormData({ fullName: fullName.value, email: email.value, message: message.value });
+
+    window.location.href = `mailto:${
+      process.env.REACT_APP_EMAIL_MAILTO
+    }?&subject=Contact from portfolio - ${fullName.value}&body=${encodeURIComponent(
+      message.value
+    )}`;
   };
 
   return (

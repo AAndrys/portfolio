@@ -918,7 +918,7 @@ footer .footer-wrapper .footer-socials .footer-socials-icons img {
 footer .footer-wrapper .footer-copyright {
   display: flex;
   align-items: flex-end;
-  text-align: left;
+  justify-content: center;
 }
 
 .about-wrapper {

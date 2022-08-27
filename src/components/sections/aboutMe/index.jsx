@@ -21,8 +21,9 @@ const AboutMe = () => {
           Hello, my name is Adam. I am {calculateYears(new Date(BIRTHDAY_DATE))} years old and I am
           from Poland. As you can see I am a JavaScript developer, and this is what I love so much!
           Too much time spent on learning, a lot of bad code and failures caused me resistant on
-          defeat. Working with a large amount of lines code, experience caused me increasing more
-          professionalism.
+          defeat. Working with a large amount of code lines, experience from other teammates and a
+          lot of overnight coding gave me more professionalism. I gain more and more skills every
+          day.
           <br />
           <strong>Programming is my hooby and I love it!</strong>
         </p>
