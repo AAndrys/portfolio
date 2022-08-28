@@ -17,6 +17,9 @@ import UpArrow from './components/upArrow';
 import Projects from './components/sections/projects';
 import Footer from './components/footer';
 
+import Analytics from './utils/analytics';
+import { classes } from './utils/class';
+
 import './styles/styles.css';
 
 const MAX_SLIDES = 4;
@@ -36,6 +39,11 @@ const App = () => {
       window.location.href = SECTIONS[slideNumber === MAX_SLIDES ? MAX_SLIDES : slideNumber + 1];
     }
   };
+
+  useEffect(() => {
+    classes.analytics = new Analytics();
+    classes.analytics._initializeTracker();
+  }, []);
 
   useEffect(() => {
     if (slideNumber > MAX_SLIDES) setslideNumber(MAX_SLIDES);

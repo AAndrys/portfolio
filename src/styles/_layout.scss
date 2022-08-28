@@ -13,21 +13,18 @@
       grid-column: 1/13;
       overflow: hidden;
 
+      @include media('md') {
+        padding: 150px 10%;
+      }
+
       h1 {
+        font-weight: 800;
         margin: 0 0 46px 0;
         text-transform: uppercase;
         color: $sectionTextColor;
         letter-spacing: 10px;
-      }
-    }
-  }
-}
 
-@include media('md') {
-  .layout-wrapper {
-    .layout {
-      .layout-container {
-        h1 {
+        @include media('md') {
           letter-spacing: 22px;
         }
       }

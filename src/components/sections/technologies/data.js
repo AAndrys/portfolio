@@ -9,6 +9,10 @@ import Node from '../../Icons/Node';
 import React from '../../Icons/React';
 import Three from '../../Icons/Three';
 import Vue from '../../Icons/Vue';
+import Gsap from '../../Icons/Gsap';
+import Mongodb from '../../Icons/Mongodb';
+import Redux from '../../Icons/Redux';
+import Typescript from '../../Icons/Typescript';
 
 export const SLIDER_ITEMS = [
   {
@@ -40,7 +44,7 @@ export const SLIDER_ITEMS = [
     image: Html
   },
   {
-    title: 'CSS/SASS',
+    title: 'CSS/SCSS',
     image: Css
   },
   {
@@ -78,5 +82,21 @@ export const SLIDER_ITEMS = [
   {
     title: 'Bash',
     image: File
+  },
+  {
+    title: 'GSAP',
+    image: Gsap
+  },
+  {
+    title: 'MongoDB',
+    image: Mongodb
+  },
+  {
+    title: 'Redux',
+    image: Redux
+  },
+  {
+    title: 'Typescript',
+    image: Typescript
   }
 ];

@@ -14,7 +14,7 @@ const AboutMe = () => {
   });
 
   return (
-    <Layout title="About" id="AboutMe" gridColumn="1/13">
+    <Layout title="About" id="AboutMe" gridColumn="1/13" bottomLine={false}>
       <Squares />
       <div ref={wrapperRef} className="about-wrapper">
         <p>
