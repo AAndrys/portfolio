@@ -1,28 +1,17 @@
-import React from "react";
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
+import React from 'react';
 
 const NormalText = (props) => {
-  const {
-    text,
-    fontSize = 16,
-    isBold = false,
-    textColor = "white",
-    isAnimated = false,
-  } = props;
+  const { text, fontSize = 16, isBold = false, textColor = 'white', isAnimated = false } = props;
 
   const styles = {
-    fontSize: fontSize + "px",
-    fontWeight: isBold && "bold",
-    color: textColor,
+    fontSize: fontSize + 'px',
+    fontWeight: isBold && 'bold',
+    color: textColor
   };
 
   return (
-    <p
-      className={
-        isAnimated ? "normal-text animated-normal-text" : "normal-text"
-      }
-      style={styles}
-    >
+    <p className={isAnimated ? 'normal-text animated-normal-text' : 'normal-text'} style={styles}>
       {text}
     </p>
   );
@@ -35,5 +24,5 @@ NormalText.propTypes = {
   fontSize: PropTypes.number,
   isBold: PropTypes.bool,
   textColor: PropTypes.string,
-  isAnimated: PropTypes.bool,
+  isAnimated: PropTypes.bool
 };

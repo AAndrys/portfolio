@@ -1,5 +1,5 @@
 .down-arrow-container {
-  @include flexCenter(center, center);
+  @include flexBox(center, center);
 
   position: fixed;
   bottom: 1.4rem;

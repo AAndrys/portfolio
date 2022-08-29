@@ -1,36 +1,40 @@
-import React from "react";
-import { useInView } from "react-intersection-observer";
+import React from 'react';
+import { useInView } from 'react-intersection-observer';
 
-import Layout from "../../layout";
-import CountBox from "../../countBox";
-import Squares from "../../Squares";
+import { countHours } from '../../../utils/countHours';
+import { calculateYears } from '../../../utils/calculateYears';
+import { BIRTHDAY_DATE, EXPERIENCE_DATE } from '../../../utils/constants';
+import CountBox from '../../countBox';
+import Layout from '../../layout';
+import Squares from '../../Squares';
 
-const AboutMe = ({}) => {
-  const [wrapperRef, isInView] = useInView({
-    threshold: 0.1,
+const AboutMe = () => {
+  const [wrapperRef] = useInView({
+    threshold: 0.1
   });
 
   return (
-    <Layout title="About" id="AboutMe" gridColumn="1/13">
+    <Layout title="About" id="AboutMe" gridColumn="1/13" bottomLine={false}>
       <Squares />
       <div ref={wrapperRef} className="about-wrapper">
         <p>
-          Hello, my name is Adam. I am 23 years old and I am from Poland. As you
-          can see I am a JavaScript developer, and this is what I love so much!
-          Too much time spent on learning, a lot of bad code and failures caused
-          me resistant on defeat. Working with a large amount of lines code,
-          experience caused me increasing more professionalism.
+          Hello, my name is Adam. I am {calculateYears(new Date(BIRTHDAY_DATE))} years old and I am
+          from Poland. As you can see I am a JavaScript developer, and this is what I love so much!
+          Too much time spent on learning, a lot of bad code and failures caused me resistant on
+          defeat. Working with a large amount of code lines, experience from other teammates and a
+          lot of overnight coding gave me more professionalism. I gain more and more skills every
+          day.
           <br />
-          <strong>Programming is my hooby and I love it!</strong>{" "}
+          <strong>Programming is my hooby and I love it!</strong>
         </p>
 
         <div className="about-amounts-container">
-          <CountBox text="Years of experience" countNumber={1} />
           <CountBox
-            text="Number of written lines of code"
-            countNumber={10000}
+            text="Years of experience"
+            countNumber={calculateYears(new Date(EXPERIENCE_DATE))}
           />
-          <CountBox text="Hours spent on learning" countNumber={4860} />
+          <CountBox text="Number of written lines of code" countNumber={10000} />
+          <CountBox text="Hours spent on learning" countNumber={countHours()} />
         </div>
       </div>
     </Layout>

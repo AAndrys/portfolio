@@ -1,0 +1,39 @@
+.exit-icon-wrapper {
+  position: fixed;
+  top: 20px;
+  right: 40px;
+  display: grid;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.548);
+  padding: 10px;
+  mix-blend-mode: difference;
+  cursor: pointer;
+
+  img {
+    width: 18px;
+    height: 18px;
+    filter: invert(100%);
+  }
+}
+
+@include media('md') {
+  .exit-icon-wrapper {
+    padding: 12px;
+
+    img {
+      width: 21px;
+      height: 21px;
+    }
+  }
+}
+
+@include media('lg') {
+  .exit-icon-wrapper {
+    padding: 15px;
+
+    img {
+      width: 24px;
+      height: 24px;
+    }
+  }
+}

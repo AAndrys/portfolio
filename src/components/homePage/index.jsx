@@ -1,25 +1,20 @@
-import React, { useState, useEffect } from "react";
-import PropTypes from "prop-types";
-import HeaderTitle from "./headerTitle";
-import Face from "../../assets/images/background/twarz_black.png";
-import { gsap } from "gsap";
+import { gsap } from 'gsap';
+import PropTypes from 'prop-types';
+import React, { useEffect, useState } from 'react';
+import HeaderTitle from './headerTitle';
+import Face from '../../assets/images/background/twarz_black.png';
 
 const HomePage = ({ startAnimationEnd, endAnimation, setEndAnimation }) => {
   const [firstAnimationEnd, setFirstAnimationEnd] = useState(false);
-  // const [endAnimation, setEndAnimation] = useState(false);
 
   useEffect(() => {
+    gsap.fromTo('.face-image', { opacity: 0, x: -100 }, { opacity: 1, x: 0, duration: 2 });
     gsap.fromTo(
-      ".face-image",
-      { opacity: 0, x: -100 },
-      { opacity: 1, x: 0, duration: 2 }
-    );
-    gsap.fromTo(
-      ".home-page-profile",
+      '.home-page-profile',
       { opacity: 0, scale: 0.8 },
       { opacity: 1, scale: 1, duration: 2 }
     );
-    if (endAnimation) document.body.style.overflow = "auto";
+    if (endAnimation) document.body.style.overflow = 'auto';
   }, [endAnimation]);
 
   if (!endAnimation) {
@@ -49,7 +44,7 @@ const HomePage = ({ startAnimationEnd, endAnimation, setEndAnimation }) => {
       <div className="home-page-main-content">
         <div className="home-page-profile">
           <h1>ADAM ANDRYSIAK</h1>
-          <p>JavaScript Developer</p>
+          <h6>JavaScript Developer</h6>
         </div>
         <div className="home-page-profile-info" />
       </div>
@@ -63,5 +58,5 @@ const HomePage = ({ startAnimationEnd, endAnimation, setEndAnimation }) => {
 export default HomePage;
 
 HomePage.propTypes = {
-  startAnimationEnd: PropTypes.bool,
+  startAnimationEnd: PropTypes.bool
 };

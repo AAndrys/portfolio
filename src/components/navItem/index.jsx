@@ -1,19 +1,19 @@
-import React from "react";
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
+import React from 'react';
 
 const NavItem = (props) => {
   const {
     text,
-    hrefLink = "#",
+    hrefLink = '#',
     isActive = false,
     onMouseEnter,
     onMouseLeave,
     onMouseMove,
-    onClick,
+    onClick
   } = props;
 
   const styles = {
-    color: isActive ? "rgba(255, 255, 255, 0.1)" : "white",
+    color: isActive ? 'rgba(255, 255, 255, 0.1)' : 'white'
   };
 
   return (
@@ -39,5 +39,5 @@ NavItem.propTypes = {
   isActive: PropTypes.bool,
   onMouseEnter: PropTypes.func,
   onMouseLeave: PropTypes.func,
-  onMouseMove: PropTypes.func,
+  onMouseMove: PropTypes.func
 };

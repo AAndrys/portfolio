@@ -1,12 +1,12 @@
-import React from "react";
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
+import React from 'react';
 
 const FilterImage = (props) => {
   const { imgSrc, mouseLeave = true, moveX = 0, moveY = 0 } = props;
 
   const styles = {
     transform: `translate(${moveX}px, ${moveY}px)`,
-    opacity: !mouseLeave && 1,
+    opacity: !mouseLeave && 1
   };
 
   return (
@@ -18,11 +18,11 @@ const FilterImage = (props) => {
           y="0%"
           width="100%"
           height="100%"
-          style={{ transition: "all 4s linear" }}
+          style={{ transition: 'all 4s linear' }}
         >
           <feTurbulence
             type="fractalNoise"
-            baseFrequency={`0.02 0.004`}
+            baseFrequency={'0.02 0.004'}
             numOctaves="5"
             seed="2"
             stitchTiles="noStitch"
@@ -59,5 +59,5 @@ FilterImage.propTypes = {
   imgSrc: PropTypes.string,
   mouseLeave: PropTypes.bool,
   moveX: PropTypes.number,
-  moveY: PropTypes.number,
+  moveY: PropTypes.number
 };

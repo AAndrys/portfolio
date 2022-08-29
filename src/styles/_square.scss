@@ -1,25 +1,25 @@
 .square-wrapper {
   position: absolute;
-  bottom: 28%;
-  right: 18%;
-  display: flex;
+  display: block;
+  bottom: 31%;
+  right: 10%;
   z-index: 1;
 
-  & img {
-    width: 438px;
-    height: 438px;
-    aspect-ratio: 1/1;
+  img {
+    width: 238px;
+    height: 238px;
+    aspect-ratio: 1 / 1;
   }
 }
 
-@media (max-width: 1024px) {
+@include media('md') {
   .square-wrapper {
-    bottom: 38%;
-    right: 10%;
+    bottom: 30%;
+    right: 5%;
 
-    & img {
-      width: 238px;
-      height: 238px;
+    img {
+      width: 438px;
+      height: 438px;
     }
   }
 }

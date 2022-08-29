@@ -1,10 +1,10 @@
-import React from "react";
-import CountUp from "react-countup";
-import { useInView } from "react-intersection-observer";
+import React from 'react';
+import CountUp from 'react-countup';
+import { useInView } from 'react-intersection-observer';
 
 const CountBox = ({ text, countNumber = 0, duration = 2 }) => {
   const [wrapperRef, isInView] = useInView({
-    threshold: 0.1,
+    threshold: 0.1
   });
 
   return (
