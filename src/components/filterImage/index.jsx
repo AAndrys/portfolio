@@ -10,7 +10,7 @@ const FilterImage = (props) => {
   };
 
   return (
-    <>
+    <React.Fragment>
       <svg>
         <filter
           id="noise"
@@ -49,7 +49,7 @@ const FilterImage = (props) => {
       <div className="overlay-filter-image" style={styles}>
         <img id="filter-image" src={imgSrc} alt="Burger" />
       </div>
-    </>
+    </React.Fragment>
   );
 };
 
