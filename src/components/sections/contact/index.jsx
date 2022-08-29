@@ -7,14 +7,16 @@ import { textPattern } from '../../../utils/constants';
 const Contact = () => {
   const handleSubmit = (e) => {
     // eslint-disable-next-line
-    const [fullName, email, message] = e.target;
-    e.preventDefault();
+    if (e.target) {
+      const [fullName, email, message] = e.target;
+      e.preventDefault();
 
-    window.location.href = `mailto:${
-      process.env.REACT_APP_EMAIL_MAILTO
-    }?&subject=Contact from portfolio - ${fullName.value}&body=${encodeURIComponent(
-      message.value
-    )}`;
+      window.location.href = `mailto:${
+        process.env.REACT_APP_EMAIL_MAILTO
+      }?&subject=Contact from portfolio - ${fullName?.value || ''}&body=${encodeURIComponent(
+        message?.value || ''
+      )}`;
+    }
   };
 
   return (
