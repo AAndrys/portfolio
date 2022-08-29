@@ -7,11 +7,7 @@ const Line = ({ lineHeight = 2, lineWidth = 90 }) => {
     height: `${lineHeight}px`
   };
 
-  return (
-    <>
-      <span id="menu-button-line" style={spanStyle} />
-    </>
-  );
+  return <span id="menu-button-line" style={spanStyle} />;
 };
 
 export default Line;
