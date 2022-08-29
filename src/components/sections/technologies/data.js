@@ -1,102 +1,102 @@
-import { CIcon as C } from '../../Icons/C';
-import { CssIcon as Css } from '../../Icons/Css';
-import { FileIcon as File } from '../../Icons/File';
-import { GitIcon as Git } from '../../Icons/Git';
-import { HtmlIcon as Html } from '../../Icons/Html';
-import { JsIcon as Js } from '../../Icons/Js';
-import { NextIcon as Next } from '../../Icons/Next';
-import { NodeIcon as Node } from '../../Icons/Node';
-import { ReactIcon as React } from '../../Icons/React';
-import { ThreeIcon as Three } from '../../Icons/Three';
-import { VueIcon as Vue } from '../../Icons/Vue';
-import { GsapIcon as Gsap } from '../../Icons/Gsap';
-import { MongoDBIcon as MongoDB } from '../../Icons/Mongodb';
-import { ReduxIcon as Redux } from '../../Icons/Redux';
-import { TypescriptIcon as Typescript } from '../../Icons/Typescript';
+import CIcon from '../../Icons/C';
+import CssIcon from '../../Icons/Css';
+import FileIcon from '../../Icons/File';
+import GitIcon from '../../Icons/Git';
+import HtmlIcon from '../../Icons/Html';
+import JsIcon from '../../Icons/Js';
+import NextIcon from '../../Icons/Next';
+import NodeIcon from '../../Icons/Node';
+import ReactIcon from '../../Icons/React';
+import ThreeIcon from '../../Icons/Three';
+import VueIcon from '../../Icons/Vue';
+import GsapIcon from '../../Icons/Gsap';
+import MongoDBIcon from '../../Icons/Mongodb';
+import ReduxIcon from '../../Icons/Redux';
+import TypescriptIcon from '../../Icons/Typescript';
 
 export const SLIDER_ITEMS = [
   {
     title: 'JavaScript',
-    image: Js
+    image: JsIcon
   },
   {
     title: 'React',
-    image: React
+    image: ReactIcon
   },
   {
     title: 'React Native',
-    image: React
+    image: ReactIcon
   },
   {
     title: 'Next.js',
-    image: Next
+    image: NextIcon
   },
   {
     title: 'Node.js',
-    image: Node
+    image: NodeIcon
   },
   {
     title: 'Express.js',
-    image: Node
+    image: NodeIcon
   },
   {
     title: 'HTML5',
-    image: Html
+    image: HtmlIcon
   },
   {
     title: 'CSS/SCSS',
-    image: Css
+    image: CssIcon
   },
   {
     title: 'Styled-components',
-    image: File
+    image: FileIcon
   },
   {
     title: 'Framer motion',
-    image: File
+    image: FileIcon
   },
   {
     title: 'Three.js',
-    image: Three
+    image: ThreeIcon
   },
   {
     title: 'Vue.js',
-    image: Vue
+    image: VueIcon
   },
   {
     title: 'Git',
-    image: Git
+    image: GitIcon
   },
   {
     title: 'C',
-    image: C
+    image: CIcon
   },
   {
     title: 'C++',
-    image: C
+    image: CIcon
   },
   {
     title: 'C#',
-    image: C
+    image: CIcon
   },
   {
     title: 'Bash',
-    image: File
+    image: FileIcon
   },
   {
     title: 'GSAP',
-    image: Gsap
+    image: GsapIcon
   },
   {
     title: 'MongoDB',
-    image: MongoDB
+    image: MongoDBIcon
   },
   {
     title: 'Redux',
-    image: Redux
+    image: ReduxIcon
   },
   {
     title: 'Typescript',
-    image: Typescript
+    image: TypescriptIcon
   }
 ];
