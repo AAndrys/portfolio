@@ -33,7 +33,7 @@ jobs:
         run: npm run test
 
       - name: Update
-        run: npm run update
+        run: npm update
 
       - name: Build
         run: npm run build
