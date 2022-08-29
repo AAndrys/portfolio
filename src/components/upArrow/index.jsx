@@ -11,5 +11,3 @@ const UpArrow = ({ onClick }) => {
 };
 
 export default UpArrow;
-
-UpArrow.propTypes = {};
