@@ -914,9 +914,6 @@ em {
   flex-direction: column;
   padding: 10px 20px;
 }
-.cookie-banner-wrapper .container .text-wrapper label {
-  cursor: pointer;
-}
 .cookie-banner-wrapper .container .button-wrapper {
   display: flex;
   justify-content: center;
