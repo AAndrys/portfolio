@@ -1,36 +1,22 @@
-import React from "react";
-import PropTypes from "prop-types";
-import { gsap } from "gsap";
+import React from 'react';
+import { gsap } from 'gsap';
+import PropTypes from 'prop-types';
 
-import ContainerWithLeftBorder from "../containerWithLeftBorder";
-import NormalText from "../normalText";
-import NavItem from "../navItem";
-// import FilterImage from "../filterImage";
+import ContainerWithLeftBorder from '../containerWithLeftBorder';
+import NavItem from '../navItem';
+import NormalText from '../normalText';
 
 const NAVIGATION_LIST_ARRAY = [
-  { text: "Home", href: "#Home" },
-  { text: "About me", href: "#AboutMe" },
-  { text: "Technologies", href: "#Technologies" },
-  { text: "Contact", href: "#Contact" },
+  { text: 'Home', href: '#Home' },
+  { text: 'About me', href: '#AboutMe' },
+  { text: 'Technologies', href: '#Technologies' },
+  { text: 'Projects', href: '#Projects' },
+  { text: 'Contact', href: '#Contact' }
 ];
-
-// const BURGER_IMAGES = [
-//   require("../../assets/images/burger1.jpg").default,
-//   require("../../assets/images/burger2.jpg").default,
-//   require("../../assets/images/burger3.jpg").default,
-//   require("../../assets/images/burger4.jpg").default,
-//   require("../../assets/images/burger5.jpg").default,
-// ];
 
 const DEFAULT_DESCRIPTION = <NormalText text="Menu" isAnimated />;
 const DEFAULT_TEXT_NUMBER = (
-  <NormalText
-    text="05"
-    isBold
-    fontSize={30}
-    textColor="rgba(255, 255, 255, 0.5)"
-    isAnimated
-  />
+  <NormalText text="05" isBold fontSize={30} textColor="rgba(255, 255, 255, 0.5)" isAnimated />
 );
 
 class DownScreen extends React.Component {
@@ -42,29 +28,21 @@ class DownScreen extends React.Component {
       mouseLeave: true,
       topDescriptions: [],
       mouseXPosition: 0,
-      mouseYPosition: 0,
+      mouseYPosition: 0
     };
 
     this.descriptionList = {
-      0: ["First page", "", ""],
-      1: ["Little about me", "", ""],
-      2: ["Technologies, which I used before", "", ""],
-      3: ["Contact to me", "", ""],
-      4: ["BurgerMenu5", "", ""],
+      0: ['First page', '', ''],
+      1: ['Little about me', '', ''],
+      2: ['Technologies, which I used before', '', ''],
+      3: ['Project which I participated', '', ''],
+      4: ['Contact to me', '', '']
     };
   }
 
-  // componentDidUpdate(prevProps) {
-  //   if (prevProps.isMenuOpen) {
-  //     this.setState({
-  //       isProp: true,
-  //     });
-  //   }
-  // }
-
   componentDidMount() {
     this.setState({
-      isLoaded: true,
+      isLoaded: true
     });
   }
 
@@ -72,7 +50,7 @@ class DownScreen extends React.Component {
     this.setState({
       activeListItemIndex: index,
       mouseLeave: false,
-      topDescriptions: this.descriptionList[`${index}`],
+      topDescriptions: this.descriptionList[`${index}`]
     });
   };
 
@@ -82,7 +60,7 @@ class DownScreen extends React.Component {
 
     this.setState({
       mouseXPosition: mouseX - window.innerWidth * 0.4,
-      mouseYPosition: mouseY - window.innerHeight * 0.1,
+      mouseYPosition: mouseY - window.innerHeight * 0.1
     });
   };
 
@@ -93,8 +71,8 @@ class DownScreen extends React.Component {
   };
 
   handleClickOnNavItem = () => {
-    gsap.to(".down-screen-container", {
-      top: "100%",
+    gsap.to('.down-screen-container', {
+      top: '100%'
     });
   };
 
@@ -111,37 +89,16 @@ class DownScreen extends React.Component {
   };
 
   render() {
-    const {
-      isLoaded,
-      activeListItemIndex,
-      mouseLeave,
-      topDescriptions,
-      mouseXPosition,
-      mouseYPosition,
-    } = this.state;
-    const { isMenuOpen } = this.props;
+    const { activeListItemIndex, mouseLeave, topDescriptions } = this.state;
 
     return (
-      // <div
-      //   className={
-      //     isLoaded
-      //       ? isMenuOpen
-      //         ? "down-screen-container startAnimation"
-      //         : "down-screen-container closeAnimation"
-      //       : "down-screen-container"
-      //   }
-      // >
       <div className="down-screen-container">
         <div className="left-side-content">
           <div className="left-side-top-container">
-            {mouseLeave
-              ? DEFAULT_DESCRIPTION
-              : this.renderTextDescriptions(topDescriptions)}
+            {mouseLeave ? DEFAULT_DESCRIPTION : this.renderTextDescriptions(topDescriptions)}
           </div>
           <div className="left-side-bottom-container">
-            {mouseLeave
-              ? DEFAULT_TEXT_NUMBER
-              : this.renderTextNumber(activeListItemIndex)}
+            {mouseLeave ? DEFAULT_TEXT_NUMBER : this.renderTextNumber(activeListItemIndex)}
           </div>
         </div>
         <ContainerWithLeftBorder componentWidth="60%">
@@ -154,30 +111,18 @@ class DownScreen extends React.Component {
                     hrefLink={href}
                     text={text}
                     key={index}
-                    isActive={
-                      !mouseLeave
-                        ? activeListItemIndex === index
-                          ? false
-                          : true
-                        : false
-                    }
+                    isActive={!mouseLeave ? (activeListItemIndex === index ? false : true) : false}
                     onMouseEnter={() => this.handleMouseOver(index)}
                     onMouseLeave={() =>
                       this.setState({
                         activeListItemIndex: null,
-                        mouseLeave: true,
+                        mouseLeave: true
                       })
                     }
                     onMouseMove={(e) => this.handleMouseMove(e)}
                   />
                 ))}
               </nav>
-              {/* <FilterImage
-                imgSrc={BURGER_IMAGES[activeListItemIndex]}
-                mouseLeave={mouseLeave}
-                moveX={mouseXPosition}
-                moveY={mouseYPosition}
-              /> */}
             </div>
           </div>
         </ContainerWithLeftBorder>
@@ -190,5 +135,5 @@ class DownScreen extends React.Component {
 export default DownScreen;
 
 DownScreen.propTypes = {
-  isMenuOpen: PropTypes.bool,
+  isMenuOpen: PropTypes.bool
 };

@@ -1,48 +1,74 @@
-.technologies-wrapper {
+#Technologies {
   position: relative;
-  display: grid;
-  width: 100%;
 
-  .slider-item {
-    min-width: 350px;
-    height: 350px;
+  .layout {
+    display: flex;
+  }
 
-    & .slider-item-title {
-      height: 20%;
-      & h4 {
-        font-size: 30px;
-        text-transform: uppercase;
-        padding: 20px 0 20px;
+  .technologies-wrapper {
+    width: 100%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 140px;
+
+    .slider-item {
+      min-width: 150px;
+      min-height: 200px;
+      cursor: pointer;
+
+      .slider-item-title {
+        height: 20%;
+
+        h6 {
+          text-transform: uppercase;
+          margin-top: 20px;
+        }
       }
-    }
 
-    .slider-item-image {
-      width: 100%;
-      height: 80%;
-      display: grid;
-      justify-content: center;
-      align-items: center;
-      font-size: 120px;
-      object-fit: cover;
-      background-color: #0d0d0d;
-      svg {
-        width: 220px;
-        height: 220px;
+      .slider-item-image {
+        width: 100%;
+        height: 170px;
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        font-size: 120px;
+        object-fit: cover;
+        background-color: $sliderBackground;
+
+        @include media('md') {
+          height: 220px;
+        }
+
+        @include media('lg') {
+          height: 320px;
+        }
+
+        svg {
+          width: 84px;
+          height: 84px;
+
+          @include media('md') {
+            width: 124px;
+            height: 124px;
+          }
+
+          @include media('lg') {
+            width: 150px;
+            height: 150px;
+          }
+        }
       }
     }
   }
 }
 
 .slick-slider {
-  & .slick-list {
-    overflow: visible;
-    & .slick-track {
-      width: max-content !important;
-
-      & .slick-slide {
-        min-width: 350px;
-        margin: 0 5px;
-      }
+  .slick-list {
+    .slick-track {
+      display: flex;
+      gap: 0 10px;
     }
   }
 }

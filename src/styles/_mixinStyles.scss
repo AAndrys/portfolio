@@ -1,6 +1,29 @@
-@mixin flexCenter($justify, $align, $direction: column) {
-    display: flex;
-    flex-direction: $direction;
-    justify-content: $justify;
-    align-items: $align;
+@mixin media($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+}
+
+@mixin flexBox($justify, $align, $direction: column) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin inputStyles() {
+  background-color: $codGrayJs;
+  border: none;
+  color: white;
+  padding: 5px;
+
+  @include media('md') {
+    padding: 8px;
+  }
+
+  @include media('lg') {
+    padding: 10px;
+  }
 }

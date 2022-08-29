@@ -1,5 +1,5 @@
-import React from "react";
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
+import React from 'react';
 
 //Font Awesome
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -24,5 +24,5 @@ const Header = ({ children }) => {
 export default Header;
 
 Header.propTypes = {
-  children: PropTypes.any,
+  children: PropTypes.any
 };

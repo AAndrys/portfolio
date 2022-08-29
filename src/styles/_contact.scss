@@ -1,0 +1,76 @@
+#Contact {
+  .contact-wrapper {
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 22%;
+      width: 40%;
+      height: auto;
+      aspect-ratio: 1 / 1;
+      display: block;
+      background: url('../assets/svgs/rect_lines.svg') no-repeat center center / cover;
+    }
+
+    @supports not (aspect-ratio: 1 / 1) {
+      .contact-wrapper::before {
+        float: left;
+        padding-top: 100%;
+        content: '';
+      }
+
+      .contact-wrapper::after {
+        display: block;
+        content: '';
+        clear: both;
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      z-index: 10;
+
+      label {
+        margin-bottom: 5px;
+      }
+
+      input {
+        @include inputStyles;
+
+        height: 32px;
+        margin-bottom: 20px;
+        font-size: 14px;
+      }
+
+      textarea {
+        @include inputStyles;
+
+        height: 180px;
+        resize: none;
+        font-size: 14px;
+      }
+
+      button {
+        @include inputStyles;
+
+        width: min(30%, 200px);
+        font-weight: 400;
+        font-size: 14px;
+        margin-top: 20px;
+        border: 1px solid white;
+        border-radius: 10px;
+        cursor: pointer;
+
+        &:hover {
+          opacity: 0.9;
+        }
+
+        &:active {
+          opacity: 0.8;
+        }
+      }
+    }
+  }
+}

@@ -1,9 +1,9 @@
-import React from "react";
-import PropTypes from "prop-types";
+import PropTypes from 'prop-types';
+import React from 'react';
 
-const ContainerWithLeftBorder = ({ children, componentWidth = "15%" }) => {
+const ContainerWithLeftBorder = ({ children, componentWidth = '15%' }) => {
   const styles = {
-    width: componentWidth,
+    width: componentWidth
   };
 
   return (
@@ -16,5 +16,5 @@ const ContainerWithLeftBorder = ({ children, componentWidth = "15%" }) => {
 export default ContainerWithLeftBorder;
 
 ContainerWithLeftBorder.propTypes = {
-  componentWidth: PropTypes.string,
+  componentWidth: PropTypes.string
 };

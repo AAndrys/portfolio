@@ -1,13 +1,13 @@
-import React from "react";
-import * as THREE from "three";
-import FOG from "vanta/dist/vanta.fog.min";
+import React from 'react';
+import * as THREE from 'three';
+import FOG from 'vanta/dist/vanta.fog.min';
 
 class Vanta extends React.Component {
   constructor(props) {
     super(props);
     this.vantaRef = React.createRef();
     this.state = {
-      isLoaded: false,
+      isLoaded: false
     };
   }
 
@@ -25,18 +25,18 @@ class Vanta extends React.Component {
         midtoneColor: 0x434343,
         lowlightColor: 0x0,
         baseColor: 0x111111,
-        speed: 0.8,
+        speed: 0.8
       });
       this.props.vantaLoaded();
     }
-    window.addEventListener("resize", this.vantaResize);
+    window.addEventListener('resize', this.vantaResize);
   }
 
   vantaResize = () => {
     if (this.vantaEffect) {
       this.vantaEffect.setOptions({
         minHeight: window.innerHeight,
-        minWidth: window.innerWidth,
+        minWidth: window.innerWidth
       });
       this.vantaEffect.resize();
     }
@@ -44,16 +44,11 @@ class Vanta extends React.Component {
 
   componentWillUnmount() {
     if (this.vantaEffect) this.vantaEffect.destroy();
-    window.removeEventListener("resize", this.vantaResize);
+    window.removeEventListener('resize', this.vantaResize);
   }
 
   render() {
-    return (
-      <div
-        ref={this.vantaRef}
-        style={{ position: "absolute", zIndex: "-100" }}
-      />
-    );
+    return <div ref={this.vantaRef} style={{ position: 'absolute', zIndex: '-100' }} />;
   }
 }
 

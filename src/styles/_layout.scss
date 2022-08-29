@@ -1,32 +1,31 @@
 .layout-wrapper {
   .layout {
+    width: 100%;
+    height: 100%;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    opacity: 0;
 
     .layout-container {
-      padding: 60px 25px;
+      width: 100%;
+      padding: 100px 10%;
       position: relative;
+      word-break: break-word;
+      grid-column: 1/13;
+      overflow: hidden;
 
-      & h1 {
-        font-family: "Poppins", sans-serif;
-        font-size: 95px;
-        margin: 40px 0;
-        text-transform: uppercase;
-        color: #ffffff23;
-        letter-spacing: 25px;
+      @include media('md') {
+        padding: 150px 10%;
       }
-    }
-  }
-}
 
-@media (max-width: 1024px) {
-  .layout-wrapper {
-    .layout {
-      .layout-container {
-        & h1 {
-          font-size: 30px;
-          letter-spacing: 10px;
+      h1 {
+        font-weight: 800;
+        margin: 0 0 46px 0;
+        text-transform: uppercase;
+        color: $sectionTextColor;
+        letter-spacing: 10px;
+
+        @include media('md') {
+          letter-spacing: 22px;
         }
       }
     }

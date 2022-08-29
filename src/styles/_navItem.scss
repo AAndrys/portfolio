@@ -1,6 +1,6 @@
 .navigation-item {
   margin: 10px 0;
-  font-size: 5vw;
+  font-size: clamp(25px, 5vw, 120px);
   cursor: pointer;
   text-decoration: none;
   color: white;
@@ -8,7 +8,7 @@
   transition: all 0.2s linear;
   text-transform: uppercase;
   &::before {
-    content: "";
+    content: '';
     width: 0;
     height: 2px;
     position: absolute;
@@ -16,6 +16,7 @@
     background-color: white;
     transition: all 0.3s linear;
   }
+
   &:hover::before {
     width: 100%;
   }
