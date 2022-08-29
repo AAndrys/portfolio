@@ -15,6 +15,7 @@ import StartScreen from './components/startScreen';
 // import Vanta from "./components/vanta";
 import UpArrow from './components/upArrow';
 import Projects from './components/sections/projects';
+import CookieBanner from './components/cookieBanner';
 import Footer from './components/footer';
 
 import Analytics from './utils/analytics';
@@ -75,6 +76,7 @@ const App = () => {
       </main>
       <Footer />
 
+      <CookieBanner />
       <DownScreen />
 
       {endHomePageAnimation && slideNumber >= 1 && <UpArrow onClick={() => handleSlide('up')} />}

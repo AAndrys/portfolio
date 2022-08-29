@@ -6,14 +6,18 @@ import { SLIDER_ITEMS } from './data';
 
 import Layout from '../../layout';
 
+import useResizeCount from '../../../hooks/useResizeCount';
+
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
 const Technologies = () => {
-  const [wrapperRef, isInView] = useInView({
+  const [wrapperRef] = useInView({
     threshold: 0.1
   });
+
   const sliderRef = useRef();
+  const { resizeCount } = useResizeCount();
 
   const settings = {
     dots: false,
@@ -57,7 +61,7 @@ const Technologies = () => {
         projects.
       </p>
       <div ref={wrapperRef} className="technologies-wrapper">
-        <div style={{ width: window.innerWidth }}>
+        <div key={`${resizeCount}`} style={{ width: window.innerWidth }}>
           <Slider ref={sliderRef} {...settings}>
             {SLIDER_ITEMS.map(({ title, image }, index) => (
               <div key={title + index} className="slider-item">

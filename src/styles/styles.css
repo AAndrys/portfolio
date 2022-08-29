@@ -893,7 +893,62 @@ em {
   }
 }
 .cookie-banner-wrapper {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: #151515;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 999999;
+}
+.cookie-banner-wrapper .container {
+  display: grid;
+  height: 100%;
+  grid-template-columns: 1.5fr 0.5fr;
+}
+.cookie-banner-wrapper .container .text-wrapper {
+  height: 100%;
   display: flex;
+  justify-content: flex-start;
+  align-items: left;
+  flex-direction: column;
+  padding: 10px 20px;
+}
+.cookie-banner-wrapper .container .text-wrapper label {
+  cursor: pointer;
+}
+.cookie-banner-wrapper .container .button-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cookie-banner-wrapper .container .button-wrapper button {
+  background-color: #151515;
+  border: none;
+  color: white;
+  padding: 5px;
+  width: clamp(75px, 30%, 200px);
+  font-weight: 400;
+  font-size: 14px;
+  border: 1px solid white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+@media (min-width: 1024px) {
+  .cookie-banner-wrapper .container .button-wrapper button {
+    padding: 8px;
+  }
+}
+@media (min-width: 1280px) {
+  .cookie-banner-wrapper .container .button-wrapper button {
+    padding: 10px;
+  }
+}
+.cookie-banner-wrapper .container .button-wrapper button:hover {
+  opacity: 0.9;
+}
+.cookie-banner-wrapper .container .button-wrapper button:active {
+  opacity: 0.8;
 }
 
 .about-wrapper {

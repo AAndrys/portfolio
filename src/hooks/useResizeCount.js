@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import debounce from 'lodash-es/debounce';
+import debounce from 'lodash/debounce';
 
 export const useResizeCount = () => {
   const [resizeCount, setResizeCount] = useState(0);

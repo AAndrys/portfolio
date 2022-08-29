@@ -6,6 +6,7 @@ import { textPattern } from '../../../utils/constants';
 
 const Contact = () => {
   const handleSubmit = (e) => {
+    // eslint-disable-next-line
     const [fullName, email, message] = e.target;
     e.preventDefault();
 

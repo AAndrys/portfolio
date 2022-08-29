@@ -42,24 +42,16 @@ module.exports = {
       {
         paths: [
           {
-            message: "Please use import foo from 'lodash-es/foo' instead.",
-            name: 'lodash'
-          },
-          {
-            message: 'Avoid using chain since it is non tree-shakable. Try out flow instead.',
-            name: 'lodash-es/chain'
-          },
-          {
-            importNames: ['chain'],
-            message: 'Avoid using chain since it is non tree-shakable. Try out flow instead.',
-            name: 'lodash-es'
-          },
-          {
-            message: "Please use import foo from 'lodash-es/foo' instead.",
-            name: 'lodash-es'
+            name: 'lodash',
+            message: 'Import [module] from lodash/[module] instead'
           }
         ],
-        patterns: ['lodash/**', 'lodash/fp/**']
+        patterns: [
+          {
+            group: ['lodash/set'],
+            message: 'Import [module] from lodash/fp/[module] instead'
+          }
+        ]
       }
     ],
     'no-unused-vars': 'warn',

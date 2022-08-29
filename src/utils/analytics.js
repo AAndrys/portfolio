@@ -18,16 +18,19 @@ class Analytics {
       });
 
       ReactGA.pageview(window.location.pathname + window.location.search);
+      // eslint-disable-next-line
     } else console.log('### Analytics disabled ###');
   }
 
   _trackEvent({ category, label, action, value }) {
-    ReactGA.event({
-      category,
-      label,
-      action,
-      value
-    });
+    if (this._cookieAnalytics && this._cookieAnalytics.toLowerCase() === 'true') {
+      ReactGA.event({
+        category,
+        label,
+        action,
+        value
+      });
+    }
   }
 }
 

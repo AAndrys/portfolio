@@ -7,6 +7,8 @@ import { SLIDER_ITEMS } from './data';
 import Layout from '../../layout';
 import Popup from '../../popup';
 
+import useResizeCount from '../../../hooks/useResizeCount';
+
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
@@ -21,6 +23,7 @@ const Projects = () => {
   const [isMouseMove, setIsMouseMove] = useState(false);
 
   const sliderRef = useRef();
+  const { resizeCount } = useResizeCount();
 
   const settings = {
     dots: false,
@@ -62,7 +65,7 @@ const Projects = () => {
     <Layout title="Projects" id="Projects" bottomLine={false}>
       <p>A few examples projects in which I participated or I have made.</p>
       <div ref={wrapperRef} className="projects-wrapper">
-        <div style={{ width: window.innerWidth }}>
+        <div key={`${resizeCount}`} style={{ width: window.innerWidth }}>
           <Slider ref={sliderRef} {...settings}>
             {SLIDER_ITEMS.map(({ title, description, image }, index) => (
               <div

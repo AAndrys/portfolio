@@ -9,7 +9,7 @@ import Layout from '../../layout';
 import Squares from '../../Squares';
 
 const AboutMe = () => {
-  const [wrapperRef, isInView] = useInView({
+  const [wrapperRef] = useInView({
     threshold: 0.1
   });
 
