@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    runs-on: windows-latest
+    runs-on: ubuntu-latest
 
     strategy:
       matrix:
@@ -20,6 +20,11 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+        with:
+          lfs: true
+
+      - name: Checkout LFS objects
+        run: git lfs checkout
 
       - name: Set up Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v1
@@ -32,12 +37,6 @@ jobs:
       - name: Run the tests
         run: npm run test
 
-      - name: Update
-        run: npm update
-
-      - name: Build
-        run: npm run build
-
       - name: Deploy
         run: |
           git config --global user.name $user_name
@@ -49,4 +48,3 @@ jobs:
           user_email: 'github-actions[bot]@users.noreply.github.com'
           github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
           repository: ${{ github.repository }}
-          CI: false
