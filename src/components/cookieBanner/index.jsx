@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import ReactDom from 'react-dom';
 import Cookies from 'js-cookie';
+import { classes } from '../../utils/class';
+import Analytics from '../../utils/analytics';
 
 const CookieBanner = () => {
   const [isAccepted, setIsAccepted] = useState(false);
@@ -20,6 +22,9 @@ const CookieBanner = () => {
     Cookies.set('aa_portfolio.consent', true);
     Cookies.set('aa_portfolio.analytics', true);
     setIsAccepted(true);
+
+    classes.analytics = new Analytics();
+    classes.analytics._initializeTracker();
   };
 
   if (isAccepted) return null;
