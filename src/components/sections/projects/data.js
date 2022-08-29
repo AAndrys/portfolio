@@ -28,7 +28,7 @@ export const SLIDER_ITEMS = [
       {
         title: 'Link',
         description:
-          '<a target="blank" title="https://tapi-todo.herokuapp.com/" href="https://tapi-todo.herokuapp.com/">Click here!</a>'
+          '<a target="_blank" title="https://tapi-todo.herokuapp.com/" href="https://tapi-todo.herokuapp.com/">Click here!</a>'
       }
     ]
   },
@@ -54,7 +54,7 @@ export const SLIDER_ITEMS = [
       {
         title: 'Link',
         description:
-          '<a target="blank" title="https://www.superunion.com" href="https://www.superunion.com">Click here!</a>'
+          '<a target="_blank" title="https://www.superunion.com" href="https://www.superunion.com">Click here!</a>'
       }
     ]
   },
@@ -79,7 +79,7 @@ export const SLIDER_ITEMS = [
       {
         title: 'Link',
         description:
-          '<a target="blank" title="https://gaming.rtbhouse.com/" href="https://gaming.rtbhouse.com/">Click here!</a>'
+          '<a target="_blank" title="https://gaming.rtbhouse.com/" href="https://gaming.rtbhouse.com/">Click here!</a>'
       }
     ]
   },
@@ -104,7 +104,7 @@ export const SLIDER_ITEMS = [
       {
         title: 'Link',
         description:
-          '<a target="blank" title="https://twojpsycholog-recruitment-task-fvovf5wch-aandrys.vercel.app/" href="https://twojpsycholog-recruitment-task-fvovf5wch-aandrys.vercel.app/">Click here!</a>'
+          '<a target="_blank" title="https://twojpsycholog-recruitment-task-fvovf5wch-aandrys.vercel.app/" href="https://twojpsycholog-recruitment-task-fvovf5wch-aandrys.vercel.app/">Click here!</a>'
       }
     ]
   },
@@ -149,7 +149,7 @@ export const SLIDER_ITEMS = [
       {
         title: 'Link',
         description:
-          '<a target="blank" title="https://www.nowherehq.com/" href="https://www.nowherehq.com/">Click here!</a>'
+          '<a target="_blank" title="https://www.nowherehq.com/" href="https://www.nowherehq.com/">Click here!</a>'
       }
     ]
   },

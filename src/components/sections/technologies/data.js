@@ -1,18 +1,18 @@
-import C from '../../Icons/C';
-import Css from '../../Icons/Css';
-import File from '../../Icons/File';
-import Git from '../../Icons/Git';
-import Html from '../../Icons/Html';
-import Js from '../../Icons/Js';
-import Next from '../../Icons/Next';
-import Node from '../../Icons/Node';
-import React from '../../Icons/React';
-import Three from '../../Icons/Three';
-import Vue from '../../Icons/Vue';
-import Gsap from '../../Icons/Gsap';
-import Mongodb from '../../Icons/Mongodb';
-import Redux from '../../Icons/Redux';
-import Typescript from '../../Icons/Typescript';
+import { CIcon as C } from '../../Icons/C';
+import { CssIcon as Css } from '../../Icons/Css';
+import { FileIcon as File } from '../../Icons/File';
+import { GitIcon as Git } from '../../Icons/Git';
+import { HtmlIcon as Html } from '../../Icons/Html';
+import { JsIcon as Js } from '../../Icons/Js';
+import { NextIcon as Next } from '../../Icons/Next';
+import { NodeIcon as Node } from '../../Icons/Node';
+import { ReactIcon as React } from '../../Icons/React';
+import { ThreeIcon as Three } from '../../Icons/Three';
+import { VueIcon as Vue } from '../../Icons/Vue';
+import { GsapIcon as Gsap } from '../../Icons/Gsap';
+import { MongoDBIcon as MongoDB } from '../../Icons/Mongodb';
+import { ReduxIcon as Redux } from '../../Icons/Redux';
+import { TypescriptIcon as Typescript } from '../../Icons/Typescript';
 
 export const SLIDER_ITEMS = [
   {
@@ -89,7 +89,7 @@ export const SLIDER_ITEMS = [
   },
   {
     title: 'MongoDB',
-    image: Mongodb
+    image: MongoDB
   },
   {
     title: 'Redux',
