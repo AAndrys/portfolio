@@ -24,15 +24,16 @@ const Popup = ({
       setIsOpenPopup(true);
       document.body.style.overflowY = 'hidden';
     } else {
-      openCloseAnimation()
-        .reverse(0)
-        .then(() => setIsOpenPopup(false));
+      document.querySelector('.popup-wrapper') &&
+        openCloseAnimation()
+          .reverse(0)
+          .then(() => setIsOpenPopup(false));
       document.body.style.overflowY = 'auto';
     }
   }, [isOpen]);
 
   useEffect(() => {
-    if (isOpenPopup) openCloseAnimation().play();
+    if (isOpenPopup && document.querySelector('.popup-wrapper')) openCloseAnimation().play();
   }, [isOpenPopup]);
 
   if (!isOpenPopup) return null;

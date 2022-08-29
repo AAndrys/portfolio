@@ -11,5 +11,3 @@ const DownArrow = ({ onClick }) => {
 };
 
 export default DownArrow;
-
-DownArrow.propTypes = {};

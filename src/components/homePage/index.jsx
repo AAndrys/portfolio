@@ -8,12 +8,14 @@ const HomePage = ({ startAnimationEnd, endAnimation, setEndAnimation }) => {
   const [firstAnimationEnd, setFirstAnimationEnd] = useState(false);
 
   useEffect(() => {
-    gsap.fromTo('.face-image', { opacity: 0, x: -100 }, { opacity: 1, x: 0, duration: 2 });
-    gsap.fromTo(
-      '.home-page-profile',
-      { opacity: 0, scale: 0.8 },
-      { opacity: 1, scale: 1, duration: 2 }
-    );
+    if (document.querySelector('.face-image'))
+      gsap.fromTo('.face-image', { opacity: 0, x: -100 }, { opacity: 1, x: 0, duration: 2 });
+    if (document.querySelector('.home-page-profile'))
+      gsap.fromTo(
+        '.home-page-profile',
+        { opacity: 0, scale: 0.8 },
+        { opacity: 1, scale: 1, duration: 2 }
+      );
     if (endAnimation) document.body.style.overflow = 'auto';
   }, [endAnimation]);
 
