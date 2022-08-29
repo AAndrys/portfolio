@@ -12,7 +12,7 @@ import Technologies from './components/sections/technologies';
 // import Testimonial from './components/sections/testimonial';
 import StartScreen from './components/startScreen';
 // import ThreeScene from "./components/threeScene";
-// import Vanta from "./components/vanta";
+// import Vanta from './components/vanta';
 import UpArrow from './components/upArrow';
 import Projects from './components/sections/projects';
 import CookieBanner from './components/cookieBanner';
@@ -20,11 +20,18 @@ import Footer from './components/footer';
 
 import Analytics from './utils/analytics';
 import { classes } from './utils/class';
+import { PAGES_LINK } from './utils/constants';
 
 import './styles/styles.css';
 
 const MAX_SLIDES = 4;
-const SECTIONS = ['#Home', '#AboutMe', '#Technologies', '#Projects', '#Contact'];
+const SECTIONS = [
+  PAGES_LINK.home,
+  PAGES_LINK.about,
+  PAGES_LINK.technologies,
+  PAGES_LINK.projects,
+  PAGES_LINK.contact
+];
 
 const App = () => {
   const [endHomePageAnimation, setEndHomePageAnimation] = useState(false);
@@ -44,6 +51,10 @@ const App = () => {
   useEffect(() => {
     classes.analytics = new Analytics();
     classes.analytics._initializeTracker();
+
+    document.body.style.overflow = 'hidden';
+
+    if (window.location.hash.length) window.location.replace('');
   }, []);
 
   useEffect(() => {
@@ -72,7 +83,7 @@ const App = () => {
         <Contact />
 
         {/* <ThreeScene /> */}
-        {/* <Vanta vantaLoaded={() => setVantaLoaded(true)} /> */}
+        {/* <Vanta vantaLoaded={() => null} /> */}
       </main>
       <Footer />
 
