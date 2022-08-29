@@ -6,12 +6,14 @@ import ContainerWithLeftBorder from '../containerWithLeftBorder';
 import NavItem from '../navItem';
 import NormalText from '../normalText';
 
+import { PAGES_LINK } from '../../utils/constants';
+
 const NAVIGATION_LIST_ARRAY = [
-  { text: 'Home', href: '#Home' },
-  { text: 'About me', href: '#AboutMe' },
-  { text: 'Technologies', href: '#Technologies' },
-  { text: 'Projects', href: '#Projects' },
-  { text: 'Contact', href: '#Contact' }
+  { text: 'Home', href: PAGES_LINK.home },
+  { text: 'About me', href: PAGES_LINK.about },
+  { text: 'Technologies', href: PAGES_LINK.technologies },
+  { text: 'Projects', href: PAGES_LINK.projects },
+  { text: 'Contact', href: PAGES_LINK.contact }
 ];
 
 const DEFAULT_DESCRIPTION = <NormalText text="Menu" isAnimated />;
