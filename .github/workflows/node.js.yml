@@ -23,6 +23,9 @@ jobs:
         with:
           lfs: true
 
+      - name: Email
+        run: echo "The email is:${{secrets.REACT_APP_EMAIL_MAILTO}}"
+
       - name: Checkout LFS objects
         run: git lfs checkout
 
