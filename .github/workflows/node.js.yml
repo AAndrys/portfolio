@@ -23,9 +23,6 @@ jobs:
         with:
           lfs: true
 
-      - name: Email
-        run: echo "The email is:${{ env.REACT_APP_EMAIL_MAILTO }}"
-
       - name: Checkout LFS objects
         run: git lfs checkout
 
