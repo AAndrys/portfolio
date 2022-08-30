@@ -1011,6 +1011,13 @@ em {
 #Technologies .layout {
   display: flex;
 }
+#Technologies .layout-container {
+  padding: 150px 0;
+}
+#Technologies .layout-container h1,
+#Technologies .layout-container p {
+  padding: 0 10%;
+}
 #Technologies .technologies-wrapper {
   width: 100%;
   position: relative;
@@ -1137,6 +1144,13 @@ em {
 }
 #Projects .layout {
   display: flex;
+}
+#Projects .layout-container {
+  padding: 150px 0;
+}
+#Projects .layout-container h1,
+#Projects .layout-container p {
+  padding: 0 10%;
 }
 #Projects .projects-wrapper {
   width: 100%;

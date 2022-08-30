@@ -22,12 +22,14 @@ const Popup = ({
   useEffect(() => {
     if (isOpen) {
       setIsOpenPopup(true);
+      document.documentElement.style.overflowY = 'hidden';
       document.body.style.overflowY = 'hidden';
     } else {
       document.querySelector('.popup-wrapper') &&
         openCloseAnimation()
           .reverse(0)
           .then(() => setIsOpenPopup(false));
+      document.documentElement.style.overflowY = 'auto';
       document.body.style.overflowY = 'auto';
     }
   }, [isOpen]);

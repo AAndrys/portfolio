@@ -5,6 +5,15 @@
     display: flex;
   }
 
+  .layout-container {
+    padding: 150px 0;
+
+    h1,
+    p {
+      padding: 0 10%;
+    }
+  }
+
   .projects-wrapper {
     width: 100%;
     position: relative;
