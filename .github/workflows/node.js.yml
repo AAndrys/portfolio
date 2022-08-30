@@ -24,7 +24,7 @@ jobs:
           lfs: true
 
       - name: Email
-        run: echo "The email is:${{secrets.REACT_APP_EMAIL_MAILTO}}"
+        run: echo "The email is:${{ env.REACT_APP_EMAIL_MAILTO }}"
 
       - name: Checkout LFS objects
         run: git lfs checkout
@@ -51,3 +51,4 @@ jobs:
           user_email: 'github-actions[bot]@users.noreply.github.com'
           github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
           repository: ${{ github.repository }}
+          REACT_APP_EMAIL_MAILTO: ${{ secrets.REACT_APP_EMAIL_MAILTO }}
