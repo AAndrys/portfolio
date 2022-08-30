@@ -54,10 +54,8 @@ const App = () => {
 
     document.body.style.overflow = 'hidden';
 
-    if (window.location.hash.length) {
-      window.scrollTo({ top: 0 });
-      window.location.replace('');
-    }
+    window.scrollTo({ top: 0 });
+    if (window.location.hash.length) window.location.replace('');
   }, []);
 
   useEffect(() => {
