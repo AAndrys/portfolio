@@ -11,6 +11,7 @@
 html {
   scroll-behavior: smooth;
   font-size: 24px;
+  overflow-y: auto;
 }
 
 body {
@@ -20,6 +21,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: black;
   overflow: hidden;
+  height: 100vh;
   color: white;
 }
 

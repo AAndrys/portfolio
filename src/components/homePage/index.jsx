@@ -16,7 +16,10 @@ const HomePage = ({ startAnimationEnd, endAnimation, setEndAnimation }) => {
         { opacity: 0, scale: 0.8 },
         { opacity: 1, scale: 1, duration: 2 }
       );
-    if (endAnimation) document.body.style.overflow = 'auto';
+    if (endAnimation) {
+      document.body.style.overflow = 'auto';
+      document.body.style.height = 'auto';
+    }
   }, [endAnimation]);
 
   if (!endAnimation) {
