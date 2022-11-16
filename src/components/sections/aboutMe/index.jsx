@@ -25,7 +25,7 @@ const AboutMe = () => {
           lot of overnight coding gave me more professionalism. I gain more and more skills every
           day.
           <br />
-          <strong>Programming is my hooby and I love it!</strong>
+          <strong>Programming is my hobby and I love it!</strong>
         </p>
 
         <div className="about-amounts-container">
