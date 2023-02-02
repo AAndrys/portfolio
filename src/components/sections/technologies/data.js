@@ -13,6 +13,7 @@ import GsapIcon from '../../Icons/Gsap';
 import MongoDBIcon from '../../Icons/Mongodb';
 import ReduxIcon from '../../Icons/Redux';
 import TypescriptIcon from '../../Icons/Typescript';
+import FramerMotionIcon from '../../Icons/FramerMotion';
 
 export const SLIDER_ITEMS = [
   {
@@ -53,7 +54,7 @@ export const SLIDER_ITEMS = [
   },
   {
     title: 'Framer motion',
-    image: FileIcon
+    image: FramerMotionIcon
   },
   {
     title: 'Three.js',
@@ -71,10 +72,10 @@ export const SLIDER_ITEMS = [
     title: 'C',
     image: CIcon
   },
-  {
-    title: 'C++',
-    image: CIcon
-  },
+  // {
+  //   title: 'C++',
+  //   image: CIcon
+  // },
   {
     title: 'C#',
     image: CIcon

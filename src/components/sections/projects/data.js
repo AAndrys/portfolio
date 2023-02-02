@@ -4,6 +4,7 @@ import RecruitmentTask from '../../../assets/images/projects/recruitment_task.pn
 import Hm from '../../../assets/images/projects/h&m.png';
 import Nowhere from '../../../assets/images/projects/nowherehq.png';
 import Superunion from '../../../assets/images/projects/superunion.png';
+import Booksona from '../../../assets/images/projects/booksona.png';
 import RtbHouseGaming from '../../../assets/images/projects/rtbhousegaming.png';
 
 export const SLIDER_ITEMS = [
@@ -28,7 +29,7 @@ export const SLIDER_ITEMS = [
       {
         title: 'Link',
         description:
-          '<a target="_blank" title="https://tapi-todo.herokuapp.com/" href="https://tapi-todo.herokuapp.com/">Click here!</a>'
+          '<a target="_blank" rel="noreferrer" title="https://tapi-todo.herokuapp.com/" href="https://tapi-todo.herokuapp.com/">Click here!</a>'
       }
     ]
   },
@@ -54,7 +55,32 @@ export const SLIDER_ITEMS = [
       {
         title: 'Link',
         description:
-          '<a target="_blank" title="https://www.superunion.com" href="https://www.superunion.com">Click here!</a>'
+          '<a target="_blank" rel="noreferrer" title="https://www.superunion.com" href="https://www.superunion.com">Click here!</a>'
+      }
+    ]
+  },
+  {
+    title: 'Booksona',
+    description: 'Company project',
+    image: Booksona,
+    sections: [
+      // {
+      //   title: 'About',
+      //   description:
+      //     'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old.'
+      // },
+      {
+        title: 'Duration',
+        description: '3.5 months'
+      },
+      {
+        title: 'Technologies',
+        description: 'Next.js, Styled-components, Framer Motion, GlobalState, Parallax'
+      },
+      {
+        title: 'Link',
+        description:
+          '<a target="_blank" rel="noreferrer" title="https://www.discoveryourbooksona.com" href="https://www.discoveryourbooksona.com">Click here!</a>'
       }
     ]
   },
@@ -79,7 +105,7 @@ export const SLIDER_ITEMS = [
       {
         title: 'Link',
         description:
-          '<a target="_blank" title="https://gaming.rtbhouse.com/" href="https://gaming.rtbhouse.com/">Click here!</a>'
+          '<a target="_blank" rel="noreferrer" title="https://gaming.rtbhouse.com/" href="https://gaming.rtbhouse.com/">Click here!</a>'
       }
     ]
   },
@@ -104,7 +130,7 @@ export const SLIDER_ITEMS = [
       {
         title: 'Link',
         description:
-          '<a target="_blank" title="https://twojpsycholog-recruitment-task-fvovf5wch-aandrys.vercel.app/" href="https://twojpsycholog-recruitment-task-fvovf5wch-aandrys.vercel.app/">Click here!</a>'
+          '<a target="_blank" rel="noreferrer" title="https://twojpsycholog-recruitment-task-fvovf5wch-aandrys.vercel.app/" href="https://twojpsycholog-recruitment-task-fvovf5wch-aandrys.vercel.app/">Click here!</a>'
       }
     ]
   },
@@ -149,7 +175,7 @@ export const SLIDER_ITEMS = [
       {
         title: 'Link',
         description:
-          '<a target="_blank" title="https://www.nowherehq.com/" href="https://www.nowherehq.com/">Click here!</a>'
+          '<a target="_blank" rel="noreferrer" title="https://www.nowherehq.com/" href="https://www.nowherehq.com/">Click here!</a>'
       }
     ]
   },
