@@ -34,7 +34,7 @@ const AboutMe = () => {
             countNumber={calculateYears(new Date(EXPERIENCE_DATE))}
           />
           <CountBox text="Number of written lines of code" countNumber={10000} />
-          <CountBox text="Hours spent on learning" countNumber={countHours()} />
+          <CountBox text="Hours spent on coding" countNumber={countHours()} />
         </div>
       </div>
     </Layout>
