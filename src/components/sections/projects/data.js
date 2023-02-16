@@ -29,7 +29,7 @@ export const SLIDER_ITEMS = [
       {
         title: 'Link',
         description:
-          '<a target="_blank" rel="noreferrer" title="https://tapi-todo.herokuapp.com/" href="https://tapi-todo.herokuapp.com/">Click here!</a>'
+          '<a target="_blank" rel="noreferrer" title="https://tapi-5h1r.onrender.com/" href="https://tapi-5h1r.onrender.com/">Click here!</a>'
       }
     ]
   },
