@@ -80,7 +80,7 @@ const Projects = () => {
                 }}
               >
                 <div className="slider-item-image" role="presentation">
-                  <img src={image} alt={title} />
+                  <img src={image} alt={title} loading="lazy" />
                 </div>
                 <div className="slider-item-title">
                   <h6>{title}</h6>
