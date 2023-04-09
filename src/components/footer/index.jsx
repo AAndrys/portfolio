@@ -16,7 +16,7 @@ const Footer = () => {
               href="https://github.com/AAndrys"
               title="Github link"
             >
-              <img src={GithubSvg} alt="Github icon" />
+              <img src={GithubSvg} alt="Github icon" loading="lazy" />
             </a>
             <a
               target="_blank"
@@ -24,7 +24,7 @@ const Footer = () => {
               href="https://www.linkedin.com/in/adam-andrysiak-6779241aa"
               title="Linkedin link"
             >
-              <img src={LinkedinSvg} alt="Linkedin icon" />
+              <img src={LinkedinSvg} alt="Linkedin icon" loading="lazy" />
             </a>
           </div>
         </section>
