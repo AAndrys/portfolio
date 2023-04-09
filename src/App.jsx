@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-//Component imports
+// Component imports
 import DownArrow from './components/downArrow';
 import DownScreen from './components/downScreen';
 import Header from './components/header';
@@ -9,10 +9,7 @@ import MenuButton from './components/menuButton';
 import AboutMe from './components/sections/aboutMe';
 import Contact from './components/sections/contact';
 import Technologies from './components/sections/technologies';
-// import Testimonial from './components/sections/testimonial';
 import StartScreen from './components/startScreen';
-// import ThreeScene from "./components/threeScene";
-// import Vanta from './components/vanta';
 import UpArrow from './components/upArrow';
 import Projects from './components/sections/projects';
 import CookieBanner from './components/cookieBanner';
@@ -79,12 +76,9 @@ const App = () => {
         />
         <AboutMe />
         <Technologies />
-        {/* <Testimonial /> */}
+
         <Projects />
         <Contact />
-
-        {/* <ThreeScene /> */}
-        {/* <Vanta vantaLoaded={() => null} /> */}
       </main>
       <Footer />
 
